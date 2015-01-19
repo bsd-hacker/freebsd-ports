@@ -1063,6 +1063,8 @@ SCRIPTSDIR?=	${PORTSDIR}/Mk/Scripts
 LIB_DIRS?=		/lib /usr/lib ${LOCALBASE}/lib
 STAGEDIR?=	${WRKDIR}/stage
 NOTPHONY?=
+FLAVORS?=
+FLAVOR?=
 PKG_ENV+=		PORTSDIR=${PORTSDIR}
 CONFIGURE_ENV+=	XDG_DATA_HOME=${WRKDIR} \
 				XDG_CONFIG_HOME=${WRKDIR} \
@@ -1094,6 +1096,21 @@ MINIMAL_PKG_VERSION=	1.3.8
 
 .include "${PORTSDIR}/Mk/bsd.commands.mk"
 
+.if !empty(FLAVOR)
+.if ! ${FLAVORS:M${FLAVOR}}
+IGNORE=	Unknown flavor '${FLAVOR}', possible flavors: ${FLAVORS}.
+.endif
+.endif
+
+.if defined(.PARSEDIR)
+.if ${.MAKEOVERRIDES:MFLAVOR}
+IGNORE=	Error: FLAVOR is an unsupported argument Use 'env FLAVOR=${FLAVOR} ${MAKE}' instead.
+.endif
+.else # old make
+.if ${.MAKEFLAGS:MFLAVOR=*}
+IGNORE=	Error: FLAVOR is an unsupported argument Use 'env FLAVOR=${FLAVOR} ${MAKE}' instead.
+.endif
+.endif
 .if defined(NO_STAGE)
 BROKEN=				Not staged.
 DEPRECATED?=		Not staged. See http://lists.freebsd.org/pipermail/freebsd-ports-announce/2014-May/000080.html
@@ -1552,7 +1569,12 @@ DEV_ERROR+=	"${PKGNAME}: Makefile error: you cannot include bsd.port[.post].mk t
 
 _POSTMKINCLUDED=	yes
 
-WRKDIR?=		${WRKDIRPREFIX}${.CURDIR}/work
+.if empty(FLAVOR)
+_WRKDIR=	work
+.else
+_WRKDIR=	work-${FLAVOR}
+.endif
+WRKDIR?=		${WRKDIRPREFIX}${.CURDIR}/${_WRKDIR}
 .if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB)
 WRKSRC?=		${WRKDIR}/${GH_ACCOUNT}-${GH_PROJECT}-${GH_COMMIT}
 .endif
@@ -3955,13 +3977,15 @@ clean:
 	@cd ${.CURDIR} && ${MAKE} limited-clean-depends
 .endif
 	@${ECHO_MSG} "===>  Cleaning for ${PKGNAME}"
+.for _flavor in "" ${FLAVORS}
 .if target(pre-clean)
-	@cd ${.CURDIR} && ${MAKE} pre-clean
+	@cd ${.CURDIR} && ${SETENV} FLAVOR=${_flavor} ${MAKE} pre-clean
 .endif
-	@cd ${.CURDIR} && ${MAKE} do-clean
+	@cd ${.CURDIR} && ${SETENV} FLAVOR=${_flavor} ${MAKE} do-clean
 .if target(post-clean)
-	@cd ${.CURDIR} && ${MAKE} post-clean
+	@cd ${.CURDIR} && ${SETENV} FLAVOR=${_flavor} ${MAKE} post-clean
 .endif
+.endfor
 .endif
 
 .if !target(pre-distclean)
