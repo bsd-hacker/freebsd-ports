@@ -5016,10 +5016,10 @@ pretty-print-run-depends-list:
 .endif
 .endif
 
+.if defined(SUB_FILES)
 _SUB_LIST_TEMP=	${SUB_LIST:S/$/!g/:S/^/ -e s!%%/:S/=/%%!/}
 .if !target(apply-slist)
 apply-slist:
-.if defined(SUB_FILES)
 .for file in ${SUB_FILES}
 .if !exists(${FILESDIR}/${file}.in)
 	@${ECHO_MSG} "** Missing ${FILESDIR}/${file}.in for ${PKGNAME}."; exit 1
