@@ -5251,10 +5251,12 @@ check-plist: stage
 check-orphans: check-plist
 .endif
 
+.if defined(DEVELOPER)
 .if !target(stage-qa)
 stage-qa:
 	@${ECHO_MSG} "====> Running Q/A tests (stage-qa)"
 	@${SETENV} ${QA_ENV} ${SH} ${SCRIPTSDIR}/qa.sh
+.endif
 .endif
 
 # Fake installation of package so that user can pkg delete it later.
