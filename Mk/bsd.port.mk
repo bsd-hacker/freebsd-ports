@@ -3638,9 +3638,9 @@ check-umask:
 	fi
 .endif
 
+.if defined(USE_LDCONFIG) || defined(USE_LDCONFIG32)
 .if !target(install-ldconfig-file)
 install-ldconfig-file:
-.if defined(USE_LDCONFIG) || defined(USE_LDCONFIG32)
 .if defined(USE_LDCONFIG)
 .if defined(USE_LINUX_PREFIX)
 .else
