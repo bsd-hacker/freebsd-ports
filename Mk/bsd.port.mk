@@ -5285,11 +5285,6 @@ fake-pkg: create-manifest
 depend:
 .endif
 
-# Same goes for tags
-.if !target(tags)
-tags:
-.endif
-
 .if !defined(NOPRECIOUSMAKEVARS)
 # These won't change, so we can pass them through the environment
 .MAKEFLAGS: \
