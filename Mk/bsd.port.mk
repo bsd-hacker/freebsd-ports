@@ -5138,8 +5138,8 @@ add-plist-buildinfo:
 .endif
 .endif
 
-.if !target(add-plist-info)
 .if defined(INFO)
+.if !target(add-plist-info)
 add-plist-info:
 .for i in ${INFO}
 	@${LS} ${STAGEDIR}${PREFIX}/${INFO_PATH}/$i.info* | ${SED} -e s:${STAGEDIR}:@info\ :g >> ${TMPPLIST}
