@@ -5797,8 +5797,8 @@ check-desktop-entries:
 	done
 .endif
 
-.if !target(install-desktop-entries)
 .if defined(DESKTOP_ENTRIES)
+.if !target(install-desktop-entries)
 install-desktop-entries:
 	@set -- ${DESKTOP_ENTRIES} XXX; \
 	while [ $$# -gt 6 ]; do \
