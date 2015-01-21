@@ -4473,18 +4473,8 @@ lib-depends:
 		target="${DEPENDS_TARGET}"; \
 		depends_args="${DEPENDS_ARGS}"; \
 		${ECHO_MSG}  -n "===>   ${PKGNAME} depends on shared library: $${lib}" ; \
-		found=0 ; \
-		dirs="${LIB_DIRS} `${CAT} ${LOCALBASE}/libdata/ldconfig/* 2>/dev/null || : `" ; \
-		for libdir in $$dirs; do \
-			test -f $${libdir}/$${lib} || continue; \
-			if [ -x /usr/bin/file ]; then \
-				_LIB_FILE=`realpath $${libdir}/$${lib}`; \
-				[ `file -b -L --mime-type $${_LIB_FILE}` = "application/x-sharedlib" ] || continue ; \
-			fi ; \
-			found=1 ; \
-			${ECHO_MSG} -n " - found ($${_LIB_FILE})"; \
-		done ; \
-		if [ $${found} -eq 0 ]; then \
+		libfile=`LIB_DIRS="${LIB_DIRS}" LOCALBASE="${LOCALBASE}" ${SH} ${SCRIPTSDIR}/find-lib.sh $${lib}` ; \
+		if [ -z "$${libfile}" ]; then \
 			${ECHO_MSG} " - not found"; \
 			${ECHO_MSG} "===>    Verifying for $$lib in $$dir"; \
 			if [ ! -d "$$dir" ] ; then \
@@ -4493,7 +4483,7 @@ lib-depends:
 				${_INSTALL_DEPENDS} \
 			fi ; \
 		else \
-			${ECHO_MSG}; \
+			${ECHO_MSG} " - found ($${libfile})"; \
 		fi ; \
 	done
 .endif
