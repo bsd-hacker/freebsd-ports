@@ -4473,7 +4473,7 @@ lib-depends:
 		target="${DEPENDS_TARGET}"; \
 		depends_args="${DEPENDS_ARGS}"; \
 		${ECHO_MSG}  -n "===>   ${PKGNAME} depends on shared library: $${lib}" ; \
-		libfile=`LIB_DIRS="${LIB_DIRS}" LOCALBASE="${LOCALBASE}" ${SH} ${SCRIPTSDIR}/find-lib.sh $${lib}` ; \
+		libfile=`${SETENV} LIB_DIRS="${LIB_DIRS}" LOCALBASE="${LOCALBASE}" ${SH} ${SCRIPTSDIR}/find-lib.sh $${lib}` ; \
 		if [ -z "$${libfile}" ]; then \
 			${ECHO_MSG} " - not found"; \
 			${ECHO_MSG} "===>    Verifying for $$lib in $$dir"; \
@@ -4793,7 +4793,7 @@ PACKAGE-DEPENDS-LIST?= \
 ACTUAL-PACKAGE-DEPENDS?= \
 	depfiles="" ; \
 	for lib in ${LIB_DEPENDS:C/\:.*//}; do \
-		depfiles="$$depfiles `LIB_DIRS="${LIB_DIRS}" LOCALBASE="${LOCALBASE}" ${SH} ${SCRIPTSDIR}/find-lib.sh $${lib}`" ; \
+		depfiles="$$depfiles `${SETENV} LIB_DIRS="${LIB_DIRS}" LOCALBASE="${LOCALBASE}" ${SH} ${SCRIPTSDIR}/find-lib.sh $${lib}`" ; \
 	done ; \
 	${SETENV} SCRIPTSDIR="${SCRIPTSDIR}" PKG_BIN="${PKG_BIN}" ${SH} ${SCRIPTSDIR}/actual-package-depends.sh $${depfiles} ${RUN_DEPENDS:C/(.*)\:.*/"\1"/}
 
