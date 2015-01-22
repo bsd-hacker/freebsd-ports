@@ -4795,7 +4795,7 @@ ACTUAL-PACKAGE-DEPENDS?= \
 	for lib in ${LIB_DEPENDS:C/\:.*//}; do \
 		depfiles="$$depfiles `${SETENV} LIB_DIRS="${LIB_DIRS}" LOCALBASE="${LOCALBASE}" ${SH} ${SCRIPTSDIR}/find-lib.sh $${lib}`" ; \
 	done ; \
-	${SETENV} SCRIPTSDIR="${SCRIPTSDIR}" PKG_BIN="${PKG_BIN}" ${SH} ${SCRIPTSDIR}/actual-package-depends.sh $${depfiles} ${RUN_DEPENDS:C/(.*)\:.*/"\1"/}
+	${SETENV} PKG_BIN="${PKG_BIN}" ${SH} ${SCRIPTSDIR}/actual-package-depends.sh $${depfiles} ${RUN_DEPENDS:C/(.*)\:.*/"\1"/}
 
 create-manifest:
 	@${MKDIR} ${METADIR}; \

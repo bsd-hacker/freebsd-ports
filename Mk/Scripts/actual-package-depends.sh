@@ -2,8 +2,8 @@
 # MAINTAINER: portmgr@FeeeBSD.org
 # $FreeBSD$
 
-if [ -z "${PKG_BIN}" -o -z "${SCRIPTSDIR}" ]; then
-	echo "PKG_BIN, SCRIPTSDIR required in environment." >&2
+if [ -z "${PKG_BIN}" ]; then
+	echo "PKG_BIN required in environment." >&2
 	exit 1
 fi
 
