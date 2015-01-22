@@ -19,4 +19,5 @@ for libdir in ${dirs} ; do
 	libfile=`realpath ${libdir}/${lib}`
 	[ `file -b -L --mime-type ${libfile}` = "application/x-sharedlib" ] || continue
 	echo $libfile
+	break
 done
