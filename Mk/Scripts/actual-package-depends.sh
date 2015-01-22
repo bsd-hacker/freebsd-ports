@@ -1,0 +1,29 @@
+#!/bin/sh
+# MAINTAINER: portmgr@FeeeBSD.org
+# $FreeBSD$
+
+if [ -z "${PKG_BIN}" -o -z "${SCRIPTSDIR}" ]; then
+	echo "PKG_BIN, SCRIPTSDIR required in environment." >&2
+	exit 1
+fi
+
+find_dep() {
+	pattern=$1
+	case ${pattern} in
+	*\>*|*\<*|*=*)
+		${PKG_BIN} info -Eg "${pattern}" 2>/dev/null
+		return
+		;;
+	/*)
+		searchfile=$pattern
+		;;
+	*)
+		searchfile=$(/usr/bin/which ${pattern} 2>/dev/null)
+		;;
+	esac
+	[ -n "${searchfile}" ] && ${PKG_BIN} which -q ${searchfile}
+}
+
+for lookup; do
+	${PKG_BIN} query "\"%n\": {origin: \"%o\", version: \"%v\"}" $(find_dep ${lookup}) || :
+done
