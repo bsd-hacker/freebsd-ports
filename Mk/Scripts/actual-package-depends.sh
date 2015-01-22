@@ -25,5 +25,5 @@ find_dep() {
 }
 
 for lookup; do
-	${PKG_BIN} query "\"%n\": {origin: \"%o\", version: \"%v\"}" $(find_dep ${lookup}) || :
+	${PKG_BIN} query "\"%n\": {origin: \"%o\", version: \"%v\"}" "$(find_dep ${lookup})" || :
 done
