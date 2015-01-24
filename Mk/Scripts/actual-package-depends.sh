@@ -21,7 +21,9 @@ find_dep() {
 		searchfile=$(/usr/bin/which ${pattern} 2>/dev/null)
 		;;
 	esac
-	[ -n "${searchfile}" ] && ${PKG_BIN} which -q `realpath ${searchfile}`
+	if [ -n "${searchfile}" ]; then
+		${PKG_BIN} which -q ${searchfile} || ${PKG_BIN} which -q `realpath ${searchfile}`
+	fi
 }
 
 for lookup; do
