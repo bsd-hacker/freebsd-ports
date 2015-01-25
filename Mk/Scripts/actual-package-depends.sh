@@ -22,7 +22,8 @@ find_dep() {
 		;;
 	esac
 	if [ -n "${searchfile}" ]; then
-		${PKG_BIN} which -q ${searchfile} || ${PKG_BIN} which -q `realpath ${searchfile}`
+		${PKG_BIN} which -q ${searchfile} || ${PKG_BIN} which -q "$(/bin/realpath ${searchfile} 2>/dev/null)" ||
+			echo "actual-package-depends: dependency on ${searchfile} not registered (normal if it belongs to base)" >&2
 	fi
 }
 
