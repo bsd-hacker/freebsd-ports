@@ -590,11 +590,13 @@
     SUBDIR += go-pretty
     SUBDIR += go-raw
     SUBDIR += go-runewidth
+    SUBDIR += go-slices
     SUBDIR += go-sql-driver
     SUBDIR += go-termbox
     SUBDIR += go-uuid
     SUBDIR += gob2
     SUBDIR += gobject-introspection
+    SUBDIR += godot
     SUBDIR += goffice
     SUBDIR += goffice010
     SUBDIR += google-gdata
@@ -2315,7 +2317,6 @@
     SUBDIR += p5-Log-Agent
     SUBDIR += p5-Log-Agent-Logger
     SUBDIR += p5-Log-Any
-    SUBDIR += p5-Log-Any-Adapter
     SUBDIR += p5-Log-Any-Adapter-Callback
     SUBDIR += p5-Log-Any-Adapter-Dispatch
     SUBDIR += p5-Log-Any-Adapter-Log4perl
@@ -3745,6 +3746,7 @@
     SUBDIR += py-doit
     SUBDIR += py-durus
     SUBDIR += py-dynrules
+    SUBDIR += py-efl
     SUBDIR += py-eggtestinfo
     SUBDIR += py-enum34
     SUBDIR += py-epsilon
@@ -3993,6 +3995,7 @@
     SUBDIR += py-setuptools34
     SUBDIR += py-setuptools_darcs
     SUBDIR += py-setuptools_hg
+    SUBDIR += py-sh
     SUBDIR += py-shapely
     SUBDIR += py-simplegeneric
     SUBDIR += py-simplejson
@@ -4262,6 +4265,7 @@
     SUBDIR += replay
     SUBDIR += rhtvision
     SUBDIR += rlog
+    SUBDIR += rlvm
     SUBDIR += rlwrap
     SUBDIR += roboctl
     SUBDIR += robodoc

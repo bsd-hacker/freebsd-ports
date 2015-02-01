@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	minerbold
-PORTVERSION=	git20150125
+PORTVERSION=	1.1
 CATEGORIES=	games
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -15,8 +15,7 @@ RUN_DEPENDS=	instead:${PORTSDIR}/games/instead
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	gl00my
-GH_TAGNAME=	${GH_COMMIT}
-GH_COMMIT=	49cbad1
+GH_COMMIT=	fad9735
 
 NO_BUILD=	yes
 NO_ARCH=	yes
@@ -25,7 +24,7 @@ DATADIR=	${PREFIX}/share/instead/games/${PORTNAME}
 
 PORTDATA=	*
 
-DESKTOP_ENTRIES="minerbold" \
+DESKTOP_ENTRIES="Miner Bold" \
 		"" \
 		"${DATADIR}/gfx/04.png" \
 		"${LOCALBASE}/bin/instead ${DATADIR}" \

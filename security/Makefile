@@ -177,6 +177,7 @@
     SUBDIR += hmap
     SUBDIR += honggfuzz
     SUBDIR += hotssh
+    SUBDIR += hpenc
     SUBDIR += hs-Crypto
     SUBDIR += hs-DRBG
     SUBDIR += hs-HsOpenSSL
@@ -519,6 +520,7 @@
     SUBDIR += p5-Crypt-Shark
     SUBDIR += p5-Crypt-Simple
     SUBDIR += p5-Crypt-SmbHash
+    SUBDIR += p5-Crypt-Sodium
     SUBDIR += p5-Crypt-Solitaire
     SUBDIR += p5-Crypt-TEA
     SUBDIR += p5-Crypt-T_e_a
