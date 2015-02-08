@@ -513,6 +513,7 @@
     SUBDIR += libpuzzle
     SUBDIR += libqrencode
     SUBDIR += librasterlite
+    SUBDIR += librasterlite2
     SUBDIR += libraw
     SUBDIR += libreatlas
     SUBDIR += librsvg2
@@ -1050,9 +1051,11 @@
     SUBDIR += yed
     SUBDIR += yukon
     SUBDIR += zathura
+    SUBDIR += zathura-cb
     SUBDIR += zathura-djvu
     SUBDIR += zathura-pdf-mupdf
     SUBDIR += zathura-pdf-poppler
+    SUBDIR += zathura-ps
     SUBDIR += zbar
     SUBDIR += zgv
     SUBDIR += zimg

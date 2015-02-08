@@ -649,6 +649,7 @@
     SUBDIR += hgsvn
     SUBDIR += hgview
     SUBDIR += highlighterkit
+    SUBDIR += hive
     SUBDIR += horde-content
     SUBDIR += horde-timeobjects
     SUBDIR += horde-whups
@@ -1155,6 +1156,7 @@
     SUBDIR += libsigcx
     SUBDIR += libsigrok
     SUBDIR += libsigrokdecode
+    SUBDIR += libsigscan
     SUBDIR += libsigsegv
     SUBDIR += libslang2
     SUBDIR += libsmdev
@@ -1355,7 +1357,6 @@
     SUBDIR += noweb
     SUBDIR += npth
     SUBDIR += nspr
-    SUBDIR += ntopng-zmq
     SUBDIR += nxt-python
     SUBDIR += obby
     SUBDIR += obfuscatejs
@@ -1399,6 +1400,8 @@
     SUBDIR += oniguruma
     SUBDIR += oniguruma4
     SUBDIR += oniguruma5
+    SUBDIR += onscripter
+    SUBDIR += onscripter-1byte
     SUBDIR += open-beagle
     SUBDIR += open-usp-tukubai
     SUBDIR += opencl
@@ -2267,6 +2270,7 @@
     SUBDIR += p5-Inline-Tcl
     SUBDIR += p5-InlineX-C2XS
     SUBDIR += p5-InlineX-CPP2XS
+    SUBDIR += p5-Input-Validator
     SUBDIR += p5-Ioctl
     SUBDIR += p5-Iodef-Pb-Simple
     SUBDIR += p5-Iterator
@@ -2275,6 +2279,7 @@
     SUBDIR += p5-Iterator-Simple
     SUBDIR += p5-Iterator-Util
     SUBDIR += p5-JIRA-Client
+    SUBDIR += p5-JIRA-REST
     SUBDIR += p5-JQuery
     SUBDIR += p5-JSON-Hyper
     SUBDIR += p5-JSON-Path
@@ -3825,6 +3830,7 @@
     SUBDIR += py-jellyfish
     SUBDIR += py-jira
     SUBDIR += py-jmespath
+    SUBDIR += py-joblib
     SUBDIR += py-jsmin
     SUBDIR += py-json-py
     SUBDIR += py-jsonlib
@@ -4262,6 +4268,7 @@
     SUBDIR += regexx
     SUBDIR += regexxer
     SUBDIR += remake
+    SUBDIR += renpy
     SUBDIR += replay
     SUBDIR += rhtvision
     SUBDIR += rlog
@@ -4743,6 +4750,7 @@
     SUBDIR += srecord
     SUBDIR += st
     SUBDIR += statcvs
+    SUBDIR += statik
     SUBDIR += statsvn
     SUBDIR += stfl
     SUBDIR += stlfilt

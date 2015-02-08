@@ -326,6 +326,7 @@
     SUBDIR += imgsizer
     SUBDIR += impresscms
     SUBDIR += interchange
+    SUBDIR += iojs
     SUBDIR += ismail
     SUBDIR += iwebcal
     SUBDIR += jawstats
@@ -1265,9 +1266,7 @@
     SUBDIR += p5-WWW-RobotRules-Parser
     SUBDIR += p5-WWW-Scraper-ISBN
     SUBDIR += p5-WWW-Scraper-ISBN-Amazon_Driver
-    SUBDIR += p5-WWW-Scraper-ISBN-Driver
     SUBDIR += p5-WWW-Scraper-ISBN-ORA_Driver
-    SUBDIR += p5-WWW-Scraper-ISBN-Record
     SUBDIR += p5-WWW-Scripter
     SUBDIR += p5-WWW-Scripter-Plugin-Ajax
     SUBDIR += p5-WWW-Scripter-Plugin-JavaScript

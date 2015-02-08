@@ -856,6 +856,7 @@
     SUBDIR += php56-sockets
     SUBDIR += php56-xmlrpc
     SUBDIR += phpldapadmin
+    SUBDIR += pimd
     SUBDIR += pimdd
     SUBDIR += pipsecd
     SUBDIR += pjsip
@@ -1255,6 +1256,7 @@
     SUBDIR += widentd
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
+    SUBDIR += wireshark-qt5
     SUBDIR += wizd
     SUBDIR += wlan2eth
     SUBDIR += wmlj
@@ -1284,6 +1286,7 @@
     SUBDIR += xprobe
     SUBDIR += xpvm
     SUBDIR += xrdesktop
+    SUBDIR += xrdesktop2
     SUBDIR += xrdp
     SUBDIR += xrdp-devel
     SUBDIR += yami4
