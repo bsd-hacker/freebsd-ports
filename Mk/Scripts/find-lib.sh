@@ -55,7 +55,7 @@ absolute_path() {
 
 for libdir in ${dirs} ; do
 	test -f ${libdir}/${lib} || continue
-	libfile=`absolute_path ${libdir}/${lib}`
+	libfile=`resolv_symlink ${libdir}/${lib}`
 	[ `file -b -L --mime-type ${libfile}` = "application/x-sharedlib" ] || continue
 	echo $libfile
 	break
