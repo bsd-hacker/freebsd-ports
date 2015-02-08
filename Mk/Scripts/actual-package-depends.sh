@@ -7,6 +7,45 @@ if [ -z "${PKG_BIN}" ]; then
 	exit 1
 fi
 
+resolv_symlink() {
+	local file tgt
+	file=${1}
+	if [ ! -L ${file} ] ; then
+		echo ${file}
+		return
+	fi
+
+	tgt=`readlink ${file}`
+	case $tgt in
+	/*)
+		echo $tgt
+		return
+		;;
+	esac
+
+	file=${file%/*}/${tgt}
+	absolute_path ${file}
+}
+
+absolute_path() {
+	local file myifs target
+	file=$1
+
+	myifs=${IFS}
+	IFS='/'
+	set -- ${file}
+	IFS=${myifs}
+	for el; do
+		case $el in
+		.) continue ;;
+		'') continue ;;
+		..) target=${target%/*} ;;
+		*) target="${target}/${el}" ;;
+		esac
+	done
+	echo ${target}
+}
+
 find_dep() {
 	pattern=$1
 	case ${pattern} in
@@ -22,7 +61,8 @@ find_dep() {
 		;;
 	esac
 	if [ -n "${searchfile}" ]; then
-		${PKG_BIN} which -q ${searchfile} || ${PKG_BIN} which -q "$(/bin/realpath ${searchfile} 2>/dev/null)" ||
+		echo $(resolv_symlink ${searchfile}) >&2
+		${PKG_BIN} which -q ${searchfile} || ${PKG_BIN} which -q "$(resolv_symlink ${searchfile} 2>/dev/null)" ||
 			echo "actual-package-depends: dependency on ${searchfile} not registered (normal if it belongs to base)" >&2
 	fi
 }
