@@ -1,15 +1,15 @@
 # Created by: Svyatoslav Lempert <svyatoslav.lempert@gmail dot com>
 # $FreeBSD$
 
-PORTNAME=		c6
-PORTVERSION=		6.6
-PORTREVISION=		1
-CATEGORIES=		emulators linux
+PORTNAME=	c6
+PORTVERSION=	6.6
+PORTREVISION=	3
+CATEGORIES=	emulators linux
 MASTER_SITES=	http://mirror.centos.org/centos/6/os/i386/Packages/ \
 		http://mirror.centos.org/centos/6/updates/i386/Packages/
-PKGNAMEPREFIX=		linux_base-
-DISTFILES=		${PRE_BIN_DISTFILES} ${BIN_DISTFILES} ${SRC_DISTFILES}
-EXTRACT_ONLY=		${BIN_DISTFILES}
+PKGNAMEPREFIX=	linux_base-
+DISTFILES=	${PRE_BIN_DISTFILES} ${BIN_DISTFILES} ${SRC_DISTFILES}
+EXTRACT_ONLY=	${BIN_DISTFILES}
 
 MAINTAINER=	emulation@FreeBSD.org
 COMMENT=	Base set of packages needed in Linux mode for i386/amd64 (Linux CentOS 6)
@@ -41,8 +41,8 @@ BIN_DISTFILES=	basesystem-10.0-4.el6.noarch.rpm \
 		gamin-0.1.10-9.el6.${LINUX_RPM_ARCH}.rpm \
 		gdbm-1.8.0-36.el6.${LINUX_RPM_ARCH}.rpm \
 		glib2-2.28.8-4.el6.${LINUX_RPM_ARCH}.rpm \
-		glibc-2.12-1.149.el6.${LINUX_RPM_ARCH}.rpm \
-		glibc-common-2.12-1.149.el6.${LINUX_RPM_ARCH}.rpm \
+		glibc-2.12-1.149.el6_6.5.${LINUX_RPM_ARCH}.rpm \
+		glibc-common-2.12-1.149.el6_6.5.${LINUX_RPM_ARCH}.rpm \
 		gmp-4.3.1-7.el6_2.2.${LINUX_RPM_ARCH}.rpm \
 		grep-2.6.3-6.el6.${LINUX_RPM_ARCH}.rpm \
 		info-4.13a-8.el6.${LINUX_RPM_ARCH}.rpm \
@@ -244,6 +244,10 @@ do-install:
 		| ${CPIO} -pm -R root:wheel ${STAGEDIR}${PREFIX}
 
 	@${LN} -sf /var/tmp ${STAGEDIR}${PREFIX}/usr/tmp
+	@${LN} -sf ../usr/bin/[ ${STAGEDIR}${PREFIX}/bin/[
+	@${LN} -sf ../usr/bin/expr ${STAGEDIR}${PREFIX}/bin/expr
+	@${LN} -sf ../usr/bin/test ${STAGEDIR}${PREFIX}/bin/test
+	@${LN} -sf ../usr/bin/uuidgen ${STAGEDIR}${PREFIX}/bin/uuidgen
 	@${CHMOD} 755 ${STAGEDIR}${PREFIX}/var/lock ${STAGEDIR}${PREFIX}/var/spool/mail
 #
 # Let some linux applications (e.g. print/acroread8) print with default settings

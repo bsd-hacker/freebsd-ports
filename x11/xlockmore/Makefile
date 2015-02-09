@@ -2,14 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	xlockmore
-PORTVERSION=	5.43
-PORTREVISION=	4
+PORTVERSION=	5.45
 CATEGORIES?=	x11
 MASTER_SITES=	http://www.tux.org/~bagleyd/xlock/${PORTNAME}-${PORTVERSION}/ \
 		ftp://ibiblio.org/pub/Linux/X11/screensavers/ \
 		LOCAL/ehaupt
 
-MAINTAINER?=	jgh@FreeBSD.org
+MAINTAINER=	jgh@FreeBSD.org
 COMMENT=	Like XLock session locker/screen saver, but just more
 
 USES=		tar:bzip2
@@ -22,9 +21,10 @@ USE_GNOME=	#
 USE_XORG=	x11 xaw ice
 
 LIB_DEPENDS+=	libfreetype.so:${PORTSDIR}/print/freetype2
+CONFIGURE_ENV+=	ac_freetype_includes="${LOCALBASE}/include/freetype2"
 
 OPTIONS_DEFINE=	MESAGL MB SYSLOG DISABLE_ALLOW_ROOT NICE_ONLY BLANK_ONLY \
-		KERBEROS4 BAD_PAM GTK2 TIME_BOMB CUSTOMIZATION MAGICK
+		KERBEROS4 BAD_PAM GTK2 TIME_BOMB CUSTOMIZATION MAGICK JP
 OPTIONS_SUB=	yes
 
 MESAGL_DESC=	Mesa 3D (for GL modes)
@@ -38,6 +38,7 @@ GTK2_DESC=	Build Gtk2 graphical shell
 XLOCK_GROUP_DESC=	Allow xlock group to logout
 TIME_BOMB_DESC=	Allow autologout
 CUSTOMIZATION_DESC=	Allow tune through resource file
+JP_DESC=	Japanese Language Support
 
 OPTIONS_RADIO=	ONE
 OPTIONS_RADIO_ONE=	PAM XLOCK_GROUP
@@ -94,7 +95,13 @@ CONFIGURE_ARGS+=	--enable-blank-only
 CONFIGURE_ARGS+=	--enable-use-mb
 .endif
 
-.if ${PORT_OPTIONS:MXLOCKMORE_LANG}
+.if ${PORT_OPTIONS:MJP}
+XLOCKMORE_LANG=	ja
+CATEGORIES+=	japanese
+PORT_OPTIONS+=	MB
+.endif
+
+.if defined(XLOCKMORE_LANG)
 CONFIGURE_ARGS+=	--with-lang=${XLOCKMORE_LANG}
 .endif
 

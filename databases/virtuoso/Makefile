@@ -2,13 +2,13 @@
 # $FreeBSD$
 
 PORTNAME=	virtuoso
-PORTVERSION=	6.1.6
-PORTREVISION=	6
+PORTVERSION=	7.1.0
+PORTREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	SF
 DISTNAME=	${PORTNAME}-opensource-${PORTVERSION}
 
-MAINTAINER=	michelle@sorbs.net
+MAINTAINER=	fjoe@FreeBSD.org
 COMMENT=	Universal SQL/Application Server
 
 LICENSE=	GPLv2
@@ -27,12 +27,12 @@ USE_OPENSSL=	yes
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--with-readline\
+		--without-internal-zlib\
 		--without-jdk2\
 		--without-jdk3\
 		--without-jdk4\
 		--disable-hslookup\
 		--disable-wbxml2\
-		--enable-bpel-vad\
 		--with-layout=freebsd\
 		--datadir="${PREFIX}"\
 		--localstatedir="${PREFIX}"
@@ -61,6 +61,7 @@ post-patch:
 
 post-install:
 	${FIND} ${STAGEDIR} -name "*.ini" -exec ${MV} {} {}.sample \; -print
+	${RMDIR} ${STAGEDIR}/${PREFIX}/virtuoso/doc/html
 
 check:
 	${SETENV} -u HOST ${MAKE_ENV} ${MAKE} -C ${WRKSRC} check
@@ -79,7 +80,7 @@ PLIST_SUB+=	WITH_IMAGEMAGICK="@comment "
 .if ${PORT_OPTIONS:MIODBC}
 CONFIGURE_ARGS+=--with-iodbc=${LOCALBASE}
 LIB_DEPENDS+=	libiodbc.so:${PORTSDIR}/databases/libiodbc
-IODBC_CPPFLAGS=
+IODBC_CPPFLAGS=	-I${LOCALBASE}/include/libiodbc
 PLIST_SUB+=	WITH_IODBC=""
 .else
 IODBC_CPPFLAGS=	-I../../libsrc/odbcsdk/include

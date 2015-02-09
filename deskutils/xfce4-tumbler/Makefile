@@ -3,7 +3,7 @@
 
 PORTNAME=	tumbler
 PORTVERSION=	0.1.30
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	deskutils xfce
 MASTER_SITES=	${MASTER_SITE_XFCE}
 MASTER_SITE_SUBDIR=	src/xfce/${PORTNAME}/${PORTVERSION:R}
@@ -86,8 +86,7 @@ USE_GNOME+=	gdkpixbuf2
 CONFIGURE_ARGS+=--enable-pixbuf-thumbnailer
 PLIST_SUB+=	PIXBUF=""
 .endif
-LIB_DEPENDS+=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
-		libexif.so:${PORTSDIR}/graphics/exif
+LIB_DEPENDS+=	libjpeg.so:${PORTSDIR}/graphics/jpeg
 CONFIGURE_ARGS+=--enable-jpeg-thumbnailer
 PLIST_SUB+=	JPEG=""
 .else

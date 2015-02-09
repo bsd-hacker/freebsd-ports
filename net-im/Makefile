@@ -96,7 +96,6 @@
     SUBDIR += pebrot
     SUBDIR += pecl-stomp
     SUBDIR += pidgin
-    SUBDIR += pidgin-audacious-remote
     SUBDIR += pidgin-birthday-reminder
     SUBDIR += pidgin-bs
     SUBDIR += pidgin-fetion
@@ -174,7 +173,6 @@
     SUBDIR += twitmail
     SUBDIR += uTox
     SUBDIR += vacuum-im
-    SUBDIR += venom
     SUBDIR += vqcc-gtk
     SUBDIR += yoono
     SUBDIR += zephyr

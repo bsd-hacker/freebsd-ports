@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	cups-filters
-PORTVERSION=	1.0.61
-PORTREVISION=	2
+PORTVERSION=	1.0.62
+PORTREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.openprinting.org/download/cups-filters/
 
@@ -19,6 +19,7 @@ LIB_DEPENDS=	libjpeg.so:${PORTSDIR}/graphics/jpeg \
 		libqpdf.so:${PORTSDIR}/print/qpdf \
 		libdbus-1.so:${PORTSDIR}/devel/dbus \
 		libcups.so:${PORTSDIR}/print/cups-client \
+		libcupsimage.so:${PORTSDIR}/print/cups-image \
 		libfreetype.so:${PORTSDIR}/print/freetype2 \
 		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig \
 		libpoppler.so:${PORTSDIR}/graphics/poppler

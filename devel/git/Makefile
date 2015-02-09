@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	git
-PORTVERSION=	2.2.2
-PORTREVISION=	1
+PORTVERSION=	2.3.0
 CATEGORIES=	devel
 MASTER_SITES=	KERNEL_ORG
 MASTER_SITE_SUBDIR=	software/scm/git
@@ -28,7 +27,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 GNU_CONFIGURE=	yes
 USES=		gmake shebangfix tar:xz
-CPPFLAGS+=	-I${LOCALBASE}/include
+CPPFLAGS+=	-isystem${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 MAKE_ENV+=	V=1
 USE_OPENSSL=	yes
@@ -156,7 +155,7 @@ IGNORE=	using GITWEB support requires PERL support
 PLIST_SUB+=	CONTRIB=""
 BUILD_DEPENDS+=	xmlto:${PORTSDIR}/textproc/xmlto \
 		asciidoc:${PORTSDIR}/textproc/asciidoc \
-		${LOCALBASE}/share/xml/docbook/4.5:${PORTSDIR}/textproc/docbook-xml
+		docbook-xml>0:${PORTSDIR}/textproc/docbook-xml
 .else
 PLIST_SUB+=	CONTRIB="@comment "
 .endif

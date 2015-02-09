@@ -1,12 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	simple-mtpfs
-PORTVERSION=	0.2.s20140709
-PORTREVISION=	2
+PORTVERSION=	0.2.s20150108
 CATEGORIES=	sysutils
 PKGNAMEPREFIX=	fusefs-
 
-MAINTAINER=	jbeich@vfemail.net
+MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Simple MTP fuse filesystem driver
 
 LICENSE=	GPLv2 # or any later version
@@ -16,7 +15,7 @@ LIB_DEPENDS=	libmtp.so:${PORTSDIR}/multimedia/libmtp
 USE_GITHUB=	yes
 GH_ACCOUNT=	phatina
 GH_TAGNAME=	${GH_COMMIT}
-GH_COMMIT=	74dfce6
+GH_COMMIT=	76be403
 
 USES=		autoreconf compiler:c++11-lib fuse pkgconfig
 GNU_CONFIGURE=	yes
@@ -43,7 +42,7 @@ SUB_FILES+=	special_${PORTNAME}
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-	${INSTALL_DATA} ${PORTDOCS:C|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	${INSTALL_MAN} ${PORTDOCS:C|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
 .if exists(/etc/autofs)
 	@${MKDIR} ${STAGEDIR}/etc/autofs
 	${INSTALL_SCRIPT} ${WRKDIR}/special_${PORTNAME} \

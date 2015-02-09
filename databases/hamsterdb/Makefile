@@ -17,18 +17,12 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-boost=${LOCALBASE}
 INSTALL_TARGET=	install-strip
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
-USES=		gmake libtool
+USES=		alias gmake libtool
 USE_LDCONFIG=	yes
 
 HAM_DOCS=	README INSTALL ChangeLog TODO AUTHORS CREDITS
 
 OPTIONS_DEFINE=	DOCS
-
-.include <bsd.port.pre.mk>
-
-.if ${OSVERSION} < 1000000
-BROKEN=	does not build on FreeBSD < 10
-.endif
 
 post-patch:
 	${REINPLACE_CMD} -e 's#-ldl##g' ${WRKSRC}/configure
@@ -41,4 +35,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}/
 .endfor
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>

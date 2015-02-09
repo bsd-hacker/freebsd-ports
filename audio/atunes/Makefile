@@ -3,7 +3,7 @@
 
 PORTNAME=	atunes
 PORTVERSION=	3.1.1
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio java
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}/aTunes%20${PORTVERSION}
 DISTNAME=	${PORTNAME}-${PORTVERSION}-bin
@@ -34,36 +34,17 @@ LAME_DESC=		Encoder: Enable lame MP3 encoder
 VORBIS_DESC=		Encoder: Enable vorbis OGG encoder
 FLAC_DESC=		Encoder: Enable FLAC encoder
 
-.include <bsd.port.options.mk>
-
-.if ${PORT_OPTIONS:MMPLAYER}
-RUN_DEPENDS+=	mplayer:${PORTSDIR}/multimedia/mplayer
-.endif
-
-.if ${PORT_OPTIONS:MXINE}
-LIB_DEPENDS+=	libxine.so:${PORTSDIR}/multimedia/libxine
-.endif
-
-.if ${PORT_OPTIONS:MCDDA2WAV}
-RUN_DEPENDS+=	cdda2wav:${PORTSDIR}/sysutils/cdrtools
-.endif
-
-.if ${PORT_OPTIONS:MLAME}
-RUN_DEPENDS+=	lame:${PORTSDIR}/audio/lame
-.endif
-
-.if ${PORT_OPTIONS:MVORBIS}
-RUN_DEPENDS+=	ogg123:${PORTSDIR}/audio/vorbis-tools
-.endif
-
-.if ${PORT_OPTIONS:MFLAC}
-RUN_DEPENDS+=	flac:${PORTSDIR}/audio/flac
-.endif
+MPLAYER_RUN_DEPENDS=	mplayer:${PORTSDIR}/multimedia/mplayer
+XINE_LIB_DEPENDS=	libxine.so:${PORTSDIR}/multimedia/libxine
+CDDA2WAV_RUN_DEPENDS=	cdda2wav:${PORTSDIR}/sysutils/cdrtools
+LAME_RUN_DEPENDS=	lame:${PORTSDIR}/audio/lame
+VORBIS_RUN_DEPENDS=	ogg123:${PORTSDIR}/audio/vorbis-tools
+FLAC_RUN_DEPENDS=	flac:${PORTSDIR}/audio/flac
 
 DESKTOP_ENTRIES="aTunes" \
 		"Audio player and manager" \
 		"${PREFIX}/share/pixmaps/atunes.png" \
-		"aTunes" \
+		"atunes" \
 		"Audio;AudioVideo;Java;" \
 		true
 

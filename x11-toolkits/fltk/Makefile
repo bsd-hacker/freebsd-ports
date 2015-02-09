@@ -2,49 +2,44 @@
 # $FreeBSD$
 
 PORTNAME=	fltk
-PORTVERSION=	1.3.2
-PORTREVISION=	2
+PORTVERSION=	1.3.3
+PORTREVISION=	1
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://fltk.org/pub/${PORTNAME}/${PORTVERSION}/
 DISTNAME=	${PORTNAME}-${PORTVERSION}-source
 
-MAINTAINER=	ports@FreeBSD.org
+MAINTAINER=	danfe@FreeBSD.org
 COMMENT=	Cross-platform C++ graphical user interface toolkit
 
 LICENSE=	LGPL20
 
-OPTIONS_DEFINE=	DOCS
-
 LIB_DEPENDS=	libpng.so:${PORTSDIR}/graphics/png \
 		libjpeg.so:${PORTSDIR}/graphics/jpeg
 
-USE_LDCONFIG=	yes
+USES=		pkgconfig
 USE_XORG=	xft
 USE_GL=		glu
-USES=		pkgconfig
+USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--enable-threads \
-		--enable-shared \
-		--enable-xft
-
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${WRKSRC}/src -L${LOCALBASE}/lib
+CONFIGURE_ARGS=	--enable-shared
 
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
 
-PORTDOCS=	*
+CPPFLAGS+=	-I${LOCALBASE}/include
+# -L../src is needed to be able to build new version with older one installed
+LDFLAGS+=	-L../src -L${LOCALBASE}/lib
 
-.include <bsd.port.options.mk>
+PORTEXAMPLES=	*
 
-post-patch:
+OPTIONS_DEFINE=	EXAMPLES
+
+post-patch: .SILENT
 	prefix="${PREFIX}" ; plength=$$(($${#prefix}+10)) ; \
 	${REINPLACE_CMD} -e "\|/etc/fltk|{s||${PREFIX}&|;s|10|$${plength}|;}" \
-	${WRKSRC}/src/Fl_Preferences.cxx
-
-.if ${PORT_OPTIONS:MDOCS}
-post-install:
-	cd ${WRKSRC}/documentation && ${MAKE} ${MAKE_ARGS} docinstall
-	cd ${WRKSRC}/test && ${MAKE} ${MAKE_ARGS} install
-.endif
+		${WRKSRC}/src/Fl_Preferences.cxx
+	${REINPLACE_CMD} -e 's,$$(docdir)/examples,${EXAMPLESDIR},' \
+		${WRKSRC}/test/Makefile
+	${REINPLACE_CMD} -E '/^INSTALL_(BIN|LIB)/s,-m,${STRIP} &, ; \
+		s,^\.SILENT,#&,' ${WRKSRC}/makeinclude.in
 
 .include <bsd.port.mk>

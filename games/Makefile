@@ -187,6 +187,7 @@
     SUBDIR += dcross
     SUBDIR += defendguin
     SUBDIR += diameter
+    SUBDIR += diaspora
     SUBDIR += digger-vgl
     SUBDIR += dmjava
     SUBDIR += dodgindiamond2
@@ -445,6 +446,7 @@
     SUBDIR += kapman
     SUBDIR += kardsgt
     SUBDIR += kartofel
+    SUBDIR += katawa-shoujo
     SUBDIR += katomic
     SUBDIR += kblackbox
     SUBDIR += kblocks
@@ -590,6 +592,7 @@
     SUBDIR += mindguard
     SUBDIR += minecraft-client
     SUBDIR += minecraft-server
+    SUBDIR += minerbold
     SUBDIR += minetest
     SUBDIR += minetest_game
     SUBDIR += mirrormagic
