@@ -1216,6 +1216,9 @@
     SUBDIR += py-MarkupSafe
     SUBDIR += py-Tempita
     SUBDIR += py-acora
+    SUBDIR += py-agate
+    SUBDIR += py-agate-dbf
+    SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
     SUBDIR += py-asv
     SUBDIR += py-awesome-slugify
@@ -1223,6 +1226,7 @@
     SUBDIR += py-chardet
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-creole
+    SUBDIR += py-dbf
     SUBDIR += py-dbfread
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docutils
