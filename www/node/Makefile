@@ -1,9 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	node
-PORTVERSION=	6.2.2
+PORTVERSION=	6.3.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://nodejs.org/dist/v${PORTVERSION}/
 
@@ -16,8 +15,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 OPTIONS_DEFINE=	BUNDLED_SSL DOCS NLS
 OPTIONS_SUB=	yes
 
-BUNDLED_SSL_DESC=	Use node.js's bundled OpenSSL implementation
-BUNDLED_SSL_USE_OFF=	OPENSSL=yes
+BUNDLED_SSL_DESC=		Use node.js's bundled OpenSSL implementation
+BUNDLED_SSL_USES_OFF=		ssl:openssl
+BUNDLED_SSL_CONFIGURE_OFF+=	--shared-openssl
 
 NLS_CONFIGURE_ON=	--with-intl=system-icu
 NLS_LIB_DEPENDS=	libicui18n.so:devel/icu
@@ -51,8 +51,6 @@ LIB_DEPENDS+=	libcares.so:dns/c-ares\
 WITH_OPENSSL_PORT=	yes
 .endif
 
-CONFIGURE_ARGS+=	--shared-openssl
-
 .endif
 
 .include <bsd.port.pre.mk>
@@ -84,16 +82,14 @@ USE_GCC=	yes
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|' \
 		${WRKSRC}/deps/v8/tools/gyp/v8.gyp
+	# So many different ways to run python. Fix them all.
 	@${REINPLACE_CMD} -e 's|/usr/bin/env python|${PYTHON_CMD}|' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e "s|python -c|${PYTHON_CMD} -c|" \
-		${WRKSRC}/deps/v8/build/toolchain.gypi
-	@${REINPLACE_CMD} -e "s|'python',|'${PYTHON_CMD}',|" \
-		${WRKSRC}/tools/icu/icu-generic.gyp \
-		${WRKSRC}/deps/v8/build/shim_headers.gypi \
-		${WRKSRC}/deps/v8/tools/gyp/v8.gyp \
-		${WRKSRC}/deps/v8/src/d8.gyp \
-		${WRKSRC}/node.gyp
+	@${FIND} ${WRKSRC} -type f -name '*.gyp*' -print0 \
+		| ${XARGS} -0 ${REINPLACE_CMD} \
+			-e "s|'python'|'${PYTHON_CMD}'|" \
+			-e 's|<!(python |<!(${PYTHON_CMD} |' \
+			-e 's|\&\& python |\&\& ${PYTHON_CMD} |'
 
 post-configure:
 	# Post-process Makefile and *.mk files created by node-gyp and remove
