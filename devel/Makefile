@@ -714,6 +714,7 @@
     SUBDIR += gnustep-make
     SUBDIR += go-bindata
     SUBDIR += go-btree
+    SUBDIR += go-cobra
     SUBDIR += go-codec
     SUBDIR += go-faker
     SUBDIR += go-flags
@@ -722,9 +723,11 @@
     SUBDIR += go-goregen
     SUBDIR += go-hashicorp-logutils
     SUBDIR += go-json-rest
+    SUBDIR += go-logrus
     SUBDIR += go-metrics
     SUBDIR += go-pflag
     SUBDIR += go-pretty
+    SUBDIR += go-protobuf
     SUBDIR += go-raw
     SUBDIR += go-runewidth
     SUBDIR += go-slices
