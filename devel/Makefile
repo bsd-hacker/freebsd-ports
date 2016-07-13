@@ -4006,6 +4006,7 @@
     SUBDIR += py-clint
     SUBDIR += py-clonedigger
     SUBDIR += py-cloudpickle
+    SUBDIR += py-cluster
     SUBDIR += py-cmdln
     SUBDIR += py-codecov
     SUBDIR += py-codegen
@@ -4263,6 +4264,7 @@
     SUBDIR += py-pex
     SUBDIR += py-phabricator
     SUBDIR += py-phonenumbers
+    SUBDIR += py-phply
     SUBDIR += py-phpserialize
     SUBDIR += py-pika
     SUBDIR += py-pinocchio
@@ -4444,6 +4446,7 @@
     SUBDIR += py-statsd
     SUBDIR += py-stdnum
     SUBDIR += py-stevedore
+    SUBDIR += py-stopit
     SUBDIR += py-structlog
     SUBDIR += py-stsci.distutils
     SUBDIR += py-subversion
@@ -4455,6 +4458,7 @@
     SUBDIR += py-tabulate
     SUBDIR += py-tapi
     SUBDIR += py-tarantool-queue
+    SUBDIR += py-tblib
     SUBDIR += py-tconfpy
     SUBDIR += py-tempora
     SUBDIR += py-tempstorage
