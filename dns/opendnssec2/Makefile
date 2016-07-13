@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	opendnssec
-PORTVERSION=	1.4.10
+PORTVERSION=	2.0.0
 CATEGORIES=	dns
 MASTER_SITES=	http://dist.opendnssec.org/source/
+PKGNAMESUFFIX=	2
 
 MAINTAINER=	jaap@NLnetLabs.nl
 COMMENT=	Tool suite for maintaining DNSSEC
@@ -18,47 +19,46 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--localstatedir="${PREFIX}/var"
 USE_RC_SUBR=	opendnssec
 USE_GNOME=	libxml2
-USES=		perl5 ssl
+USES=		perl5
+USES=		ssl
 USE_LDCONFIG=	yes
 
-CONFLICTS=	opendnssec-1.[0-3]* opendnssec2-[0-9]*
+SUB_FILES+=	pkg-message
+
+CONFLICTS=	opendnssec-1.[0-4]*
 
 USERS=		opendnssec
 GROUPS=		opendnssec
 
-PORTDOCS=	KNOWN_ISSUES MIGRATION NEWS README.md
+PORTDOCS=	MIGRATION NEWS README.md
+MIGRATE=	README.md find_problematic_zones.sql \
+		convert_mysql mysql_convert.sql \
+		convert_sqlite sqlite_convert.sql
 
 OPTIONS_DEFINE=		SOFTHSM DOCS
 OPTIONS_SUB=		yes
 
 OPTIONS_SINGLE=		DB
-OPTIONS_SINGLE_DB=	MYSQL SQLITE
-OPTIONS_DEFAULT=	MYSQL
+OPTIONS_SINGLE_DB=	SQLITE MYSQL
+
+OPTIONS_DEFAULT=	DOCS SQLITE
 
 SOFTHSM_DESC=		SoftHSM cryptographic store for PKCS \#11 interface
 
 MYSQL_DESC=		Use MYSQL backend
 SQLITE_DESC=		Use SQLite backend
 
-SQLITE_USE=	yes
-
 .include <bsd.port.options.mk>
 
 .if ${PORT_OPTIONS:MMYSQL}
-CONFIGURE_ARGS+=	--with-database-backend=mysql
+CONFIGURE_ARGS+=	--with-enforcer-database=mysql
 USES+=		mysql
-SCRIPTDATA=	migrate_adapters_1.mysql migrate_keyshare_mysql.pl \
-		migrate_zone_delete.mysql migrate_id_mysql.pl \
-		migrate_to_ng_mysql.pl migrate_1_4_8.mysql
 .endif
 
 .if ${PORT_OPTIONS:MSQLITE}
-CONFIGURE_ARGS+=	--with-sqlite3=${LOCALBASE}
-CONFIGURE_ARGS+=	--with-database-backend=sqlite3
+USES=		sqlite
+CONFIGURE_ARGS+=	--with-enforcer-database=sqlite3
 BUILD_DEPENDS+=	sqlite3>=3.3.9:databases/sqlite3
-SCRIPTDATA=	database_create.sqlite3 migrate_keyshare_sqlite3.pl \
-		migrate_adapters_1.sqlite3 migrate_to_ng_sqlite.pl \
-		migrate_1_4_8.sqlite3
 .endif
 
 .if ${PORT_OPTIONS:MSOFTHSM}
@@ -66,21 +66,19 @@ CONFIGURE_ARGS+=	--with-pkcs11-softhsm=${LOCALBASE}/lib/softhsm/libsofthsm.so
 RUN_DEPENDS+=	softhsm>=1.2.0:security/softhsm
 .endif
 
-SCRIPTDATA+=	convert_database.pl
-
-PKGMESSAGE=	${WRKSRC}/MIGRATION
-
 pre-install:
 .if ${PORT_OPTIONS:MMYSQL}
-	@${REINPLACE_CMD} -e '/REQUIRE:/ s|$$| mysql|' ${WRKDIR}/opendnssec
+	${REINPLACE_CMD} -e '/REQUIRE:/ s|$$| mysql|' ${WRKDIR}/opendnssec
 .endif
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}
-		@${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S|^|${WRKSRC}/|} ${STAGEDIR}${DOCSDIR}
+	${MKDIR} ${STAGEDIR}${DOCSDIR}/1.4-2.0_db_convert
+	${INSTALL_DATA} \
+		${MIGRATE:S|^|${WRKSRC}/enforcer/utils/1.4-2.0_db_convert/|} \
+		${STAGEDIR}${DOCSDIR}/1.4-2.0_db_convert
 .endif
-	${INSTALL_DATA} ${SCRIPTDATA:S|^|${WRKSRC}/enforcer/utils/|} ${STAGEDIR}${DATADIR}
-#	${CHOWN} -R ${USERS}:${GROUPS} ${PREFIX}/var/opendnssec
 
 .include <bsd.port.mk>
