@@ -1,20 +1,19 @@
 # $FreeBSD$
 
-PORTNAME=	phply
-PORTVERSION=	0.9.1
-PORTREVISION=	1
-CATEGORIES=	devel python
+PORTNAME=	halberd
+PORTVERSION=	0.2.4
+CATEGORIES=	security www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@bsd.com.br
-COMMENT=	PHP lexer and parser in Python
+COMMENT=	HTTP load balancer detector written in Python
 
-LICENSE=	BSD3CLAUSE
+LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 NO_ARCH=	yes
-USES=		python:-2.7
+USES=		python
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>

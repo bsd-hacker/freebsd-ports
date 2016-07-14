@@ -846,6 +846,7 @@
     SUBDIR += py-gnupg
     SUBDIR += py-gnutls
     SUBDIR += py-gpsoauth
+    SUBDIR += py-halberd
     SUBDIR += py-hkdf
     SUBDIR += py-htpasswd
     SUBDIR += py-itsdangerous
@@ -912,6 +913,7 @@
     SUBDIR += py-twistedConch
     SUBDIR += py-twofish
     SUBDIR += py-volatility
+    SUBDIR += py-vulndb
     SUBDIR += py-xmlsec
     SUBDIR += py-yara
     SUBDIR += py-yara-editor

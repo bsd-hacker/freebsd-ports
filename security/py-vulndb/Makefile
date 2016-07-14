@@ -1,20 +1,21 @@
 # $FreeBSD$
 
-PORTNAME=	phply
-PORTVERSION=	0.9.1
-PORTREVISION=	1
-CATEGORIES=	devel python
+PORTNAME=	vulndb
+PORTVERSION=	0.0.19
+CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	dbaio@bsd.com.br
-COMMENT=	PHP lexer and parser in Python
+COMMENT=	Provides access to the vulndb information in Python
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools-git>=1.1:devel/py-setuptools-git
+
 NO_ARCH=	yes
-USES=		python:-2.7
+USES=		python
 USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.mk>
