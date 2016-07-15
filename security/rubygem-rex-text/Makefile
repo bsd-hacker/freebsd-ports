@@ -1,12 +1,12 @@
 # $FreeBSD$
 
-PORTNAME=	metasploit-payloads
-PORTVERSION=	1.1.12
+PORTNAME=	rex-text
+PORTVERSION=	0.1.1
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
-COMMENT=	Compiled binaries for Metasploit's Meterpreter
+COMMENT=	Ruby Exploitation(Rex) methods for text manipulation and generation
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
