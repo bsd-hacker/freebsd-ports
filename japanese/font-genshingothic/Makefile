@@ -1,27 +1,26 @@
 # $FreeBSD$
 
-PORTNAME=	nasu
-PORTVERSION=	20141215
-PORTREVISION=	1
+PORTNAME=	genshingothic
+PORTVERSION=	20150607
+#PORTREVISION=	0
 CATEGORIES=	japanese x11-fonts
 MASTER_SITES=	SOURCEFORGE_JP
-MASTER_SITE_SUBDIR=users/7/7587
+MASTER_SITE_SUBDIR=users/8/8634
 PKGNAMEPREFIX=	ja-font-
-DISTNAME=	NasuFont-${PORTVERSION}
 
 MAINTAINER=	ume@FreeBSD.org
-COMMENT=	Nasu Japanese TrueType fonts
+COMMENT=	GenShinGothic Japanese TrueType fonts
 
-LICENSE=	APACHE20
+LICENSE=	OFL11
 
-USES=		fonts:fc zip
-FONTNAME=	nasu
+USES=		7z fonts:fc
+FONTNAME=	genshingothic
 NO_ARCH=	yes
 NO_BUILD=	yes
 PKGINSTALL=	${WRKDIR}/pkg-install
 PKGDEINSTALL=	${WRKDIR}/pkg-install
 SUB_FILES=	pkg-install
-WRKSRC=		${WRKDIR}/${DISTNAME:C/-//}
+NO_WRKSUBDIR=	yes
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
@@ -42,9 +41,6 @@ do-install:
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DOCSDIR} \
-		"! ( -name Nasu-Bold-20141215.ttf \
-		-o -name Nasu-Regular-20141215.ttf \
-		-o -name NasuM-Bold-20141215.ttf \
-		-o -name NasuM-Regular-20141215.ttf )"
+		"! -name *\.ttf"
 
 .include <bsd.port.mk>
