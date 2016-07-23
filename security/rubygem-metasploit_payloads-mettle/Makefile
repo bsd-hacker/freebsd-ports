@@ -1,15 +1,14 @@
 # $FreeBSD$
 
-PORTNAME=	metasploit-payloads
-PORTVERSION=	1.1.13
+PORTNAME=	metasploit_payloads-mettle
+PORTVERSION=	0.0.5
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	antoine@FreeBSD.org
-COMMENT=	Compiled binaries for Metasploit's Meterpreter
+COMMENT=	Compiled binaries for Metasploit's next-gen Meterpreter
 
 LICENSE=	BSD3CLAUSE
-LICENSE_FILE=	${WRKSRC}/LICENSE
 
 NO_ARCH=	yes
 
