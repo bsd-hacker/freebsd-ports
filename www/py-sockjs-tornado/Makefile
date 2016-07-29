@@ -1,19 +1,18 @@
 # $FreeBSD$
 
-PORTNAME=	django-bitfield
-PORTVERSION=	1.8.0
+PORTNAME=	sockjs-tornado
+PORTVERSION=	1.0.3
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	rm@FreeBSD.org
-COMMENT=	BitField in Django
+COMMENT=	SockJS python server implementation on top of Tornado framework
 
-LICENSE=	APACHE20
+LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django18>0:www/py-django18 \
-		${PYTHON_PKGNAMEPREFIX}six>0:devel/py-six
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tornado>0:www/py-tornado
 
 NO_ARCH=	yes
 USES=		python:2.7+
