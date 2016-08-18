@@ -1103,6 +1103,7 @@
     SUBDIR += tuptime
     SUBDIR += tw_cli
     SUBDIR += tzdialog
+    SUBDIR += u-boot-a13-olinuxino
     SUBDIR += u-boot-bananapi
     SUBDIR += u-boot-bananapim2
     SUBDIR += u-boot-beaglebone
@@ -1111,6 +1112,7 @@
     SUBDIR += u-boot-cubox-hummingboard
     SUBDIR += u-boot-duovero
     SUBDIR += u-boot-olimex-a20-som-evb
+    SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-orangepi-one
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pine64
