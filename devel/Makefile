@@ -455,6 +455,7 @@
     SUBDIR += elixir-hex
     SUBDIR += elixir-inflex
     SUBDIR += elixir-lager_logger
+    SUBDIR += elixir-math
     SUBDIR += elixir-msgpax
     SUBDIR += elixir-nadia
     SUBDIR += elixir-nimble_csv
@@ -463,7 +464,9 @@
     SUBDIR += elixir-poison
     SUBDIR += elixir-quantum
     SUBDIR += elixir-red_black_tree
+    SUBDIR += elixir-simple_bayes
     SUBDIR += elixir-sorted_set
+    SUBDIR += elixir-stemmer
     SUBDIR += elixir-swarm
     SUBDIR += elixir-timex
     SUBDIR += elixir-tirexs
