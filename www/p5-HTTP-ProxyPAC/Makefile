@@ -10,6 +10,9 @@ PKGNAMEPREFIX=	p5-
 MAINTAINER=	ehaupt@FreeBSD.org
 COMMENT=	Use a proxy auto config file to get proxy info
 
+LICENSE=	ART10 GPLv1
+LICENSE_COMB=	dual
+
 BUILD_DEPENDS=	p5-JE>0:www/p5-JE \
 		p5-URI>=0:net/p5-URI \
 		p5-libwww>=0:www/p5-libwww
