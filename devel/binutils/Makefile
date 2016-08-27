@@ -3,6 +3,7 @@
 
 PORTNAME=	binutils
 PORTVERSION=	2.27
+PORTREVISION=	1
 PORTEPOCH?=	1
 CATEGORIES?=	devel
 MASTER_SITES=	SOURCEWARE/binutils/releases
@@ -37,6 +38,14 @@ INFO_PATH=	${PKGNAMEPREFIX:S/-$//}/info
 CONFIGURE_ARGS+=	--disable-shared \
 			--target=${BUTARGET}
 .else
+BUREMOVE=	coffdump \
+		dlltool \
+		dllwrap \
+		nlmconv \
+		srconv \
+		sysdump \
+		windmc \
+		windres
 CFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 CONFIGURE_ARGS+=	--with-system-zlib \
@@ -100,7 +109,6 @@ post-install:
 .endfor
 .if defined(BUREMOVE) && ${BUREMOVE:Mld}
 	@${RM} -rf ${STAGEDIR}${PREFIX}/${BUTARGET}/lib/ldscripts
-	@${FIND} ${STAGEDIR}${PREFIX}/${BUTARGET}/lib -empty -delete
 .endif
 
 .include <bsd.port.post.mk>
