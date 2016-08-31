@@ -3,7 +3,7 @@
 
 PORTNAME=	binutils
 PORTVERSION=	2.27
-PORTREVISION=	1
+PORTREVISION=	2
 PORTEPOCH?=	1
 CATEGORIES?=	devel
 MASTER_SITES=	SOURCEWARE/binutils/releases
@@ -75,7 +75,7 @@ NLS_CONFIGURE_ENABLE=	nls
 .include <bsd.port.pre.mk>
 
 # Actual earliest version may differ slightly
-.if ${ARCH} != ia64 && ${ARCH} != i386 && ${ARCH} != mips && ${ARCH} != mips64 && !defined(PKGNAMEPREFIX) && (${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 34 || ${COMPILER_TYPE} == gcc)
+.if ${ARCH} != powerpc && ${ARCH} != powerpc64 && ${ARCH} != ia64 && ${ARCH} != i386 && ${ARCH} != mips && ${ARCH} != mips64 && !defined(PKGNAMEPREFIX) && (${COMPILER_TYPE} == clang && ${COMPILER_VERSION} >= 34 || ${COMPILER_TYPE} == gcc)
 CONFIGURE_ARGS+=	--enable-gold --enable-plugins
 PLIST_SUB+=	GOLD=""
 .else
