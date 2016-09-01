@@ -3,7 +3,7 @@
 
 PORTNAME=	timediff
 PORTVERSION=	0.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	misc
 
 MAINTAINER=	naito.yuichiro@gmail.com
@@ -19,6 +19,10 @@ PLIST_FILES=	sbin/timediff
 
 NO_ARCH=	yes
 NO_BUILD=	yes
+
+do-patch:
+	${REINPLACE_CMD} -e 's|/usr/local|${LOCALBASE}|g' \
+		${WRKSRC}/timediff
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/timediff \
