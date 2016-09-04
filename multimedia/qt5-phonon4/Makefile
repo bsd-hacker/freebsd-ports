@@ -3,9 +3,9 @@
 PORTNAME=	phonon
 PORTVERSION=	4.8.3
 CATEGORIES=	multimedia
+MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 PKGNAMEPREFIX=	qt5-
 PKGNAMESUFFIX=	4
-MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
 DIST_SUBDIR=	KDE
 
 MAINTAINER=	kde@FreeBSD.org
@@ -13,7 +13,7 @@ COMMENT=	Phonon 4 transitional library for Qt 5
 
 LICENSE=	LGPL21
 
-USES=		cmake tar:xz
+USES=		cmake pathfix tar:xz
 USE_QT5=	core dbus declarative gui opengl widgets \
 		buildtools_build qmake_build
 CMAKE_ARGS=	-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT:BOOL=TRUE \
