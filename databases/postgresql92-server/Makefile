@@ -6,7 +6,7 @@ DISTVERSION?=	9.2.18
 PORTREVISION?=	0
 CATEGORIES?=	databases
 MASTER_SITES=	PGSQL/source/v${DISTVERSION}
-PKGNAMESUFFIX?=	${DISTVERSION:R:S/.//}${COMPONENT}
+PKGNAMESUFFIX?=	${PORTVERSION:R:S/.//}${COMPONENT}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 COMMENT?=	The most advanced open-source database available anywhere
@@ -89,7 +89,7 @@ ICU_DESC=	Use ICU for unicode collation
 # (requires dump/restore if modified.)
 OPTIONS_DEFINE+=	INTDATE
 INTDATE_DESC=	Builds with 64-bit date/time type
-OPTIONS_DEFAULT=	XML TZDATA INTDATE
+OPTIONS_DEFAULT+=	XML TZDATA INTDATE
 .endif
 
 .if !defined(SLAVE_ONLY)
