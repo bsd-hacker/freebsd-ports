@@ -2,8 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	cloud_sptheme
-PORTVERSION=	1.6
-PORTREVISION=	1
+PORTVERSION=	1.7.1
 CATEGORIES=	textproc python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,10 +13,8 @@ COMMENT=	Sphinx theme
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=0:textproc/py-sphinx
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sphinx>=1.3:textproc/py-sphinx
 RUN_DEPENDS:=	${BUILD_DEPENDS}
-
-BROKEN=		does not build
 
 USES=		python
 USE_PYTHON=	distutils autoplist
