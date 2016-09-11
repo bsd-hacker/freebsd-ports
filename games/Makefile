@@ -217,6 +217,7 @@
     SUBDIR += dungeon
     SUBDIR += dungeoncrawl
     SUBDIR += dustrac
+    SUBDIR += easyrpg-player
     SUBDIR += eboard
     SUBDIR += edge
     SUBDIR += editss
@@ -512,6 +513,7 @@
     SUBDIR += libggz
     SUBDIR += libkdegames
     SUBDIR += libkmahjongg
+    SUBDIR += liblcf
     SUBDIR += libmaitretarot
     SUBDIR += libmt_client
     SUBDIR += libretro-cores
