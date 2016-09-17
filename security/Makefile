@@ -1024,6 +1024,8 @@
     SUBDIR += rubygem-rex-random_identifier
     SUBDIR += rubygem-rex-registry
     SUBDIR += rubygem-rex-rop_builder
+    SUBDIR += rubygem-rex-socket
+    SUBDIR += rubygem-rex-sslscan
     SUBDIR += rubygem-rex-struct2
     SUBDIR += rubygem-rex-text
     SUBDIR += rubygem-rex-zip
