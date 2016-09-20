@@ -4356,6 +4356,7 @@
     SUBDIR += py-pykde4
     SUBDIR += py-pykdeuic4
     SUBDIR += py-pyke
+    SUBDIR += py-pylru-cache
     SUBDIR += py-pymarc
     SUBDIR += py-pympler
     SUBDIR += py-pymtbl
@@ -4676,6 +4677,7 @@
     SUBDIR += py3-libpeas
     SUBDIR += py3-nose
     SUBDIR += py3-pyicu
+    SUBDIR += py3-pylru-cache
     SUBDIR += py3-python-magic
     SUBDIR += py3-pytz
     SUBDIR += py3-vcversioner
