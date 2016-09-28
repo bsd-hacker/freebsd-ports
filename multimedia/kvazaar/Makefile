@@ -7,7 +7,7 @@ PORTREVISION?=	0
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	H.265/HEVC encoder implementation written in C
+COMMENT=	H.265/HEVC encoder implemented in C
 
 LICENSE=	LGPL21+
 
@@ -19,7 +19,7 @@ GH_SUBDIR=	greatest:greatest
 
 CONFLICTS_INSTALL?=	${PORTNAME}-devel
 
-USES+=		autoreconf compiler:c11 libtool pathfix
+USES=		autoreconf compiler:c11 libtool pathfix
 PATHFIX_MAKEFILEIN=	Makefile.am
 GNU_CONFIGURE=	yes
 TEST_TARGET=	check
