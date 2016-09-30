@@ -54,6 +54,7 @@
     SUBDIR += R-cran-mvtnorm
     SUBDIR += R-cran-nloptr
     SUBDIR += R-cran-nnls
+    SUBDIR += R-cran-nortest
     SUBDIR += R-cran-outliers
     SUBDIR += R-cran-pbkrtest
     SUBDIR += R-cran-psych
@@ -66,6 +67,7 @@
     SUBDIR += R-cran-sspir
     SUBDIR += R-cran-stabledist
     SUBDIR += R-cran-survey
+    SUBDIR += R-cran-truncnorm
     SUBDIR += R-cran-xts
     SUBDIR += R-cran-zoo
     SUBDIR += aamath
