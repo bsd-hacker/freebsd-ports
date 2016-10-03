@@ -1,7 +1,7 @@
 # Created by: Martin Matuska <mm@FreeBSD.org>
 # $FreeBSD$
 
-PORTREVISION=	3
+PORTREVISION=	0
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -9,7 +9,7 @@ COMMENT=	OpenCV Python library
 
 OCV_SLAVE=	python
 OCV_PYTHON=	yes
-MASTERDIR=	${.CURDIR:H}/opencv
+MASTERDIR=	${.CURDIR:H}/opencv2
 PLIST=		${.CURDIR}/pkg-plist
 
 .include "${MASTERDIR}/Makefile"
