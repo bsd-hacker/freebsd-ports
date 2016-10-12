@@ -4053,10 +4053,12 @@
     SUBDIR += py-click
     SUBDIR += py-click-log
     SUBDIR += py-click-threading
+    SUBDIR += py-cliff
     SUBDIR += py-clint
     SUBDIR += py-clonedigger
     SUBDIR += py-cloudpickle
     SUBDIR += py-cluster
+    SUBDIR += py-cmd2
     SUBDIR += py-cmdln
     SUBDIR += py-codecov
     SUBDIR += py-codegen
