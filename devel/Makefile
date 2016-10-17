@@ -4134,6 +4134,7 @@
     SUBDIR += py-fabric
     SUBDIR += py-fake-factory
     SUBDIR += py-fam
+    SUBDIR += py-fasteners
     SUBDIR += py-fastimport
     SUBDIR += py-filemagic
     SUBDIR += py-fileutils
@@ -4404,6 +4405,7 @@
     SUBDIR += py-pytest-xdist
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-distutils-extra
+    SUBDIR += py-python-editor
     SUBDIR += py-python-gist
     SUBDIR += py-python-jenkins
     SUBDIR += py-python-magic
