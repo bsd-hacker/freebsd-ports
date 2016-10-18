@@ -4039,6 +4039,7 @@
     SUBDIR += py-bluelet
     SUBDIR += py-boto
     SUBDIR += py-botocore
+    SUBDIR += py-cachetools
     SUBDIR += py-calendar
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
@@ -4315,6 +4316,7 @@
     SUBDIR += py-os-client-config
     SUBDIR += py-osc-lib
     SUBDIR += py-oslo.config
+    SUBDIR += py-oslo.context
     SUBDIR += py-oslo.i18n
     SUBDIR += py-oslo.serialization
     SUBDIR += py-oslo.utils
@@ -4335,6 +4337,7 @@
     SUBDIR += py-phply
     SUBDIR += py-phpserialize
     SUBDIR += py-pika
+    SUBDIR += py-pika-pool
     SUBDIR += py-pinocchio
     SUBDIR += py-pip
     SUBDIR += py-pkgconfig
