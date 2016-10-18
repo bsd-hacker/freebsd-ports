@@ -1,19 +1,16 @@
 # Created by: Kyle Evans <bsdports@kyle-evans.net>
 # $FreeBSD$
 
-PORTNAME=	Flask-Principal
-PORTVERSION=	0.4.0
-CATEGORIES=	www python
+PORTNAME=	chainmap
+PORTVERSION=	1.0.2
+CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	bsdports@kyle-evans.net
-COMMENT=	Identity management for flask
+COMMENT=	Backport/clone of chainmap for py26, py32, and pypy3
 
-LICENSE=	MIT
-
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}Flask>=0:www/py-flask \
-		${PYTHON_PKGNAMEPREFIX}blinker>=0:devel/py-blinker
+LICENSE=	PSFL
 
 USES=		python
 USE_PYTHON=	autoplist distutils
