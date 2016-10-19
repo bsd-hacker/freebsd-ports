@@ -4330,7 +4330,11 @@
     SUBDIR += py-osc-lib
     SUBDIR += py-oslo.config
     SUBDIR += py-oslo.context
+    SUBDIR += py-oslo.db
     SUBDIR += py-oslo.i18n
+    SUBDIR += py-oslo.log
+    SUBDIR += py-oslo.middleware
+    SUBDIR += py-oslo.policy
     SUBDIR += py-oslo.serialization
     SUBDIR += py-oslo.utils
     SUBDIR += py-palm
@@ -4376,6 +4380,7 @@
     SUBDIR += py-py
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
+    SUBDIR += py-pycadf
     SUBDIR += py-pycalendar
     SUBDIR += py-pycallgraph
     SUBDIR += py-pycerberus
