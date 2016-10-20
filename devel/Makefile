@@ -4252,6 +4252,7 @@
     SUBDIR += py-kayako
     SUBDIR += py-kazoo
     SUBDIR += py-keystoneauth1
+    SUBDIR += py-keystonemiddleware
     SUBDIR += py-kid
     SUBDIR += py-kitchen
     SUBDIR += py-kjbuckets
@@ -4329,16 +4330,20 @@
     SUBDIR += py-ordereddict
     SUBDIR += py-os-client-config
     SUBDIR += py-osc-lib
+    SUBDIR += py-oslo.cache
     SUBDIR += py-oslo.concurrency
     SUBDIR += py-oslo.config
     SUBDIR += py-oslo.context
     SUBDIR += py-oslo.db
     SUBDIR += py-oslo.i18n
     SUBDIR += py-oslo.log
+    SUBDIR += py-oslo.messaging
     SUBDIR += py-oslo.middleware
     SUBDIR += py-oslo.policy
     SUBDIR += py-oslo.serialization
+    SUBDIR += py-oslo.service
     SUBDIR += py-oslo.utils
+    SUBDIR += py-osprofiler
     SUBDIR += py-palm
     SUBDIR += py-parsedatetime
     SUBDIR += py-path.py
@@ -4621,6 +4626,7 @@
     SUBDIR += py-virtualenv
     SUBDIR += py-virtualenv-clone
     SUBDIR += py-virtualenvwrapper
+    SUBDIR += py-voluptuous
     SUBDIR += py-warlock
     SUBDIR += py-watchdog
     SUBDIR += py-wcwidth
