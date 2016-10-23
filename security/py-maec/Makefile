@@ -1,23 +1,21 @@
 # Created by: Antoine Brodin <antoine@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	stix
-PORTVERSION=	1.1.1.7
+PORTNAME=	maec
+PORTVERSION=	4.1.0.12
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	antoine@FreeBSD.org
-COMMENT=	Python library for parsing, manipulating, and generating STIX content
+COMMENT=	Python library for parsing, manipulating, and generating MAEC content
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dateutil>=0:devel/py-dateutil \
-		${PYTHON_PKGNAMEPREFIX}lxml>=2.3:devel/py-lxml \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}lxml>=2.2.3:devel/py-lxml \
 		${PYTHON_PKGNAMEPREFIX}cybox>=2.1.0.11:security/py-cybox
-TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>=0:devel/py-nose \
-		${PYTHON_PKGNAMEPREFIX}maec>=4.1.0.12:security/py-maec
+TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}nose>=0:devel/py-nose
 
 NO_ARCH=	yes
 USES=		python:2.7
