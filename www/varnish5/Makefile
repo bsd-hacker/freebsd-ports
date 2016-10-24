@@ -14,10 +14,10 @@ LICENSE=	BSD2CLAUSE
 
 LIB_DEPENDS=	libpcre.so:devel/pcre
 
-CONFLICTS=	varnish-2.* varnish-3.*
+CONFLICTS=	varnish-2.* varnish-3.* varnish4-4.*
 BROKEN_arm=	does not configure
 
-USES=		autoreconf cpe gmake libedit libtool pkgconfig python:2,build \
+USES=		autoreconf cpe gmake libedit libtool pathfix pkgconfig python:2,build \
 		readline shebangfix
 SHEBANG_FILES=	lib/libvcc/vmodtool.py
 CPE_VENDOR=	varnish-cache
@@ -32,16 +32,15 @@ USERS=		varnish varnishlog
 GROUPS=		varnish
 
 USE_RC_SUBR=	varnishd varnishlog varnishncsa
+SUB_FILES=	pkg-message
 .if defined(NO_INET6) || defined(WITHOUT_INET6)
 BAD_TESTS+=	r00832
 EXTRA_PATCHES+=	${FILESDIR}/no-inet6.patch
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|\$$(libdir)/pkgconfig|\$$(prefix)/libdata/pkgconfig|' \
-		${WRKSRC}/Makefile.am
 .if defined(BAD_TESTS)
-	${RM} -f ${BAD_TESTS:C|.+|${WRKSRC}/bin/varnishtest/tests/\0.vtc|}
+	${RM} ${BAD_TESTS:C|.+|${WRKSRC}/bin/varnishtest/tests/\0.vtc|}
 .endif
 
 regression-test check test: build
