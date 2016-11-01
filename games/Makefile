@@ -366,6 +366,7 @@
     SUBDIR += gnustep-ladder
     SUBDIR += gnustep-sudoku
     SUBDIR += golddig
+    SUBDIR += goldencheetah
     SUBDIR += golly
     SUBDIR += gomoku
     SUBDIR += gondola
@@ -1019,6 +1020,8 @@
     SUBDIR += vodovod
     SUBDIR += volleyball
     SUBDIR += vor
+    SUBDIR += voxelands
+    SUBDIR += voxelands-server
     SUBDIR += vultures-eye
     SUBDIR += wanderer
     SUBDIR += wargus
