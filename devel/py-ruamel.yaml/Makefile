@@ -1,21 +1,19 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	thriftpy
-PORTVERSION=	0.3.9
+PORTNAME=	ruamel.yaml
+PORTVERSION=	0.12.15
 PORTREVISION=	0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	feld@FreeBSD.org
-COMMENT=	Pure python implementation of Apache Thrift
+COMMENT=	YAML 1.2 loader/dumper package for Python
 
 LICENSE=	MIT
 
 USES=		python
-USE_PYTHON=	autoplist distutils
-
-NO_ARCH=	yes
+USE_PYTHON=	distutils
 
 .include <bsd.port.mk>

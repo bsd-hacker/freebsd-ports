@@ -1,21 +1,19 @@
 # Created by: Mark Felder <feld@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	thriftpy
-PORTVERSION=	0.3.9
+PORTNAME=	streamparse
+PORTVERSION=	3.1.1
 PORTREVISION=	0
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	feld@FreeBSD.org
-COMMENT=	Pure python implementation of Apache Thrift
+COMMENT=	Python analysis of Apache Storm streams
 
-LICENSE=	MIT
+LICENSE=	APACHE20
 
 USES=		python
 USE_PYTHON=	autoplist distutils
-
-NO_ARCH=	yes
 
 .include <bsd.port.mk>
