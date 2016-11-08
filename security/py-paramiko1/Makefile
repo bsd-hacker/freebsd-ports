@@ -1,14 +1,13 @@
-# Created by: Ulf Lilleengen
 # $FreeBSD$
 
 PORTNAME=	paramiko
-PORTVERSION=	2.0.0
-PORTREVISION=	1
+PORTVERSION=	1.17.2
 CATEGORIES=	security python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+PKGNAMESUFFIX=	1
 
-MAINTAINER=	sbz@FreeBSD.org
+MAINTAINER=	lwhsu@FreeBSD.org
 COMMENT=	Python SSH2 protocol library
 
 LICENSE=	GPLv2
@@ -19,7 +18,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}cryptography>0:security/py-cryptography \
 USES=		python
 USE_PYTHON=	distutils autoplist
 
-CONFLICTS_INSTALL=	py??-paramiko1-*
+CONFLICTS_INSTALL=	py??-paramiko-*
 
 OPTIONS_DEFINE=	EXAMPLES
 
