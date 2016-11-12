@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	qemu
-PORTVERSION=	2.7.50.g20161024
+PORTVERSION=	2.7.50.g20161111
 CATEGORIES=	emulators
 MASTER_SITES=	GH \
 		LOCAL/nox:dtc \
@@ -21,12 +21,12 @@ LICENSE=	GPLv2
 USE_GITHUB=	yes
 GH_ACCOUNT=	seanbruno
 GH_PROJECT=	${PORTNAME}-bsd-user
-GH_TAGNAME=	e0c9a90
+GH_TAGNAME=	ec807d10
 HAS_CONFIGURE=	yes
 USES=		gmake pkgconfig bison perl5 python:2,build
 USE_PERL5=	build
 PATCH_STRIP=	-p1
-MAKE_ENV+=	BSD_MAKE="${MAKE}"
+MAKE_ENV+=	BSD_MAKE="${MAKE}" V=1
 ONLY_FOR_ARCHS=	amd64 powerpc powerpc64 # XXX someone wants to debug sparc64 hosts?
 BROKEN_i386=	aarch64 system target is currently broken for i386 hosts, disable for now while dealing with upstream.
 

@@ -8796,3 +8796,11 @@ multimedia/libmovtar||2016-11-05|Not used anymore, abandonware
 devel/p5-Test-Exception-LessClever||2016-11-06|Deprecated by upstream
 www/py-django-piston||2016-11-06|Has expired: Abandoned upstream. Doesn't work with django>=1.6
 net/remmina-plugin-i18n||2016-11-08|Plugin translations removed upstream in GH commit 2dd0526
+net/p5-Net-Ping||2016-11-08|Has expired: This or newer version included in all supported versions of perl
+ftp/curl-hiphop||2016-11-08|Has expired: useful only for removed hiphop-php
+textproc/rubygem-string-scrub||2016-11-08|Has expired: needed only for EOL versions of Ruby
+cad/py-gdsii|cad/python-gdsii|2016-11-10|Renamed
+textproc/erlang-p1xml|textproc/erlang-fast_xml|2016-11-08|Project was renamed
+devel/py-pydasm|devel/py-capstone|2016-11-11|Has expired: No more upstream and known bugs, use devel/py-capstone instead
+devel/libdasm|devel/capstone3|2016-11-11|Has expired: No more upstream and known bugs, use devel/capstone3 instead
+security/erlang-p1tls|security/erlang-fast_tls|2016-11-11|Project was renamed

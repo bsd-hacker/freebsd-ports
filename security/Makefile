@@ -124,8 +124,8 @@
     SUBDIR += elixir-comeonin
     SUBDIR += elixir-comeonin_i18n
     SUBDIR += elixir-jose
+    SUBDIR += erlang-fast_tls
     SUBDIR += erlang-jose
-    SUBDIR += erlang-p1tls
     SUBDIR += eschalot
     SUBDIR += esteidfirefoxplugin
     SUBDIR += expiretable
@@ -417,6 +417,7 @@
     SUBDIR += openconnect
     SUBDIR += opencryptoki
     SUBDIR += openct
+    SUBDIR += openiked
     SUBDIR += opensaml2
     SUBDIR += opensc
     SUBDIR += openscep
