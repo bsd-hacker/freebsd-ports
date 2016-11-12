@@ -4085,6 +4085,7 @@
     SUBDIR += py-configargparse
     SUBDIR += py-configobj
     SUBDIR += py-configparser
+    SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-contextlib2
     SUBDIR += py-country
@@ -4208,6 +4209,7 @@
     SUBDIR += py-hypothesis
     SUBDIR += py-icalendar
     SUBDIR += py-ice
+    SUBDIR += py-incremental
     SUBDIR += py-inflect
     SUBDIR += py-iniparse
     SUBDIR += py-initgroups
