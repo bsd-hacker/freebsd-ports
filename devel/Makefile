@@ -1082,6 +1082,8 @@
     SUBDIR += ice
     SUBDIR += icmake
     SUBDIR += icu
+    SUBDIR += icu-le-hb
+    SUBDIR += icu-lx
     SUBDIR += idutils
     SUBDIR += imake
     SUBDIR += include-what-you-use
