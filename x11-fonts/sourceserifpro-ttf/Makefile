@@ -1,13 +1,13 @@
-# Created by: Masaki TAGAWA <masaki@club.kyutech.ac.jp>
+# Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	sourcecodepro-ttf
-PORTVERSION=	2.030
-DISTVERSIONSUFFIX=	R-ro/1.050R-it
+PORTNAME=	sourceserifpro-ttf
+PORTVERSION=	1.017
+DISTVERSIONSUFFIX=	R
 CATEGORIES=	x11-fonts
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Set of fonts by Adobe designed for coders
+COMMENT=	Set of fonts by Adobe designed for UI
 
 LICENSE=	OFL11
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
@@ -16,11 +16,11 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 USES=		fonts
 
-FONTNAME=	SourceCodePro
+FONTNAME=	SourceSerifPro
 SUB_FILES=	pkg-message
 
 GH_ACCOUNT=	adobe-fonts
-GH_PROJECT=	source-code-pro
+GH_PROJECT=	source-serif-pro
 USE_GITHUB=	yes
 
 do-install:
