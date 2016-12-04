@@ -54,6 +54,4 @@ do-install:
 
 	${INSTALL} -d ${STAGEDIR}/var/run/rmilter
 
-post-stage:
-	${INSTALL} -d ${STAGEDIR}/var/run/rmilter
 .include <bsd.port.post.mk>

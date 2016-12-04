@@ -25,7 +25,4 @@ USES=		localbase perl5
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${SITE_ARCH}/auto/Math/MPC/MPC.so
 
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${SITE_ARCH}/auto/Math/MPC/MPC.so
-
 .include <bsd.port.mk>

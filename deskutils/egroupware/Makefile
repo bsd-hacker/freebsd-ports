@@ -47,7 +47,7 @@ ZIP_USE=	PHP=zip
 GD_USE=		PHP=gd
 LDAP_USE=	PHP=ldap
 
-WRKSRC=	${WRKDIR}/egroupware-${PORTVERSION}
+WRKSRC=	${WRKDIR}/egroupware
 EG_DIR=	www/eg
 EG_WWWDIR=	${PREFIX}/${EG_DIR}
 EG_DATA=	www/egdata

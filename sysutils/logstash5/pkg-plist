@@ -211,6 +211,7 @@ logstash/vendor/bundle/jruby/1.9/bin/aws.rb
 logstash/vendor/bundle/jruby/1.9/bin/bundle
 logstash/vendor/bundle/jruby/1.9/bin/bundler
 logstash/vendor/bundle/jruby/1.9/bin/coderay
+logstash/vendor/bundle/jruby/1.9/bin/dotenv
 logstash/vendor/bundle/jruby/1.9/bin/file-deps
 logstash/vendor/bundle/jruby/1.9/bin/fpm
 logstash/vendor/bundle/jruby/1.9/bin/gelfd
