@@ -539,6 +539,9 @@
     SUBDIR += nghttp2
     SUBDIR += nginx
     SUBDIR += nginx-devel
+    SUBDIR += nginx-full
+    SUBDIR += nginx-lite
+    SUBDIR += nginx-naxsi
     SUBDIR += nibbleblog
     SUBDIR += node
     SUBDIR += node012
@@ -2070,8 +2073,8 @@
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer
-    SUBDIR += rubygem-url-mount
     SUBDIR += rubygem-url_escape
+    SUBDIR += rubygem-url_mount
     SUBDIR += rubygem-wasabi
     SUBDIR += rubygem-webkit-gtk
     SUBDIR += rubygem-webkit-gtk2
