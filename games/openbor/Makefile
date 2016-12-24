@@ -9,7 +9,11 @@ MASTER_SITES=	LOCAL/jbeich \
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Moddable fighting game engine (aka Beats of Rage)
 
-LICENSE=	BSD3CLAUSE
+LICENSE=	BSD3CLAUSE GPLv2+ MIT
+LICENSE_COMB=	multi
+LICENSE_FILE_BSD3CLAUSE=${WRKSRC}/LICENSE
+LICENSE_FILE_GPLv2+ =	${_LICENSE_STORE}/GPLv2 # source/gfxlib/hq2x.c
+LICENSE_FILE_MIT=	${WRKSRC}/source/webmlib/nestegg/LICENSE
 
 LIB_DEPENDS=	libpng.so:graphics/png \
 		libvpx.so:multimedia/libvpx
@@ -91,7 +95,7 @@ post-patch:
 	@${GREP} -Flr 'malloc.h' ${WRKSRC} | ${XARGS} ${REINPLACE_CMD} \
 		's,malloc\.h,stdlib.h,'
 	@${REINPLACE_CMD} -e 's/^function \(.*\) {/\1() {/' \
-		-e 's/^get_revnum/VERSION_BUILD=${SVN_REV}/' \
+		-e 's/^get_revnum$$/VERSION_BUILD=${SVN_REV}/' \
 		${WRKSRC}/version.sh
 
 do-configure:
