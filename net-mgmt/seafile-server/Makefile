@@ -1,8 +1,7 @@
 # $FreeBSD$
 
-PORTNAME=	seafile
-PORTVERSION=	6.0.0
-PORTREVISION=	1
+PORTNAME=	seafile-server
+PORTVERSION=	6.0.6
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-server
 CATEGORIES=	net-mgmt
@@ -19,7 +18,7 @@ LIB_DEPENDS=	libsearpc.so:devel/libsearpc \
 		libzdb.so:databases/libzdb \
 		libcurl.so:ftp/curl \
 		libinotify.so:devel/libinotify \
-		libccnet.so:net-mgmt/ccnet \
+		libccnet.so:net-mgmt/ccnet-server \
 		libevent.so:devel/libevent2 \
 		libuuid.so:misc/e2fsprogs-libuuid \
 		libjansson.so:devel/jansson
@@ -27,23 +26,22 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3 \
 		${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3 \
 		bash:shells/bash
 
-CONFLICTS=	seafile-server-[0-9]*
+CONFLICTS=	seafile-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	haiwen
 
 USES=		autoreconf gettext iconv libarchive libtool mysql pathfix \
-		pkgconfig python:-2.7 shebangfix sqlite ssl
+		pgsql pkgconfig python:-2.7 shebangfix sqlite ssl
 USE_GNOME=	glib20
-SHEBANG_FILES=	scripts/*.sh scripts/upgrade/*.sh  tests/*.py tests/basic/*.sh \
-		tests/sync-auto-test/*.template *.sh scripts/build/*.py \
-		scripts/*.py *.py scripts/upgrade/*.py app/seaf-cli \
-		tools/seafile-admin
+SHEBANG_FILES=	scripts/*.sh scripts/upgrade/*.sh *.sh scripts/build/*.py \
+		scripts/*.py scripts/upgrade/*.py tools/seafile-admin
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	SSL_CFLAGS="${OPENSSLINC}" SSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto"
 
-CONFIGURE_ARGS=	--enable-server
+PATHFIX_MAKEFILEIN=	Makefile.am
+
 INSTALL_TARGET=	install-strip
 CPPFLAGS+=	-I${LOCALBASE}/include -I${LOCALBASE}/include/evhtp
 LDFLAGS+=	-L${LOCALBASE}/lib
@@ -56,7 +54,7 @@ SEALIB=		${SEAFILE_SERVER}/seafile/lib
 USERS=		seafile
 GROUPS=		${USERS}
 
-USE_RC_SUBR=	${PORTNAME}
+USE_RC_SUBR=	seafile
 PLIST_SUB=	USERS=${USERS} \
 		GROUPS=${GROUPS} \
 		SEAFILE_SERVER=${SEAFILE_SERVER} \
@@ -71,17 +69,13 @@ SUB_LIST+=	USERS=${USERS} \
 
 MAKE_JOBS_UNSAFE=	yes
 
-OPTIONS_DEFINE=		FUSE RIAK
+OPTIONS_DEFINE=		FUSE
 OPTIONS_SUB=		yes
 
 FUSE_DESC=		Use file system in userspace
-RIAK_DESC=		Use distributed noSQL database
 
 FUSE_CONFIGURE_ENABLE=	fuse
 FUSE_LIB_DEPENDS=	libfuse.so:sysutils/fusefs-libs
-
-RIAK_CONFIGURE_ENABLE=	riak
-RIAK_RUN_DEPENDS=	riak:databases/riak
 
 OPTIONS_DEFAULT=	FUSE
 OPTIONS_EXCLUDE_DragonFly=	FUSE
@@ -114,12 +108,9 @@ post-install:
 	${LN} -s ${PREFIX}/${SEABIN}/${SERVPROG} ${STAGEDIR}${PREFIX}/bin/
 .endfor
 
-	${INSTALL_SCRIPT} ${STAGEDIR}${PREFIX}/bin/seaf-cli ${STAGEDIR}${PREFIX}/${SEABIN}/seaf-cli.py
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/seaf-cli-wrapper.sh ${STAGEDIR}${PREFIX}/bin/seaf-cli
 	(cd ${STAGEDIR}${PREFIX}/lib && \
 		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
-	@${RM} -r ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION} \
-		${WRKSRC}/scripts/seaf-cli-wrapper.sh \
+	@${RM} -rf ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION} \
 		${WRKSRC}/scripts/sqlite2mysql.[ps][yh] \
 		${WRKSRC}/scripts/setup-seafile.sh \
 		${STAGEDIR}${PREFIX}/bin/seafile-admin
