@@ -1,6 +1,6 @@
 # $FreeBSD$
 
-PKGNAMEPREFIX=	amd64-
+PKGNAMEPREFIX=	riscv64-
 
 MASTERDIR=	${.CURDIR}/../powerpc64-xtoolchain-gcc
 
