@@ -4594,6 +4594,7 @@
     SUBDIR += py-roxlib
     SUBDIR += py-rq
     SUBDIR += py-rtree
+    SUBDIR += py-rtslib-fb
     SUBDIR += py-ruamel.ordereddict
     SUBDIR += py-ruamel.yaml
     SUBDIR += py-ruledispatch
@@ -4657,6 +4658,7 @@
     SUBDIR += py-tconfpy
     SUBDIR += py-tempora
     SUBDIR += py-tempstorage
+    SUBDIR += py-tenacity
     SUBDIR += py-termcolor
     SUBDIR += py-terminable_thread
     SUBDIR += py-termstyle
@@ -5281,6 +5283,7 @@
     SUBDIR += rubygem-newrelic_rpm
     SUBDIR += rubygem-nice-ffi
     SUBDIR += rubygem-nio4r
+    SUBDIR += rubygem-nio4r1
     SUBDIR += rubygem-nori
     SUBDIR += rubygem-notiffany
     SUBDIR += rubygem-notify
