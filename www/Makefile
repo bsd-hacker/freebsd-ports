@@ -1904,7 +1904,9 @@
     SUBDIR += ruby-aws
     SUBDIR += ruby-google
     SUBDIR += rubygem-ace-rails-ap
+    SUBDIR += rubygem-actioncable5
     SUBDIR += rubygem-actionpack4
+    SUBDIR += rubygem-actionpack5
     SUBDIR += rubygem-activeresource4
     SUBDIR += rubygem-acts-as-taggable-on
     SUBDIR += rubygem-acts-as-taggable-on3
@@ -2039,6 +2041,7 @@
     SUBDIR += rubygem-rails4
     SUBDIR += rubygem-rails_autolink
     SUBDIR += rubygem-railties4
+    SUBDIR += rubygem-railties5
     SUBDIR += rubygem-raindrops
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
