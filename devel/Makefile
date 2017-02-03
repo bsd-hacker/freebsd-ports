@@ -5235,6 +5235,7 @@
     SUBDIR += rubygem-ice_cube
     SUBDIR += rubygem-ice_nine
     SUBDIR += rubygem-inflecto
+    SUBDIR += rubygem-insist
     SUBDIR += rubygem-instance_storage
     SUBDIR += rubygem-interact
     SUBDIR += rubygem-io-like
@@ -5334,6 +5335,7 @@
     SUBDIR += rubygem-piston
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
+    SUBDIR += rubygem-pleaserun
     SUBDIR += rubygem-plist
     SUBDIR += rubygem-pluggaloid
     SUBDIR += rubygem-polyamorous
@@ -5459,6 +5461,7 @@
     SUBDIR += rubygem-streetaddress
     SUBDIR += rubygem-stringex
     SUBDIR += rubygem-structured_warnings
+    SUBDIR += rubygem-stud
     SUBDIR += rubygem-subexec
     SUBDIR += rubygem-sugar-high
     SUBDIR += rubygem-sumbur
