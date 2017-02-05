@@ -4243,6 +4243,7 @@
     SUBDIR += py-five.localsitemanager
     SUBDIR += py-flake8
     SUBDIR += py-flake8-builtins
+    SUBDIR += py-flake8-docstrings
     SUBDIR += py-flake8-import-order
     SUBDIR += py-flake8-polyfill
     SUBDIR += py-flake8-quotes
@@ -4505,6 +4506,7 @@
     SUBDIR += py-pycodestyle
     SUBDIR += py-pycparser
     SUBDIR += py-pydenticon
+    SUBDIR += py-pydocstyle
     SUBDIR += py-pydoop
     SUBDIR += py-pyechonest
     SUBDIR += py-pyee
@@ -4872,6 +4874,7 @@
     SUBDIR += py3-dbus
     SUBDIR += py3-flake8
     SUBDIR += py3-flake8-builtins
+    SUBDIR += py3-flake8-docstrings
     SUBDIR += py3-flake8-import-order
     SUBDIR += py3-flake8-polyfill
     SUBDIR += py3-flake8-quotes
@@ -4884,6 +4887,7 @@
     SUBDIR += py3-nose
     SUBDIR += py3-py
     SUBDIR += py3-pycodestyle
+    SUBDIR += py3-pydocstyle
     SUBDIR += py3-pyflakes
     SUBDIR += py3-pyicu
     SUBDIR += py3-pylru-cache
