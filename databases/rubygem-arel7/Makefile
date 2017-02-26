@@ -1,10 +1,11 @@
 # $FreeBSD$
 
 PORTNAME=	arel
-PORTVERSION=	8.0.0
+PORTVERSION=	7.1.4
 PORTEPOCH=	1
 CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	7
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Relational Algebra for Ruby
