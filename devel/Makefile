@@ -1571,6 +1571,7 @@
     SUBDIR += lua-posix
     SUBDIR += lua-pty
     SUBDIR += lua-sysctl
+    SUBDIR += lua51-cjson
     SUBDIR += lua51-libevent
     SUBDIR += luabind
     SUBDIR += luafilesystem
@@ -5609,6 +5610,7 @@
     SUBDIR += smv
     SUBDIR += soapui
     SUBDIR += sonar-ant-task
+    SUBDIR += sonar-scanner-cli
     SUBDIR += sonarqube
     SUBDIR += sope2
     SUBDIR += sope3
