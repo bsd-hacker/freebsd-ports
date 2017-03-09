@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	fog-aws
-PORTVERSION=	1.2.1
+PORTVERSION=	0.13.0
 CATEGORIES=	net rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	0
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Module for the 'fog' gem to support Amazon Web Services
