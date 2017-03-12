@@ -1,15 +1,16 @@
 # Created by: Sunpoet Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	parallel
-PORTVERSION=	1.11.1
-CATEGORIES=	sysutils rubygems
+PORTNAME=	prawn_shapes
+PORTVERSION=	1.2.1
+CATEGORIES=	print rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Run any kind of code in parallel processes
+COMMENT=	Adds additional vector shapes to Prawn
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 NO_ARCH=	yes
 USE_RUBY=	yes
