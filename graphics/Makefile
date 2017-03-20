@@ -78,6 +78,7 @@
     SUBDIR += burplex
     SUBDIR += c-a-i-r
     SUBDIR += cadubi
+    SUBDIR += caffe
     SUBDIR += cairo
     SUBDIR += cairo-reference
     SUBDIR += cairomm
