@@ -5188,6 +5188,8 @@
     SUBDIR += rubygem-debug_inspector
     SUBDIR += rubygem-debugger-linecache
     SUBDIR += rubygem-debugger-xml
+    SUBDIR += rubygem-declarative
+    SUBDIR += rubygem-declarative-option
     SUBDIR += rubygem-deep_merge
     SUBDIR += rubygem-deep_test
     SUBDIR += rubygem-deface
@@ -5554,6 +5556,7 @@
     SUBDIR += rubygem-turn
     SUBDIR += rubygem-typed-array
     SUBDIR += rubygem-tzinfo
+    SUBDIR += rubygem-uber
     SUBDIR += rubygem-unicode
     SUBDIR += rubygem-unicode-display_width
     SUBDIR += rubygem-useragent
