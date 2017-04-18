@@ -219,7 +219,6 @@
     SUBDIR += gnome-doc-utils
     SUBDIR += gnome-spell
     SUBDIR += gnugrep
-    SUBDIR += go-text
     SUBDIR += go.text
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
@@ -373,8 +372,8 @@
     SUBDIR += kibana43
     SUBDIR += kibana44
     SUBDIR += kibana45
-    SUBDIR += kibana50
-    SUBDIR += kibana50-x-pack
+    SUBDIR += kibana5
+    SUBDIR += kibana5-x-pack
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -1123,7 +1122,6 @@
     SUBDIR += p5-XML-XPath
     SUBDIR += p5-XML-XPathEngine
     SUBDIR += p5-XML-XQL
-    SUBDIR += p5-XML-XSH
     SUBDIR += p5-XML-XSLT
     SUBDIR += p5-XML-XUpdate-LibXML
     SUBDIR += p5-YAML
@@ -1246,6 +1244,7 @@
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
     SUBDIR += py-asv
+    SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
     SUBDIR += py-bugzillatools
     SUBDIR += py-chardet
@@ -1378,6 +1377,7 @@
     SUBDIR += py3-hunspell
     SUBDIR += py3-libxml2
     SUBDIR += py3-pager
+    SUBDIR += py3-pygments
     SUBDIR += py3-pystemmer
     SUBDIR += py3-snowballstemmer
     SUBDIR += py3-sphinx_rtd_theme
@@ -1689,6 +1689,7 @@
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt4
     SUBDIR += uml2svg
+    SUBDIR += uncle
     SUBDIR += uncrustify
     SUBDIR += uni2ascii
     SUBDIR += unoconv

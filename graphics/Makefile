@@ -146,6 +146,7 @@
     SUBDIR += dmtx-utils
     SUBDIR += dri
     SUBDIR += driconf
+    SUBDIR += dspdfviewer
     SUBDIR += duhdraw
     SUBDIR += dynamechs
     SUBDIR += easypaint
@@ -284,7 +285,6 @@
     SUBDIR += gocr
     SUBDIR += goocanvas
     SUBDIR += goocanvas2
-    SUBDIR += goocanvasmm
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
@@ -292,6 +292,7 @@
     SUBDIR += gphoto2
     SUBDIR += gpicview
     SUBDIR += gpsmanshp
+    SUBDIR += gpu-firmware-kmod
     SUBDIR += gracula
     SUBDIR += grads
     SUBDIR += grafx2
@@ -503,6 +504,7 @@
     SUBDIR += libimg
     SUBDIR += libiptcdata
     SUBDIR += libjpeg-turbo
+    SUBDIR += libjxr
     SUBDIR += libkdcraw-kde4
     SUBDIR += libkexiv2-kde4
     SUBDIR += libkface
@@ -620,12 +622,11 @@
     SUBDIR += opencolorio
     SUBDIR += opencolorio-tools
     SUBDIR += opencsg
-    SUBDIR += opencv2
-    SUBDIR += opencv2-core
-    SUBDIR += opencv2-java
+    SUBDIR += opencv
+    SUBDIR += opencv-core
+    SUBDIR += opencv-java
     SUBDIR += opendx
     SUBDIR += opengl-man
-    SUBDIR += opengtl
     SUBDIR += openimageio
     SUBDIR += openjpeg
     SUBDIR += openjpeg15
@@ -641,6 +642,7 @@
     SUBDIR += osgearth
     SUBDIR += oyranos
     SUBDIR += p5-Acme-Steganography-Image-Png
+    SUBDIR += p5-Alien-Gimp
     SUBDIR += p5-Barcode-ZBar
     SUBDIR += p5-CAD-Drawing
     SUBDIR += p5-CAD-Drawing-Template
@@ -861,7 +863,7 @@
     SUBDIR += py-ming
     SUBDIR += py-nwdiag
     SUBDIR += py-opencolorio
-    SUBDIR += py-opencv2
+    SUBDIR += py-opencv
     SUBDIR += py-openexr
     SUBDIR += py-openimageio
     SUBDIR += py-paint
@@ -918,7 +920,6 @@
     SUBDIR += qt5-pixeltool
     SUBDIR += qt5-svg
     SUBDIR += qtawesome
-    SUBDIR += qtgtl
     SUBDIR += quat
     SUBDIR += quat-gui
     SUBDIR += quesa
@@ -999,7 +1000,6 @@
     SUBDIR += seq2gif
     SUBDIR += shared-color-profiles
     SUBDIR += sharpconstruct
-    SUBDIR += shiva-collections
     SUBDIR += shotwell
     SUBDIR += showimage
     SUBDIR += silgraphite

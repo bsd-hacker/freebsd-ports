@@ -522,7 +522,6 @@
     SUBDIR += monast
     SUBDIR += mongoose
     SUBDIR += mongrel2
-    SUBDIR += moodle29
     SUBDIR += moodle30
     SUBDIR += moodle31
     SUBDIR += moodle32
@@ -798,7 +797,6 @@
     SUBDIR += p5-Catalyst-Plugin-Session-Store-Memcached
     SUBDIR += p5-Catalyst-Plugin-Session-Store-Memcached-Fast
     SUBDIR += p5-Catalyst-Plugin-Setenv
-    SUBDIR += p5-Catalyst-Plugin-Singleton
     SUBDIR += p5-Catalyst-Plugin-SmartURI
     SUBDIR += p5-Catalyst-Plugin-StackTrace
     SUBDIR += p5-Catalyst-Plugin-Static
@@ -1392,6 +1390,7 @@
     SUBDIR += p5-webservice-validator-css-w3c
     SUBDIR += p5-webservice-validator-html-w3c
     SUBDIR += paros
+    SUBDIR += payara
     SUBDIR += pear-HTML_AJAX
     SUBDIR += pear-HTML_TagCloud
     SUBDIR += pear-HTTP
@@ -1622,6 +1621,7 @@
     SUBDIR += py-django-tinymce
     SUBDIR += py-django-voting
     SUBDIR += py-django110
+    SUBDIR += py-django111
     SUBDIR += py-django16
     SUBDIR += py-django16-tastypie
     SUBDIR += py-django18
@@ -1645,6 +1645,7 @@
     SUBDIR += py-feedgenerator
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
+    SUBDIR += py-flask-api
     SUBDIR += py-flask-assets
     SUBDIR += py-flask-bootstrap
     SUBDIR += py-flask-cache
@@ -1677,13 +1678,16 @@
     SUBDIR += py-graphite-web
     SUBDIR += py-grequests
     SUBDIR += py-gunicorn
+    SUBDIR += py-h2
     SUBDIR += py-horizon
+    SUBDIR += py-hpack
     SUBDIR += py-html
     SUBDIR += py-html5lib
     SUBDIR += py-http-parser
     SUBDIR += py-httpie
     SUBDIR += py-httplib2
     SUBDIR += py-hyper
+    SUBDIR += py-hyperframe
     SUBDIR += py-imdbpy
     SUBDIR += py-jonpy
     SUBDIR += py-jswebkit
@@ -1926,6 +1930,7 @@
     SUBDIR += rubygem-anemone
     SUBDIR += rubygem-asana
     SUBDIR += rubygem-async_sinatra
+    SUBDIR += rubygem-best_in_place
     SUBDIR += rubygem-bluecloth
     SUBDIR += rubygem-bootstrap-sass
     SUBDIR += rubygem-browser
@@ -1965,6 +1970,7 @@
     SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-grack
     SUBDIR += rubygem-gitlab-turbolinks-classic
+    SUBDIR += rubygem-goldfinger
     SUBDIR += rubygem-gollum
     SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-lib
@@ -1978,6 +1984,7 @@
     SUBDIR += rubygem-haml-contrib
     SUBDIR += rubygem-haml-rails-rails4
     SUBDIR += rubygem-hamlit
+    SUBDIR += rubygem-hamlit-rails
     SUBDIR += rubygem-hashicorp-checkpoint
     SUBDIR += rubygem-heroku
     SUBDIR += rubygem-heroku-api
@@ -1997,7 +2004,6 @@
     SUBDIR += rubygem-jekyll-watch
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
-    SUBDIR += rubygem-jquery-atwho-rails-rails4
     SUBDIR += rubygem-jquery-rails
     SUBDIR += rubygem-jquery-scrollto-rails
     SUBDIR += rubygem-jquery-turbolinks
@@ -2017,6 +2023,7 @@
     SUBDIR += rubygem-less
     SUBDIR += rubygem-lighthouse-api
     SUBDIR += rubygem-link_header
+    SUBDIR += rubygem-lograge
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
     SUBDIR += rubygem-merb-assets
@@ -2035,9 +2042,12 @@
     SUBDIR += rubygem-nicovideo
     SUBDIR += rubygem-ntlm-http
     SUBDIR += rubygem-octopress
+    SUBDIR += rubygem-oembed
+    SUBDIR += rubygem-ostatus2
     SUBDIR += rubygem-pagerduty
     SUBDIR += rubygem-passenger
     SUBDIR += rubygem-puma
+    SUBDIR += rubygem-puma2
     SUBDIR += rubygem-pusher-client
     SUBDIR += rubygem-rabbirack
     SUBDIR += rubygem-rack
@@ -2052,10 +2062,15 @@
     SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
+    SUBDIR += rubygem-rack-timeout
     SUBDIR += rubygem-rack15
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rails4
+    SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
+    SUBDIR += rubygem-rails_serve_static_assets
+    SUBDIR += rubygem-rails-settings-cached
+    SUBDIR += rubygem-rails_stdout_logging
     SUBDIR += rubygem-railties4
     SUBDIR += rubygem-railties5
     SUBDIR += rubygem-raindrops
@@ -2203,6 +2218,7 @@
     SUBDIR += tivoka
     SUBDIR += tntnet
     SUBDIR += tokyopromenade
+    SUBDIR += tomcat-devel
     SUBDIR += tomcat-native
     SUBDIR += tomcat6
     SUBDIR += tomcat7
@@ -2304,8 +2320,8 @@
     SUBDIR += twiki-WysiwygPlugin
     SUBDIR += twill
     SUBDIR += twms
-    SUBDIR += typo3
-    SUBDIR += typo3-lts
+    SUBDIR += typo3-7
+    SUBDIR += typo3-8
     SUBDIR += uchiwa
     SUBDIR += udmsearch
     SUBDIR += ufdbguard
@@ -2369,6 +2385,7 @@
     SUBDIR += www6to4
     SUBDIR += wwwoffle
     SUBDIR += xapian-omega
+    SUBDIR += xapian-omega12
     SUBDIR += xaraya
     SUBDIR += xcache
     SUBDIR += xfce4-smartbookmark-plugin
@@ -2468,8 +2485,10 @@
     SUBDIR += xsp
     SUBDIR += yabb
     SUBDIR += yanopaste
+    SUBDIR += yarn
     SUBDIR += yaws
     SUBDIR += yii
+    SUBDIR += you-get
     SUBDIR += yourls
     SUBDIR += youtube_dl
     SUBDIR += yuicompressor

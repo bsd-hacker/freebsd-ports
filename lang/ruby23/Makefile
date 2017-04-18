@@ -11,7 +11,7 @@ DISTNAME=	${RUBY_DISTNAME}
 DIST_SUBDIR=	ruby
 
 MAINTAINER=	ruby@FreeBSD.org
-COMMENT?=	Object-oriented interpreted scripting language
+COMMENT=	Object-oriented interpreted scripting language
 
 LICENSE=	BSD2CLAUSE RUBY
 LICENSE_COMB=	dual
@@ -22,6 +22,9 @@ LICENSE_FILE_RUBY=	${WRKSRC}/COPYING
 BUILD_DEPENDS=	libffi>=0:devel/libffi
 LIB_DEPENDS=	libyaml.so:textproc/libyaml
 RUN_DEPENDS=	libffi>=0:devel/libffi
+
+BROKEN_SSL=	openssl-devel
+BROKEN_SSL_REASON_openssl-devel=does not detect and buid the openssl*.rb bits	
 
 CONFIGURE_ARGS=	${RUBY_CONFIGURE_ARGS} \
 		--disable-rpath \
@@ -72,10 +75,6 @@ CPE_VERSION=	${RUBY_RELVERSION}
 CPE_UPDATE=	p${RUBY_PATCHLEVEL}
 
 .include <bsd.port.pre.mk>
-
-.if ${SSL_DEFAULT} == openssl-devel
-BROKEN=		Does not detect and buid the openssl*.rb bits.
-.endif
 
 # PORTREVISION/PORTEPOCH hack
 

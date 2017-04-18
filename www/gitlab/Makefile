@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	gitlab
-PORTVERSION=	8.16.8
+PORTVERSION=	8.16.9
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
 CATEGORIES=	www devel
@@ -77,7 +77,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-fog-local>=0.3:net/rubygem-fog-local \
 	rubygem-fog-openstack>=0.1:net/rubygem-fog-openstack \
 	rubygem-fog-rackspace>=0.1.1:net/rubygem-fog-rackspace \
-	rubygem-google-api-client>=0.8.6:devel/rubygem-google-api-client \
+	rubygem-google-api-client010>=0.8.6:devel/rubygem-google-api-client010 \
 	rubygem-unf>=0.1.4:textproc/rubygem-unf \
 	rubygem-seed-fu>=2.3.5:databases/rubygem-seed-fu \
 	rubygem-html-pipeline1>=1.11.0:textproc/rubygem-html-pipeline1 \
@@ -101,7 +101,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-after_commit_queue>=1.3.0:databases/rubygem-after_commit_queue \
 	rubygem-acts-as-taggable-on>=4.0.0:www/rubygem-acts-as-taggable-on \
 	rubygem-sidekiq>=4.2.7:devel/rubygem-sidekiq \
-	rubygem-sidekiq-cron>=0.4.4:devel/rubygem-sidekiq-cron \
+	rubygem-sidekiq-cron04>=0.4.4:devel/rubygem-sidekiq-cron04 \
 	rubygem-redis-namespace>=1.5.2:databases/rubygem-redis-namespace \
 	rubygem-sidekiq-limit_fetch>=3.4:devel/rubygem-sidekiq-limit_fetch \
 	rubygem-httparty>=0.13.3:www/rubygem-httparty \
@@ -151,7 +151,7 @@ RUN_DEPENDS=	git>=2.8.4:devel/git \
 	rubygem-base32>=0.3.2:converters/rubygem-base32 \
 	rubygem-sentry-raven>=2.0.0:devel/rubygem-sentry-raven \
 	rubygem-premailer-rails>=1.9.0:mail/rubygem-premailer-rails \
-	rubygem-newrelic_rpm>=3.16:devel/rubygem-newrelic_rpm \
+	rubygem-newrelic_rpm3>=3.16:devel/rubygem-newrelic_rpm3 \
 	rubygem-octokit>=4.6.2:net/rubygem-octokit \
 	rubygem-mail_room>=0.9.0:mail/rubygem-mail_room \
 	rubygem-email_reply_trimmer>=0.1:mail/rubygem-email_reply_trimmer \
