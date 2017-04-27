@@ -2,24 +2,24 @@
 # $FreeBSD$
 
 PORTNAME=	haml
-PORTVERSION=	5.0.0
+PORTVERSION=	4.0.7
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	4
 
 MAINTAINER=	ruby@FreeBSD.org
 COMMENT=	Markup language to describe HTML
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/MIT-LICENSE
 
-RUN_DEPENDS=	rubygem-temple>=0.8.0:devel/rubygem-temple \
-		rubygem-tilt>=0:devel/rubygem-tilt
+RUN_DEPENDS=	rubygem-tilt>=0:devel/rubygem-tilt
+
+PORTSCOUT=	limit:^4\.
 
 NO_ARCH=	yes
 USE_RUBY=	yes
 USES=		gem
 
-PLIST_FILES=	bin/haml \
-		${GEM_LIB_DIR}/test/templates/standard_ugly.haml
+PLIST_FILES=	bin/haml
 
 .include <bsd.port.mk>
