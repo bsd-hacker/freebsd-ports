@@ -862,12 +862,15 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_lua_common.h  \
 .endif
 
 .if ${PORT_OPTIONS:MMEMC}
-NGINX_MEMC_VERSION=	0.17
+NGINX_MEMC_VERSION=	0.18
 GH_ACCOUNT+=	openresty:memc
 GH_PROJECT+=	memc-nginx-module:memc
 GH_TAGNAME+=	v${NGINX_MEMC_VERSION}:memc
+.if !empty(PORT_OPTIONS:MDSO)
+CONFIGURE_ARGS+=--add-dynamic-module=${WRKSRC_memc}
+.else
 CONFIGURE_ARGS+=--add-module=${WRKSRC_memc}
-EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ngx_http_memc_util.c
+.endif
 .endif
 
 .if ${PORT_OPTIONS:MMODSECURITY}
@@ -905,7 +908,7 @@ CONFIGURE_ARGS+=--without-http_rewrite_module \
 .endif
 
 .if ${PORT_OPTIONS:MPASSENGER}
-PASSENGER_VERSION=	5.1.2
+PASSENGER_VERSION=	5.1.3
 MASTER_SITES+=	http://s3.amazonaws.com/phusion-passenger/releases/:passenger
 DISTFILES+=	passenger-${PASSENGER_VERSION}.tar.gz:passenger
 .if !empty(PORT_OPTIONS:MDSO)
