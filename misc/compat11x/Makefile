@@ -1,14 +1,14 @@
 # $FreeBSD$
 
-PORTNAME=	compat9x
-PORTVERSION=	9.3.903000.20170608
+PORTNAME=	compat11x
+PORTVERSION=	11.0.1100122.20170608
 CATEGORIES=	misc
 MASTER_SITES=	LOCAL/des
 PKGNAMESUFFIX=	-${ARCH}
 DISTNAME=	${PORTNAME}-${ARCH}-${PORTVERSION}
 
 MAINTAINER=	des@FreeBSD.org
-COMMENT=	Convenience package to install the compat9x libraries
+COMMENT=	Convenience package to install the compat11x libraries
 
 USES=		tar:xz
 NO_BUILD=	yes
@@ -20,8 +20,8 @@ USE_LDCONFIG=	${TARGET_DIR}
 
 .include <bsd.port.pre.mk>
 
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100000
-RUN_DEPENDS=	compat10x-${ARCH}>=0:misc/compat10x
+.if ${OSVERSION} < 1100000
+IGNORE=		is for FreeBSD 11.x and newer
 .endif
 
 .if ${ARCH} == amd64
