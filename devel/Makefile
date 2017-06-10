@@ -1477,6 +1477,7 @@
     SUBDIR += libtifiles2
     SUBDIR += libtool
     SUBDIR += libtpl
+    SUBDIR += libtrue
     SUBDIR += libtuntap
     SUBDIR += libublio
     SUBDIR += libudev-devd
@@ -4952,6 +4953,7 @@
     SUBDIR += py3-dbus
     SUBDIR += py3-defusedxml
     SUBDIR += py3-docopt
+    SUBDIR += py3-enum34
     SUBDIR += py3-flake8
     SUBDIR += py3-flake8-builtins
     SUBDIR += py3-flake8-docstrings
@@ -4968,7 +4970,11 @@
     SUBDIR += py3-llfuse
     SUBDIR += py3-lxml
     SUBDIR += py3-mccabe
+    SUBDIR += py3-mock
     SUBDIR += py3-nose
+    SUBDIR += py3-pbr
+    SUBDIR += py3-pip
+    SUBDIR += py3-pluggy
     SUBDIR += py3-ply
     SUBDIR += py3-pretend
     SUBDIR += py3-prompt_toolkit
@@ -4996,6 +5002,7 @@
     SUBDIR += py3-six
     SUBDIR += py3-tabulate
     SUBDIR += py3-threema-msgapi
+    SUBDIR += py3-tox
     SUBDIR += py3-urwid
     SUBDIR += py3-vcversioner
     SUBDIR += py3-virtualenv
