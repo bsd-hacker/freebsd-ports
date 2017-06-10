@@ -4958,6 +4958,7 @@
     SUBDIR += py3-flake8-import-order
     SUBDIR += py3-flake8-polyfill
     SUBDIR += py3-flake8-quotes
+    SUBDIR += py3-freezegun
     SUBDIR += py3-gobject3
     SUBDIR += py3-hgtools
     SUBDIR += py3-jedi
@@ -4969,6 +4970,7 @@
     SUBDIR += py3-mccabe
     SUBDIR += py3-nose
     SUBDIR += py3-ply
+    SUBDIR += py3-pretend
     SUBDIR += py3-prompt_toolkit
     SUBDIR += py3-py
     SUBDIR += py3-pyasn1
@@ -4982,10 +4984,12 @@
     SUBDIR += py3-pytest
     SUBDIR += py3-pytest-capturelog
     SUBDIR += py3-pytest-runner
+    SUBDIR += py3-pytest-timeout
     SUBDIR += py3-pytest-xdist
     SUBDIR += py3-python-magic
     SUBDIR += py3-pytz
     SUBDIR += py3-rubymarshal
+    SUBDIR += py3-scripttest
     SUBDIR += py3-setproctitle
     SUBDIR += py3-setuptools_scm
     SUBDIR += py3-simplejson
@@ -4994,6 +4998,7 @@
     SUBDIR += py3-threema-msgapi
     SUBDIR += py3-urwid
     SUBDIR += py3-vcversioner
+    SUBDIR += py3-virtualenv
     SUBDIR += py3-wcwidth
     SUBDIR += py3-xdg
     SUBDIR += py3-yaml
