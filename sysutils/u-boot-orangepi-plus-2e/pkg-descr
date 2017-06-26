@@ -1,7 +1,8 @@
-U-Boot loader for pcDuino3
+U-Boot loader for OrangePi Plus2E.
 
 To install this bootloader on an sdcard just do :
-dd if=/usr/local/share/u-boot/u-boot-pcduino3/u-boot-sunxi-with-spl.bin of=/path/to/sdcarddevice bs=1k seek=8 conv=notrunc,sync
+dd if=/usr/local/share/u-boot/u-boot-orangepi-plus-2e/u-boot-sunxi-with-spl.bin \
+	of=/path/to/sdcarddevice bs=1k seek=8 conv=notrunc,sync
 
 This version is patched so that:
  * ELF and API features are enabled.
