@@ -5213,6 +5213,7 @@
     SUBDIR += rubygem-axiom-types
     SUBDIR += rubygem-backports
     SUBDIR += rubygem-bacon
+    SUBDIR += rubygem-baf
     SUBDIR += rubygem-benelux
     SUBDIR += rubygem-bin_utils
     SUBDIR += rubygem-bindata
@@ -5584,6 +5585,7 @@
     SUBDIR += rubygem-rspec-core
     SUBDIR += rubygem-rspec-expectations
     SUBDIR += rubygem-rspec-logsplit
+    SUBDIR += rubygem-rspec-its
     SUBDIR += rubygem-rspec-mocks
     SUBDIR += rubygem-rspec-rails
     SUBDIR += rubygem-rspec-support
