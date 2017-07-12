@@ -4166,6 +4166,7 @@
     SUBDIR += py-babelfish
     SUBDIR += py-backports.functools_lru_cache
     SUBDIR += py-backports.shutil_get_terminal_size
+    SUBDIR += py-backports.weakref
     SUBDIR += py-backports_abc
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
@@ -5585,8 +5586,8 @@
     SUBDIR += rubygem-rspec
     SUBDIR += rubygem-rspec-core
     SUBDIR += rubygem-rspec-expectations
-    SUBDIR += rubygem-rspec-logsplit
     SUBDIR += rubygem-rspec-its
+    SUBDIR += rubygem-rspec-logsplit
     SUBDIR += rubygem-rspec-mocks
     SUBDIR += rubygem-rspec-rails
     SUBDIR += rubygem-rspec-support
