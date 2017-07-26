@@ -20,10 +20,7 @@ LIB_DEPENDS=	libpng.so:graphics/png \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libpcre.so:devel/pcre
 
-NOT_FOR_ARCHS=		aarch64 armv6 powerpc powerpc64
-NOT_FOR_ARCHS_REASON=	invokes x86 asm
-
-USES=		compiler:c++0x execinfo gmake jpeg libtool localbase:ldflags \
+USES=		compiler:c++11-lib execinfo gmake jpeg libtool localbase:ldflags \
 		pathfix pkgconfig sqlite tar:tgz
 USE_XORG=	x11
 USE_LDCONFIG=	yes
