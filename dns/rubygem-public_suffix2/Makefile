@@ -2,17 +2,20 @@
 # $FreeBSD$
 
 PORTNAME=	public_suffix
-PORTVERSION=	3.0.0
+PORTVERSION=	2.0.5
 CATEGORIES=	dns rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	2
 
-MAINTAINER=	ruby@FreeBSD.org
+MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Ruby domain name parser based on the Public Suffix List
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 PATCH_DEPENDS=	public_suffix_list>=0:dns/public_suffix_list
+
+PORTSCOUT=	limit:^2\.
 
 NO_ARCH=	yes
 USE_RUBY=	yes
