@@ -1,8 +1,8 @@
 # Created by: Marc G. Fournier <scrappy@FreeBSD.org>
 # $FreeBSD$
 
-DISTVERSION?=	9.6.4
-PORTREVISION?=	3
+DISTVERSION?=	10beta3
+PKGNAMESUFFIX?= ${PORTVERSION:R}${COMPONENT}
 
 MAINTAINER?=	pgsql@FreeBSD.org
 
@@ -20,7 +20,10 @@ PG_USER?=	postgres
 PG_GROUP?=	postgres
 PG_UID?=	770
 
-ICU_PATCHFILE=	pg-96b4-icu-2016-10-02.diff.gz
-OPTIONS_DEFAULT+=ICU
+.if defined(SERVER_ONLY)
+CONFIGURE_ARGS+=--with-icu
+LIB_DEPENDS+=	libicudata.so:devel/icu
+USES+=		pkgconfig
+.endif
 
 .include "${.CURDIR}/../postgresql92-server/Makefile"
