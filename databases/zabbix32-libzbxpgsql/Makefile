@@ -5,7 +5,7 @@ PORTNAME=	libzbxpgsql
 PORTVERSION=	1.1.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	databases
-PKGNAMEPREFIX=	zabbix3-
+PKGNAMEPREFIX=	zabbix32-
 
 MAINTAINER=	martin@waschbuesch.de
 COMMENT=	Zabbix agent module for comprehensive monitoring of PostgreSQL servers
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	${NONEXISTENT}:net-mgmt/${PKGNAMEPREFIX}agent:patch
 RUN_DEPENDS=	zabbix_agentd:net-mgmt/${PKGNAMEPREFIX}agent
 LIB_DEPENDS=	libconfig.so:devel/libconfig
 
-CONFLICTS=	zabbix[0-9][0-9]-libzbxpgsql
+CONFLICTS=	zabbix[0-24-9][0-13-9]-libzbxpgsql zabbix[0-9]-libzbxpgsql
 
 USES=		autoreconf gmake libtool pgsql
 
