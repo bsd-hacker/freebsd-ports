@@ -4425,6 +4425,7 @@
     SUBDIR += py-grizzled
     SUBDIR += py-grouch
     SUBDIR += py-grpcio
+    SUBDIR += py-gtfslib
     SUBDIR += py-gyp
     SUBDIR += py-hash_ring
     SUBDIR += py-hghooks
@@ -4494,6 +4495,8 @@
     SUBDIR += py-kjbuckets
     SUBDIR += py-kqueue
     SUBDIR += py-krosspython
+    SUBDIR += py-lazr.config
+    SUBDIR += py-lazr.delegates
     SUBDIR += py-lazy
     SUBDIR += py-lazy-object-proxy
     SUBDIR += py-levenshtein
@@ -4683,6 +4686,7 @@
     SUBDIR += py-pyperclip
     SUBDIR += py-pypugjs
     SUBDIR += py-pyqi
+    SUBDIR += py-pyqtree
     SUBDIR += py-pyral
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
