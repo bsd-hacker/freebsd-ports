@@ -35,6 +35,7 @@
     SUBDIR += R-cran-gmodels
     SUBDIR += R-cran-gsubfn
     SUBDIR += R-cran-gtools
+    SUBDIR += R-cran-hms
     SUBDIR += R-cran-iterators
     SUBDIR += R-cran-itertools
     SUBDIR += R-cran-magrittr
@@ -5100,6 +5101,7 @@
     SUBDIR += py3-six
     SUBDIR += py3-tabulate
     SUBDIR += py3-threema-msgapi
+    SUBDIR += py3-toposort
     SUBDIR += py3-tox
     SUBDIR += py3-tzlocal
     SUBDIR += py3-urwid
