@@ -25,6 +25,7 @@
     SUBDIR += R-cran-RcppArmadillo
     SUBDIR += R-cran-RcppEigen
     SUBDIR += R-cran-Rmpfr
+    SUBDIR += R-cran-robustbase
     SUBDIR += R-cran-Rsolnp
     SUBDIR += R-cran-SparseM
     SUBDIR += R-cran-VGAM
@@ -35,6 +36,7 @@
     SUBDIR += R-cran-car
     SUBDIR += R-cran-coda
     SUBDIR += R-cran-combinat
+    SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dimRed
     SUBDIR += R-cran-dlmodeler
