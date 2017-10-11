@@ -908,6 +908,7 @@
     SUBDIR += py-mcrypt
     SUBDIR += py-mhash
     SUBDIR += py-mixbox
+    SUBDIR += py-mnemonic
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
     SUBDIR += py-onetime
@@ -962,6 +963,7 @@
     SUBDIR += py-stem
     SUBDIR += py-stix
     SUBDIR += py-tlslite
+    SUBDIR += py-trezor
     SUBDIR += py-trustedpickle
     SUBDIR += py-tuf
     SUBDIR += py-twofish
