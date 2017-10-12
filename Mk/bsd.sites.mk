@@ -670,7 +670,6 @@ MASTER_SITE_KDE+= \
 	http://ftp.heanet.ie/mirrors/ftp.kde.org/%SUBDIR%/ \
 	ftp://ftp.kddlabs.co.jp/pub/X11/kde/%SUBDIR%/ \
 	http://ftp.kddlabs.co.jp/pub/X11/kde/%SUBDIR%/ \
-	http://kde.mirror.uber.com.au/%SUBDIR%/ \
 	ftp://ftp.ussg.iu.edu/pub/kde/%SUBDIR%/ \
 	http://ftp.ussg.iu.edu/kde/%SUBDIR%/ \
 	ftp://ftp.sayclub.com/pub/X/KDE/%SUBDIR%/ \
@@ -679,7 +678,6 @@ MASTER_SITE_KDE+= \
 	ftp://ftp.mirrorservice.org/sites/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	http://www.mirrorservice.org/sites/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	http://ftp.icm.edu.pl/pub/unix/kde/%SUBDIR%/ \
-	http://kde-mirror.freenux.org/%SUBDIR%/ \
 	http://ftp.fi.muni.cz/pub/kde/%SUBDIR%/ \
 	ftp://ftp.funet.fi/pub/mirrors/ftp.kde.org/pub/kde/%SUBDIR%/ \
 	http://ftp.funet.fi/pub/mirrors/ftp.kde.org/pub/kde/%SUBDIR%/
@@ -898,11 +896,7 @@ MASTER_SITE_QT+= \
 	http://www.mirrorservice.org/sites/download.qt-project.org/%SUBDIR%/ \
 	http://www.nic.funet.fi/pub/mirrors/download.qt-project.org/%SUBDIR%/ \
 	http://qtmirror.ics.com/pub/qtproject/%SUBDIR%/ \
-	http://anychimirror101.mirrors.tds.net/pub/Qt/%SUBDIR%/ \
-	http://www.las.ic.unicamp.br/pub/qtproject/%SUBDIR%/ \
-	http://linorg.usp.br/Qt/%SUBDIR%/ \
-	http://ftp.jaist.ac.jp/pub/qtproject/%SUBDIR%/ \
-	http://mirrors.neusoft.edu.cn/qt/%SUBDIR%/
+	http://ftp.jaist.ac.jp/pub/qtproject/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_REDHAT_LINUX)
@@ -957,8 +951,8 @@ MASTER_SITE_SAVANNAH+= \
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE)
 .for p in https http
 MASTER_SITE_SOURCEFORGE+= ${p}://downloads.sourceforge.net/project/%SUBDIR%/
-.for m in cytranet dronedata excellmedia freefr jaist kent liquidtelecom nchc \
-	netassist netcologne netix superb-dca2 superb-sea2 tenet ufpr vorboss
+.for m in cytranet excellmedia freefr jaist kent nchc \
+	netcologne netix superb-dca2 superb-sea2 ufpr vorboss
 MASTER_SITE_SOURCEFORGE+= ${p}://${m}.dl.sourceforge.net/project/%SUBDIR%/
 .endfor
 .endfor
