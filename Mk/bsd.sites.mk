@@ -762,7 +762,6 @@ MASTER_SITE_NETLIB+= \
 	http://www.netlib.org/%SUBDIR%/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.netlib.org/%SUBDIR%/ \
 	http://www.mirrorservice.org/sites/ftp.netlib.org/%SUBDIR%/ \
-	http://www.netlib.no/netlib/%SUBDIR%/ \
 	ftp://ftp.irisa.fr/pub/netlib/%SUBDIR%/ \
 	http://netlib.sandia.gov/%SUBDIR%/
 .endif
@@ -917,9 +916,7 @@ MASTER_SITE_RUBYGEMS+= \
 
 .if !defined(IGNORE_MASTER_SITE_SAMBA)
 MASTER_SITE_SAMBA+= \
-	http://ftp.samba.org/pub/%SUBDIR%/ \
-	ftp://ca.samba.org/pub/%SUBDIR%/ \
-	ftp://de.samba.org/pub/%SUBDIR%/
+	http://ftp.samba.org/pub/%SUBDIR%/
 .endif
 
 # List:	http://download.savannah.gnu.org/mirmon/
