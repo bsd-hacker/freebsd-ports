@@ -1,22 +1,23 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	Email-Address-XS
-PORTVERSION=	1.01
-CATEGORIES=	mail perl5
+PORTNAME=	Net-DNS-Resolver-Mock
+PORTVERSION=	1.20170814
+CATEGORIES=	dns perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Parse and format RFC 2822 email addresses and groups
+COMMENT=	Mock a DNS Resolver object for testing
 
 LICENSE=	ART10 GPLv1+
 LICENSE_COMB=	dual
+LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BUILD_DEPENDS=	p5-Net-DNS>=0:dns/p5-Net-DNS
+RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USE_PERL5=	configure
 USES=		perl5
-
-post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/Email/Address/XS/XS.so
 
 .include <bsd.port.mk>
