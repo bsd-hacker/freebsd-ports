@@ -2064,6 +2064,7 @@
     SUBDIR += p5-Class-Factory
     SUBDIR += p5-Class-Factory-Util
     SUBDIR += p5-Class-Field
+    SUBDIR += p5-Class-Fields
     SUBDIR += p5-Class-Forward
     SUBDIR += p5-Class-Generate
     SUBDIR += p5-Class-Gomor
@@ -3241,6 +3242,7 @@
     SUBDIR += p5-SDL
     SUBDIR += p5-SNMP-Persist
     SUBDIR += p5-SOAP-WSDL
+    SUBDIR += p5-SPOPS
     SUBDIR += p5-SSN-Validate
     SUBDIR += p5-SUPER
     SUBDIR += p5-SVN-ACL
