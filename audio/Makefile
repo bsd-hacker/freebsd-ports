@@ -312,6 +312,7 @@
     SUBDIR += guspat
     SUBDIR += gvolwheel
     SUBDIR += gxmms2
+    SUBDIR += gxplugins-lv2
     SUBDIR += harp
     SUBDIR += herrie
     SUBDIR += hexter
@@ -414,6 +415,7 @@
     SUBDIR += libmpdclient
     SUBDIR += libmusicbrainz3
     SUBDIR += libmusicbrainz5
+    SUBDIR += libmusicxml
     SUBDIR += libnjb
     SUBDIR += libnoise
     SUBDIR += libogg
@@ -635,6 +637,7 @@
     SUBDIR += pm3umpdl
     SUBDIR += pms
     SUBDIR += pocketsphinx
+    SUBDIR += polyphone
     SUBDIR += portaudio
     SUBDIR += praat
     SUBDIR += pragha
