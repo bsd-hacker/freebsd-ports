@@ -114,6 +114,7 @@
     SUBDIR += dream
     SUBDIR += drumgizmo
     SUBDIR += drumpiler
+    SUBDIR += drumstick
     SUBDIR += dsbmixer
     SUBDIR += dssi
     SUBDIR += dtmfdial
@@ -333,6 +334,7 @@
     SUBDIR += idjc
     SUBDIR += ifp-line
     SUBDIR += infamous-plugins-lv2
+    SUBDIR += invada-studio-plugins-lv2
     SUBDIR += ir-lv2
     SUBDIR += jack
     SUBDIR += jack-keyboard
