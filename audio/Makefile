@@ -178,6 +178,7 @@
     SUBDIR += fluidsynth-dssi
     SUBDIR += fmit
     SUBDIR += foo-yc20
+    SUBDIR += fomp-lv2
     SUBDIR += forked-daapd
     SUBDIR += fpc-a52
     SUBDIR += fpc-mad
@@ -341,6 +342,7 @@
     SUBDIR += jack_mixer
     SUBDIR += jack_umidi
     SUBDIR += jalv
+    SUBDIR += jalv-select
     SUBDIR += jamin
     SUBDIR += jid3lib
     SUBDIR += jmusic
@@ -804,6 +806,7 @@
     SUBDIR += tkeca
     SUBDIR += toolame
     SUBDIR += tosha
+    SUBDIR += triceratops-lv2
     SUBDIR += trommler
     SUBDIR += tse3
     SUBDIR += tta
