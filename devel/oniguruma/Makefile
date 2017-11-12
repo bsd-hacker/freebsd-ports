@@ -2,12 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	oniguruma
-PORTVERSION=	5.9.6
+PORTVERSION=	6.6.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	1
 CATEGORIES=	devel textproc
-PKGNAMESUFFIX=	5
-DIST_SUBDIR=	ruby
+PKGNAMESUFFIX=	6
 
 MAINTAINER=	rob@theseusnetworking.com
 COMMENT=	BSDL Regular Expressions library compatible with POSIX/GNU/Perl
@@ -15,22 +13,18 @@ COMMENT=	BSDL Regular Expressions library compatible with POSIX/GNU/Perl
 LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-DEPRECATED=	Upstream no longer maintained, superseded by devel/oniguruma6
-EXPIRATION_DATE=2017-11-12
-
-OPTIONS_DEFINE=	DOCS EXAMPLES
-
-CONFLICTS_INSTALL=	oniguruma[46]
-
+USES=		pathfix autoreconf libtool
 USE_GITHUB=	yes
 GH_ACCOUNT=	kkos
 
-USES=		pathfix autoreconf libtool
+OPTIONS_DEFINE=	DOCS EXAMPLES
+
+PATHFIX_MAKEFILEIN=	Makefile.am
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 USE_LDCONFIG=	yes
-
-.include <bsd.port.options.mk>
+TEST_TARGET=	test
+TEST_WRKSRC=	${WRKSRC}/test
 
 post-patch:
 	@${REINPLACE_CMD} -e \
