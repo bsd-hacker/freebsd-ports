@@ -43,6 +43,7 @@
     SUBDIR += dlpoly-classic
     SUBDIR += ecs
     SUBDIR += epte
+    SUBDIR += erd
     SUBDIR += fastcap
     SUBDIR += fasthenry
     SUBDIR += fisicalab
@@ -144,6 +145,7 @@
     SUBDIR += p5-Physics-Unit
     SUBDIR += paje
     SUBDIR += paraview
+    SUBDIR += pcmsolver
     SUBDIR += pnetcdf
     SUBDIR += psychopy
     SUBDIR += pulseview
