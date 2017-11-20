@@ -1,12 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=		ldb
-PORTVERSION=		1.2.2
+PORTVERSION=		1.3.0
 PORTREVISION=		0
 PORTEPOCH=		0
 CATEGORIES=		databases
 MASTER_SITES=		SAMBA
-PKGNAMESUFFIX=		12
+PKGNAMESUFFIX=		13
 
 MAINTAINER=		timur@FreeBSD.org
 COMMENT=		LDAP-like embedded database
@@ -24,7 +24,7 @@ LDB_DEPENDS=		talloc>=2.1.10:devel/talloc \
 			cmocka>=1.1.1:sysutils/cmocka \
 			popt>=0:devel/popt
 
-CONFLICTS=		ldb-1.1.* ldb13-1.3.*
+CONFLICTS_INSTALL=	ldb-1.1.* ldb12-1.2.*
 
 USES=			compiler pkgconfig waf
 USE_LDCONFIG=		yes
