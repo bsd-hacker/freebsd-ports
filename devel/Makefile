@@ -4350,6 +4350,7 @@
     SUBDIR += py-cycler
     SUBDIR += py-d2to1
     SUBDIR += py-daemon
+    SUBDIR += py-daemon-runner
     SUBDIR += py-daemonize
     SUBDIR += py-daemons
     SUBDIR += py-dal
@@ -4440,6 +4441,7 @@
     SUBDIR += py-future
     SUBDIR += py-futures
     SUBDIR += py-futurist
+    SUBDIR += py-fuzzywuzzy
     SUBDIR += py-game
     SUBDIR += py-game_sdl2
     SUBDIR += py-gamin
@@ -4757,6 +4759,7 @@
     SUBDIR += py-pytest-timeout
     SUBDIR += py-pytest-tornado
     SUBDIR += py-pytest-xdist
+    SUBDIR += py-python-Levenshtein
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-distutils-extra
     SUBDIR += py-python-dtrace
