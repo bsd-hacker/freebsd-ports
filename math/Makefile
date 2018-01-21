@@ -183,6 +183,7 @@
     SUBDIR += fftw3-long
     SUBDIR += fftw3-quad
     SUBDIR += fityk
+    SUBDIR += flann
     SUBDIR += form
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
@@ -659,6 +660,7 @@
     SUBDIR += py-patsy
     SUBDIR += py-plastex
     SUBDIR += py-probstat
+    SUBDIR += py-pyasp
     SUBDIR += py-pybloom
     SUBDIR += py-pycosat
     SUBDIR += py-pyhull
@@ -732,8 +734,10 @@
     SUBDIR += superlu
     SUBDIR += superlu_mt
     SUBDIR += surf
+    SUBDIR += symmetrica
     SUBDIR += tablix
     SUBDIR += taucs
+    SUBDIR += tblis
     SUBDIR += testu01
     SUBDIR += tetgen
     SUBDIR += timbl

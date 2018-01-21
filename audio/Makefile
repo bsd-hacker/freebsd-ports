@@ -54,7 +54,6 @@
     SUBDIR += baresip
     SUBDIR += baudline
     SUBDIR += bcg729
-    SUBDIR += beast
     SUBDIR += beep
     SUBDIR += beets
     SUBDIR += blop
@@ -325,7 +324,6 @@
     SUBDIR += hs-libmpd
     SUBDIR += hts_engine-API
     SUBDIR += hydrogen
-    SUBDIR += hydrogen-devel
     SUBDIR += icecast-kh
     SUBDIR += icecast2
     SUBDIR += icegenerator
@@ -688,6 +686,7 @@
     SUBDIR += py-speex
     SUBDIR += py-tagpy
     SUBDIR += py-vorbis
+    SUBDIR += py-wavio
     SUBDIR += py-xmms2
     SUBDIR += pytone
     SUBDIR += qjackctl
@@ -718,7 +717,6 @@
     SUBDIR += rubberband
     SUBDIR += ruby-smf
     SUBDIR += ruby-taglib
-    SUBDIR += ruby-xmms2
     SUBDIR += rubygem-librmpd
     SUBDIR += rubygem-ruby-mp3info
     SUBDIR += rubygem-ruby-ogginfo

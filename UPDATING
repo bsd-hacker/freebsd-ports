@@ -5,6 +5,99 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180117:
+  AFFECTS: users of x11-toolkits/kf5-kirigami2 and x11/kf5-plasma-framework
+  AUTHOR: kde@FreeBSD.org
+
+  Files that were previously installed by kf5-kirigami2 get now installed 
+  in kf5-plasma-wramwork. This can lead to a conflict during the upgrade
+  of the packages. 
+  It is recommended to first remove the package kf5-krigami2.
+
+20180115
+  AFFECTS: users of net-p2p/transmission-daemon
+  AUTHOR: woodsb02@FreeBSD.org
+
+  The transmission-daemon port has been updated to 2.92_4 to incorporate
+  a patch which mitigates DNS rebinding attacks. This will prevent
+  clients from being able to connect to the transmission daemon using
+  DNS with any hostname other than localhost, unless one of the
+  following is done:
+    - Enable password authentication, then any hostname is allowed.
+      This can be achieved by either:
+        - setting rpc-authentication-required to true, and adding
+          credentials to the rpc-username and rpc-password fields in
+          settings.json (must be done whilst the transmission service is
+          stopped); or
+        - running transmission-daemon with the following arguments
+          (these can be set with transmission_flags in /etc/rc.conf):
+          -t -u USERNAME -v PASSWORD
+    OR
+    - Add the allowed server hostnames to the rpc-host-whitelist setting
+      in settings.json (must be done whilst the transmission service is
+      stopped). Note that this value is NOT a list of allowed CLIENTS,
+      but instead a list of allowed SERVER hostnames.
+
+20180111
+  AFFECTS: users of editors/vim-lite
+  AUTHOR: adamw@FreeBSD.org
+
+  The vim-lite port has been renamed to vim-console, because it isn't
+  actually any lighter. All three vim packages are built with
+  --enable-features=huge. Portmaster users will need to run this
+  command:
+
+  	portmaster -o editors/vim-console editors/vim-lite
+
+  If the switch doesn't happen automatically for you, just delete the
+  vim-lite package and install vim-console.
+
+20180109
+  AFFECTS: users of www/qt5-webengine
+  AUTHOR: kde@FreeBSD.org
+
+  The upgrade of www/qt5-webengine to 5.9.3 may fail if an older version
+  of it is installed. It is recommended to either build the port in a
+  builder like poudriere, or to deinstall and then doing an install.
+
+20180107
+  AFFECTS: users of security/gnupg and mail/mutt and mail/neomutt
+  AUTHOR: adamw@FreeBSD.org
+
+  The invocation for gpg from mutt/neomutt changed between gnupg-2.0
+  (which has expired and is now removed) and gnupg-2.2 (the current
+  version in the tree). Unless you're using gpgme, PGP-related
+  commands may fail in (neo)mutt.
+
+  In all cases, users are strongly urged to use security/gpgme to take
+  care of the setup for you. If you prefer to roll your own, the
+  following muttrc/neomuttrc entry has been reported to work:
+
+  pgp_decrypt_command="gpg2 %?p?--passphrase-fd 0 --pinentry-mode=loopback? --no-verbose --batch --output - %f"
+
+  See muttrc(5), neomuttrc(5), mutt.org, and neomutt.org for instructions
+  on (neo)mutt's gpg and gpgme instructions.
+
+20180102:
+  AFFECTS: users of devel/awscli
+  AUTHOR: bhughes@FreeBSD.org
+
+  The package name for devel/awscli has changed (back) to just awscli.
+  The introduction of flavors erroneously caused the awscli package to
+  be renamed to py27-awscli.
+
+20171230:
+  AFFECTS: users of net-im/ejabberd
+  AUTHOR: ashish@FreeBSD.org
+
+  If you are building ejabberd 17.11 on a host, which already has an older 
+  version of ejabberd installed, then build process will fail with "unknown type
+  specifier" errors. As a workaround, please uninstall ejabberd before building
+  ejabberd.
+
+  This has been reported upstream at:
+  https://github.com/processone/ejabberd/issues/2194
+
 20171223:
   AFFECTS: users of dns/dnscrypt-proxy
   AUTHOR: egypcio@googlemail.com

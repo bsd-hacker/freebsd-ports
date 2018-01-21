@@ -430,6 +430,7 @@
     SUBDIR += deforaos-libsystem
     SUBDIR += deheader
     SUBDIR += delta
+    SUBDIR += dep
     SUBDIR += derelict-sdl2
     SUBDIR += derelict-util
     SUBDIR += desktop-file-utils
@@ -1196,6 +1197,7 @@
     SUBDIR += icu-lx
     SUBDIR += idutils
     SUBDIR += imake
+    SUBDIR += inastemp
     SUBDIR += include-what-you-use
     SUBDIR += inifiled
     SUBDIR += inilib
@@ -1537,6 +1539,7 @@
     SUBDIR += libsoup-gnome
     SUBDIR += libsoup-reference
     SUBDIR += libspark2012
+    SUBDIR += libspice-server
     SUBDIR += libstatgrab
     SUBDIR += libstatgrab0
     SUBDIR += libstrfunc
@@ -1667,6 +1670,7 @@
     SUBDIR += lua-posix
     SUBDIR += lua-pty
     SUBDIR += lua-sysctl
+    SUBDIR += lua51-bitop
     SUBDIR += lua51-cjson
     SUBDIR += lua51-libevent
     SUBDIR += luabind
@@ -2977,7 +2981,6 @@
     SUBDIR += p5-MooseX-Role-Matcher
     SUBDIR += p5-MooseX-Role-Parameterized
     SUBDIR += p5-MooseX-Role-Strict
-    SUBDIR += p5-MooseX-Role-WithOverloading
     SUBDIR += p5-MooseX-Runnable
     SUBDIR += p5-MooseX-SemiAffordanceAccessor
     SUBDIR += p5-MooseX-SetOnce
@@ -3126,7 +3129,6 @@
     SUBDIR += p5-Parse-PMFile
     SUBDIR += p5-Parse-PerlConfig
     SUBDIR += p5-Parse-Pidl
-    SUBDIR += p5-Parse-Pidl44
     SUBDIR += p5-Parse-PlainConfig
     SUBDIR += p5-Parse-RecDescent
     SUBDIR += p5-Parse-Win32Registry
@@ -3182,6 +3184,7 @@
     SUBDIR += p5-Pipeline
     SUBDIR += p5-Pithub
     SUBDIR += p5-PkgConfig
+    SUBDIR += p5-PkgConfig-LibPkgConf
     SUBDIR += p5-Pod-Coverage
     SUBDIR += p5-Pod-Coverage-Moose
     SUBDIR += p5-Pod-Coverage-TrustPod
@@ -3427,7 +3430,6 @@
     SUBDIR += p5-Test-Benchmark
     SUBDIR += p5-Test-BinaryData
     SUBDIR += p5-Test-Bits
-    SUBDIR += p5-Test-Block
     SUBDIR += p5-Test-CPAN-Meta
     SUBDIR += p5-Test-CPAN-Meta-YAML
     SUBDIR += p5-Test-CheckDeps
@@ -4129,7 +4131,6 @@
     SUBDIR += pure-stldict
     SUBDIR += pure-stllib
     SUBDIR += pushmi
-    SUBDIR += pwlib
     SUBDIR += py-Acquisition
     SUBDIR += py-AddOns
     SUBDIR += py-Automat
@@ -4397,6 +4398,7 @@
     SUBDIR += py-efilter
     SUBDIR += py-efl
     SUBDIR += py-eggtestinfo
+    SUBDIR += py-ejson
     SUBDIR += py-entrypoints
     SUBDIR += py-enum-compat
     SUBDIR += py-enum34
@@ -4404,6 +4406,7 @@
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
     SUBDIR += py-evdev
+    SUBDIR += py-eventlib
     SUBDIR += py-exam
     SUBDIR += py-extras
     SUBDIR += py-extremes
@@ -4565,6 +4568,7 @@
     SUBDIR += py-libzfs
     SUBDIR += py-linecache2
     SUBDIR += py-llfuse
+    SUBDIR += py-llvmcpy
     SUBDIR += py-llvmlite
     SUBDIR += py-lock_file
     SUBDIR += py-lockfile
@@ -4747,6 +4751,7 @@
     SUBDIR += py-pyqi
     SUBDIR += py-pyqtree
     SUBDIR += py-pyral
+    SUBDIR += py-pyrepl
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
     SUBDIR += py-pyshapelib
@@ -4824,7 +4829,6 @@
     SUBDIR += py-rcsparse
     SUBDIR += py-rebulk
     SUBDIR += py-rednose
-    SUBDIR += py-repl
     SUBDIR += py-repoze.lru
     SUBDIR += py-repoze.sphinx.autointerface
     SUBDIR += py-repoze.tm2
@@ -5225,14 +5229,11 @@
     SUBDIR += rth
     SUBDIR += ruby-bsearch
     SUBDIR += ruby-build
-    SUBDIR += ruby-calendar
-    SUBDIR += ruby-date2
     SUBDIR += ruby-gems
     SUBDIR += ruby-korundum
     SUBDIR += ruby-krossruby
     SUBDIR += ruby-ncurses
     SUBDIR += ruby-qtruby
-    SUBDIR += ruby-rbbr
     SUBDIR += ruby-rbprof
     SUBDIR += ruby-sdl
     SUBDIR += ruby-setup.rb
@@ -5454,6 +5455,7 @@
     SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-api-client010
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
@@ -5519,6 +5521,7 @@
     SUBDIR += rubygem-librarianp
     SUBDIR += rubygem-libyajl2
     SUBDIR += rubygem-licensee
+    SUBDIR += rubygem-licensee8
     SUBDIR += rubygem-listen
     SUBDIR += rubygem-little-plugger
     SUBDIR += rubygem-local_time
@@ -5724,6 +5727,7 @@
     SUBDIR += rubygem-sdoc
     SUBDIR += rubygem-semantic_puppet
     SUBDIR += rubygem-semi_semantic
+    SUBDIR += rubygem-semver2
     SUBDIR += rubygem-sentry-raven
     SUBDIR += rubygem-sequel
     SUBDIR += rubygem-settingslogic

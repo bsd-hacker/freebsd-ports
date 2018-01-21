@@ -2,7 +2,7 @@
 
 PORTNAME=	llvm
 DISTVERSION=	4.0.1
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	devel lang
 MASTER_SITES=	http://llvm.org/${PRE_}releases/${LLVM_RELEASE}/${RCDIR}
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
@@ -30,7 +30,7 @@ DATADIR=	${PREFIX}/share/${PORTNAME}${LLVM_SUFFIX}
 
 USES=		cmake:outsource compiler:c++11-lib libedit perl5 tar:xz \
 		shebangfix
-_USES_PYTHON?=	python:build
+_USES_PYTHON?=	python:2.7,build
 USES+=		${_USES_PYTHON}
 USE_LDCONFIG=	${LLVM_PREFIX}/lib
 SHEBANG_FILES=	utils/lit/lit.py utils/llvm-lit/llvm-lit.in
@@ -39,7 +39,7 @@ SUB_FILES=	llvm-wrapper.sh
 SUB_LIST=	LLVM_PREFIX="${LLVM_PREFIX}" LLVM_SUFFIX="${LLVM_SUFFIX}"
 
 CMAKE_INSTALL_PREFIX=	${LLVM_PREFIX}
-CMAKE_ARGS=	-DLLVM_BUILD_LLVM_DYLIB=ON
+CMAKE_ARGS=	-DLLVM_BUILD_LLVM_DYLIB=ON -DLLVM_LINK_LLVM_DYLIB=ON
 CMAKE_ARGS+=	-DLLVM_ENABLE_RTTI=ON
 CMAKE_ARGS+=	-DLLVM_DEFAULT_TARGET_TRIPLE=${CONFIGURE_TARGET}
 CMAKE_ARGS+=	-DLLVM_HOST_TRIPLE=${CONFIGURE_TARGET}
@@ -86,7 +86,7 @@ GOLD_DESC=		Build the LLVM Gold plugin for LTO
 GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
 GOLD_BUILD_DEPENDS=	${LOCALBASE}/bin/ld.gold:devel/binutils
 LIT_DESC=		Install lit and FileCheck test tools
-LIT_VARS=		_USES_PYTHON=python
+LIT_VARS=		_USES_PYTHON=python:2.7
 LLD_DESC=		Install lld, the LLVM linker
 LLD_DISTFILES=		lld-${DISTVERSION}.src${EXTRACT_SUFX}
 LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30
@@ -94,7 +94,7 @@ LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_DISTFILES=		lldb-${DISTVERSION}.src${EXTRACT_SUFX}
 LLDB_EXTRA_PATCHES=	${PATCHDIR}/lldb-patch-tools_lldb_source_Host_common_FileSpec.cpp
 LLDB_IMPLIES=		CLANG
-LLDB_VARS=		_USES_PYTHON=python
+LLDB_VARS=		_USES_PYTHON=python:2.7
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
 OPENMP_DISTFILES=	openmp-${DISTVERSION}.src${EXTRACT_SUFX}
 OPENMP_EXTRA_PATCHES=	${PATCHDIR}/openmp-patch-bug32279

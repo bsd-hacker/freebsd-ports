@@ -127,6 +127,7 @@
     SUBDIR += proxy65
     SUBDIR += psi
     SUBDIR += psimedia
+    SUBDIR += purple-hangouts
     SUBDIR += py-fbmq
     SUBDIR += py-jabber
     SUBDIR += py-jabberbot
@@ -160,6 +161,7 @@
     SUBDIR += rubygem-termtter
     SUBDIR += rubygem-tinder
     SUBDIR += sayaka
+    SUBDIR += scudcloud
     SUBDIR += sendxmpp
     SUBDIR += skype
     SUBDIR += skype-devel
