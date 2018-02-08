@@ -1337,6 +1337,7 @@
     SUBDIR += libchipcard
     SUBDIR += libcidr
     SUBDIR += libcii
+    SUBDIR += libcjson
     SUBDIR += libclc
     SUBDIR += libcli
     SUBDIR += libconcurrent
@@ -4572,6 +4573,7 @@
     SUBDIR += py-libtmux
     SUBDIR += py-libusb1
     SUBDIR += py-libusb115
+    SUBDIR += py-libversion
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
     SUBDIR += py-linecache2
@@ -5996,6 +5998,7 @@
     SUBDIR += tig
     SUBDIR += tigcc
     SUBDIR += tijmp
+    SUBDIR += tinycbor
     SUBDIR += tinylaf
     SUBDIR += tinyq
     SUBDIR += tkcon
