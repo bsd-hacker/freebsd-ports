@@ -3,7 +3,7 @@
 
 PORTNAME=	octave
 PORTVERSION=	4.2.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	math java
 MASTER_SITES=	GNU
 
@@ -63,7 +63,8 @@ CONFIGURE_ARGS=	--host=${GNU_HOST} \
 		--with-lapack="${LAPACKLIB}" \
 		--enable-shared \
 		--disable-jit \
-		--disable-openmp
+		--disable-openmp \
+		--with-qt=4
 
 OPTIONS_DEFINE=	DOCS
 

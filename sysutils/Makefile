@@ -200,6 +200,7 @@
     SUBDIR += cpuburn
     SUBDIR += cpuid
     SUBDIR += cpulimit
+    SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
     SUBDIR += createrepo
@@ -584,6 +585,7 @@
     SUBDIR += logstash
     SUBDIR += logstash-forwarder
     SUBDIR += logstash5
+    SUBDIR += logstash6
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += lookat
@@ -1003,7 +1005,6 @@
     SUBDIR += rtty
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bosh-gen
-    SUBDIR += rubygem-bosh_cli
     SUBDIR += rubygem-bundler
     SUBDIR += rubygem-bundler_ext
     SUBDIR += rubygem-capistrano
@@ -1130,6 +1131,7 @@
     SUBDIR += smenu
     SUBDIR += smp_utils
     SUBDIR += snap
+    SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += snowlog
     SUBDIR += socket
@@ -1169,6 +1171,7 @@
     SUBDIR += syslog-ng311
     SUBDIR += syslog-ng312
     SUBDIR += syslog-ng313
+    SUBDIR += syslog-ng314
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39

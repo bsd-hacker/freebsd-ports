@@ -82,14 +82,10 @@
     SUBDIR += adabooch
     SUBDIR += adacurses
     SUBDIR += adaid
-    SUBDIR += adime
     SUBDIR += aegis
-    SUBDIR += afay
     SUBDIR += ahven
     SUBDIR += aifad
-    SUBDIR += alabastra
     SUBDIR += ald
-    SUBDIR += alf
     SUBDIR += allegro
     SUBDIR += allegro-devel
     SUBDIR += alog
@@ -207,7 +203,6 @@
     SUBDIR += bmake
     SUBDIR += bmkdep
     SUBDIR += bnf
-    SUBDIR += boaconstructor
     SUBDIR += boehm-gc
     SUBDIR += boehm-gc-redirect
     SUBDIR += boehm-gc-threaded
@@ -366,7 +361,6 @@
     SUBDIR += csmith
     SUBDIR += csoap
     SUBDIR += cssc
-    SUBDIR += cstringbuffer
     SUBDIR += ctags
     SUBDIR += ctypes.sh
     SUBDIR += cunit
@@ -458,7 +452,6 @@
     SUBDIR += doctorj
     SUBDIR += dolphin-plugins-kde4
     SUBDIR += dotconf
-    SUBDIR += dotconf++
     SUBDIR += doxygen
     SUBDIR += dparser
     SUBDIR += dprog
@@ -2067,6 +2060,7 @@
     SUBDIR += p5-Class-Declare
     SUBDIR += p5-Class-Default
     SUBDIR += p5-Class-Delegation
+    SUBDIR += p5-Class-EHierarchy
     SUBDIR += p5-Class-ErrorHandler
     SUBDIR += p5-Class-Factory
     SUBDIR += p5-Class-Factory-Util
@@ -3366,7 +3360,7 @@
     SUBDIR += p5-Symbol-Util
     SUBDIR += p5-Syntax-Keyword-Gather
     SUBDIR += p5-Syntax-Keyword-Junction
-    SUBDIR += p5-Sys-Cpu
+    SUBDIR += p5-Sys-CPU
     SUBDIR += p5-Sys-Info
     SUBDIR += p5-Sys-Info-Base
     SUBDIR += p5-Sys-Info-Driver-BSD
@@ -4546,6 +4540,7 @@
     SUBDIR += py-json-sempai
     SUBDIR += py-jsonlib
     SUBDIR += py-jsonlib2
+    SUBDIR += py-jsonlines
     SUBDIR += py-jsonpatch
     SUBDIR += py-jsonpointer
     SUBDIR += py-jsonref
@@ -5277,6 +5272,7 @@
     SUBDIR += rubygem-analogger
     SUBDIR += rubygem-annoy
     SUBDIR += rubygem-ansi
+    SUBDIR += rubygem-airborne
     SUBDIR += rubygem-apipie-bindings
     SUBDIR += rubygem-apipie-params
     SUBDIR += rubygem-app_config
@@ -5310,19 +5306,15 @@
     SUBDIR += rubygem-binding_of_caller
     SUBDIR += rubygem-bit-struct
     SUBDIR += rubygem-blankslate
-    SUBDIR += rubygem-blobstore_client
     SUBDIR += rubygem-blockenspiel
     SUBDIR += rubygem-bones
     SUBDIR += rubygem-bootsnap
     SUBDIR += rubygem-bootstrap_form
-    SUBDIR += rubygem-bosh-template
-    SUBDIR += rubygem-bosh_common
     SUBDIR += rubygem-bson
     SUBDIR += rubygem-buftok
     SUBDIR += rubygem-bugspots
     SUBDIR += rubygem-builder
     SUBDIR += rubygem-byebug
-    SUBDIR += rubygem-byebug9
     SUBDIR += rubygem-cabin
     SUBDIR += rubygem-caesars
     SUBDIR += rubygem-cairo-gobject
@@ -5435,7 +5427,6 @@
     SUBDIR += rubygem-flipper
     SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper-active_support_cache_store011
-    SUBDIR += rubygem-flipper010
     SUBDIR += rubygem-flipper011
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
@@ -5479,7 +5470,6 @@
     SUBDIR += rubygem-glib2
     SUBDIR += rubygem-gobject-introspection
     SUBDIR += rubygem-google-api-client
-    SUBDIR += rubygem-google-api-client010
     SUBDIR += rubygem-google-protobuf
     SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
@@ -5654,7 +5644,6 @@
     SUBDIR += rubygem-powerpack
     SUBDIR += rubygem-pqueue
     SUBDIR += rubygem-progressbar
-    SUBDIR += rubygem-progressbar09
     SUBDIR += rubygem-prometheus-client-mmap
     SUBDIR += rubygem-protected_attributes
     SUBDIR += rubygem-protocol
@@ -5734,6 +5723,7 @@
     SUBDIR += rubygem-ruby-filemagic
     SUBDIR += rubygem-ruby-fogbugz
     SUBDIR += rubygem-ruby-libvirt
+    SUBDIR += rubygem-ruby-macho
     SUBDIR += rubygem-ruby-ole
     SUBDIR += rubygem-ruby-prof
     SUBDIR += rubygem-ruby-prof016
