@@ -2182,6 +2182,7 @@
     SUBDIR += p5-DB_File-Lock
     SUBDIR += p5-Daemon-Control
     SUBDIR += p5-Dancer-Debug
+    SUBDIR += p5-Dancer-Logger-Syslog
     SUBDIR += p5-Danga-Socket
     SUBDIR += p5-Danga-Socket-Callback
     SUBDIR += p5-Data-ACL
@@ -5208,6 +5209,7 @@
     SUBDIR += radare2
     SUBDIR += ragel
     SUBDIR += raknet
+    SUBDIR += range-v3
     SUBDIR += rapidjson
     SUBDIR += raylib
     SUBDIR += rbenv
