@@ -226,6 +226,7 @@
     SUBDIR += grafana2
     SUBDIR += grafana3
     SUBDIR += grafana4
+    SUBDIR += grafana5
     SUBDIR += grails
     SUBDIR += gregarius
     SUBDIR += groupoffice
@@ -1667,6 +1668,7 @@
     SUBDIR += py-flask
     SUBDIR += py-flask-admin
     SUBDIR += py-flask-api
+    SUBDIR += py-flask-apscheduler
     SUBDIR += py-flask-assets
     SUBDIR += py-flask-bootstrap
     SUBDIR += py-flask-cache
@@ -1674,11 +1676,13 @@
     SUBDIR += py-flask-cors
     SUBDIR += py-flask-flatpages
     SUBDIR += py-flask-login
+    SUBDIR += py-flask-marshmallow
     SUBDIR += py-flask-migrate
     SUBDIR += py-flask-oauthlib
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
+    SUBDIR += py-flask-script
     SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
@@ -1890,6 +1894,7 @@
     SUBDIR += py-webhelpers
     SUBDIR += py-webkitgtk
     SUBDIR += py-webob
+    SUBDIR += py-weboob
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
@@ -1940,6 +1945,7 @@
     SUBDIR += reportmagic
     SUBDIR += repos-style
     SUBDIR += resin3
+    SUBDIR += restbed
     SUBDIR += retawq
     SUBDIR += revive-adserver
     SUBDIR += rnews
@@ -2323,6 +2329,7 @@
     SUBDIR += trac-customfieldadmin
     SUBDIR += trac-datefield
     SUBDIR += trac-defaultcc
+    SUBDIR += trac-devel
     SUBDIR += trac-discussion
     SUBDIR += trac-downloads
     SUBDIR += trac-email2trac

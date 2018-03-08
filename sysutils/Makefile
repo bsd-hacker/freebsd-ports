@@ -103,7 +103,6 @@
     SUBDIR += biosfont
     SUBDIR += bkpupsd
     SUBDIR += bksh
-    SUBDIR += blackbox_exporter
     SUBDIR += boxbackup
     SUBDIR += boxbackup-devel
     SUBDIR += brasero
@@ -1079,6 +1078,7 @@
     SUBDIR += rubygem-yell
     SUBDIR += rundeck
     SUBDIR += runit
+    SUBDIR += runit-faster
     SUBDIR += runwhen
     SUBDIR += s6
     SUBDIR += s6-rc

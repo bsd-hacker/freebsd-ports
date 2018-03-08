@@ -592,6 +592,7 @@
     SUBDIR += pgloader
     SUBDIR += pgloader3
     SUBDIR += pglogical
+    SUBDIR += pgmetrics
     SUBDIR += pgmodeler
     SUBDIR += pgpool
     SUBDIR += pgpool-II-33
@@ -790,6 +791,7 @@
     SUBDIR += py-kyotocabinet
     SUBDIR += py-leveldb
     SUBDIR += py-lmdb
+    SUBDIR += py-marshmallow-sqlalchemy
     SUBDIR += py-motor
     SUBDIR += py-mycli
     SUBDIR += py-mysql-connector-python
