@@ -49,6 +49,7 @@
     SUBDIR += areca-cli
     SUBDIR += ascpu
     SUBDIR += asfsm
+    SUBDIR += asmctl
     SUBDIR += asmem
     SUBDIR += asmon
     SUBDIR += asusoled
@@ -383,6 +384,7 @@
     SUBDIR += fusefs-sshfs
     SUBDIR += fusefs-unionfs
     SUBDIR += fusefs-wdfs
+    SUBDIR += fusefs-webdavfs
     SUBDIR += fusefs-wikipediafs
     SUBDIR += fusefs-zip
     SUBDIR += fvcool
@@ -601,6 +603,8 @@
     SUBDIR += lxsplit
     SUBDIR += lxtask
     SUBDIR += lxterminal
+    SUBDIR += mac_nonet
+    SUBDIR += mac_rtprio
     SUBDIR += magicrescue
     SUBDIR += manck
     SUBDIR += mapchan

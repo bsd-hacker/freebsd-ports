@@ -301,6 +301,7 @@
     SUBDIR += lybniz
     SUBDIR += mate-calc
     SUBDIR += math77
+    SUBDIR += mathgl
     SUBDIR += mathmod
     SUBDIR += mathomatic
     SUBDIR += matio
@@ -668,6 +669,7 @@
     SUBDIR += py-pyvtk
     SUBDIR += py-roman
     SUBDIR += py-scientific
+    SUBDIR += py-seaborn
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
     SUBDIR += py-symeig
@@ -771,6 +773,7 @@
     SUBDIR += xplot
     SUBDIR += xppaut
     SUBDIR += xspread
+    SUBDIR += xtensor
     SUBDIR += yacas
     SUBDIR += z3
     SUBDIR += zimpl
