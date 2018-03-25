@@ -528,9 +528,7 @@
     SUBDIR += elixir-plug
     SUBDIR += elixir-poison
     SUBDIR += elixir-quantum
-    SUBDIR += elixir-simple_bayes
     SUBDIR += elixir-smppex
-    SUBDIR += elixir-stemmer
     SUBDIR += elixir-swarm
     SUBDIR += elixir-timex
     SUBDIR += elixir-tirexs
@@ -4440,6 +4438,7 @@
     SUBDIR += py-fastnumbers
     SUBDIR += py-filemagic
     SUBDIR += py-fileutils
+    SUBDIR += py-first
     SUBDIR += py-five.customerize
     SUBDIR += py-five.formlib
     SUBDIR += py-five.globalrequest
@@ -4486,6 +4485,7 @@
     SUBDIR += py-geotypes
     SUBDIR += py-gevent
     SUBDIR += py-git-up
+    SUBDIR += py-git_semver
     SUBDIR += py-gitdb2
     SUBDIR += py-gitless
     SUBDIR += py-gitosis
@@ -4552,6 +4552,7 @@
     SUBDIR += py-jsmin
     SUBDIR += py-json-py
     SUBDIR += py-json-sempai
+    SUBDIR += py-json_tricks
     SUBDIR += py-jsonlib
     SUBDIR += py-jsonlib2
     SUBDIR += py-jsonlines
@@ -4611,13 +4612,16 @@
     SUBDIR += py-matrix-angular-sdk
     SUBDIR += py-mccabe
     SUBDIR += py-mdv
+    SUBDIR += py-medikit
     SUBDIR += py-meliae
     SUBDIR += py-memory_profiler
     SUBDIR += py-mercurialserver
     SUBDIR += py-microversion-parse
     SUBDIR += py-mimeparse
     SUBDIR += py-minimongo
+    SUBDIR += py-minio
     SUBDIR += py-mock
+    SUBDIR += py-mondrian
     SUBDIR += py-mongoengine
     SUBDIR += py-mongokit
     SUBDIR += py-monotonic
@@ -4712,6 +4716,7 @@
     SUBDIR += py-pika-pool
     SUBDIR += py-pinocchio
     SUBDIR += py-pip
+    SUBDIR += py-pip-tools
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
     SUBDIR += py-plan
@@ -5023,6 +5028,7 @@
     SUBDIR += py-weblib
     SUBDIR += py-websockify
     SUBDIR += py-wheel
+    SUBDIR += py-whistle
     SUBDIR += py-widgetsnbextension
     SUBDIR += py-wrapt
     SUBDIR += py-wsgi_intercept
@@ -5286,6 +5292,7 @@
     SUBDIR += rubygem-activesupport4
     SUBDIR += rubygem-activesupport5
     SUBDIR += rubygem-activesupport50
+    SUBDIR += rubygem-airborne
     SUBDIR += rubygem-akismet
     SUBDIR += rubygem-algebrick
     SUBDIR += rubygem-algorithms
@@ -5293,7 +5300,6 @@
     SUBDIR += rubygem-analogger
     SUBDIR += rubygem-annoy
     SUBDIR += rubygem-ansi
-    SUBDIR += rubygem-airborne
     SUBDIR += rubygem-apipie-bindings
     SUBDIR += rubygem-apipie-params
     SUBDIR += rubygem-app_config

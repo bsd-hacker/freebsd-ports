@@ -665,6 +665,7 @@
     SUBDIR += py-pygsl
     SUBDIR += py-pyhull
     SUBDIR += py-pymc
+    SUBDIR += py-pymc3
     SUBDIR += py-pysparse
     SUBDIR += py-pyvtk
     SUBDIR += py-roman
@@ -676,6 +677,7 @@
     SUBDIR += py-sympy
     SUBDIR += py-theano
     SUBDIR += py-ufl
+    SUBDIR += py-uncertainties
     SUBDIR += py-viper
     SUBDIR += py-yt
     SUBDIR += qalculate

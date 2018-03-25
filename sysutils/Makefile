@@ -6,6 +6,7 @@
     SUBDIR += 3dm
     SUBDIR += 44bsd-more
     SUBDIR += 915resolution
+    SUBDIR += DTraceToolkit
     SUBDIR += LPRng
     SUBDIR += LPRngTool
     SUBDIR += UEFITool
@@ -146,6 +147,7 @@
     SUBDIR += cfengine-masterfiles37
     SUBDIR += cfengine-masterfiles38
     SUBDIR += cfengine-masterfiles39
+    SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine22
     SUBDIR += cfengine310
     SUBDIR += cfengine311
@@ -157,6 +159,7 @@
     SUBDIR += cfengine37
     SUBDIR += cfengine38
     SUBDIR += cfengine39
+    SUBDIR += cfengine-devel
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -189,6 +192,7 @@
     SUBDIR += consolekit2
     SUBDIR += consul
     SUBDIR += consul-alerts
+    SUBDIR += consul-replicate
     SUBDIR += consul_exporter
     SUBDIR += container-diff
     SUBDIR += contractor
@@ -211,7 +215,6 @@
     SUBDIR += curly
     SUBDIR += currtime
     SUBDIR += cw
-    SUBDIR += DTraceToolkit
     SUBDIR += daa2iso
     SUBDIR += dae
     SUBDIR += daemonize
@@ -314,6 +317,7 @@
     SUBDIR += file
     SUBDIR += filedupe
     SUBDIR += filelight
+    SUBDIR += filelight-kde4
     SUBDIR += fileprune
     SUBDIR += fileschanged
     SUBDIR += filetype
@@ -1124,6 +1128,7 @@
     SUBDIR += shmcat
     SUBDIR += showbeastie
     SUBDIR += siegfried
+    SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
     SUBDIR += skill
@@ -1211,6 +1216,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux23
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl
