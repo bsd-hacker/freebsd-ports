@@ -33,6 +33,7 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	monero-project
 GH_PROJECT=	monero
 CFLAGS+=	-D_WANT_SEMUN
+LLD_UNSAFE=	yes
 
 OPTIONS_DEFINE=		DOXYGEN
 DOXYGEN_BUILD_DEPENDS=	dot:graphics/graphviz \
