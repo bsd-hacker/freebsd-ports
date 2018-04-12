@@ -5,6 +5,7 @@
 
     SUBDIR += R-cran-RgoogleMaps
     SUBDIR += R-cran-Rook
+    SUBDIR += R-cran-crosstalk
     SUBDIR += R-cran-downloader
     SUBDIR += R-cran-htmlwidgets
     SUBDIR += R-cran-httpuv
@@ -197,6 +198,7 @@
     SUBDIR += gist
     SUBDIR += gitea
     SUBDIR += gitlab
+    SUBDIR += gitlab-pages
     SUBDIR += gitlab-workhorse
     SUBDIR += glassfish
     SUBDIR += glpi
@@ -384,6 +386,7 @@
     SUBDIR += man2web
     SUBDIR += mathjax
     SUBDIR += mathopd
+    SUBDIR += matomo
     SUBDIR += mattermost-server
     SUBDIR += mattermost-webapp
     SUBDIR += mediawiki127
@@ -397,6 +400,7 @@
     SUBDIR += midori
     SUBDIR += mimetex
     SUBDIR += mini_httpd
+    SUBDIR += miniflux
     SUBDIR += miniminiweb
     SUBDIR += minio
     SUBDIR += minio-client
@@ -552,7 +556,6 @@
     SUBDIR += npm-node4
     SUBDIR += npm-node6
     SUBDIR += npm-node8
-    SUBDIR += npm4
     SUBDIR += nspluginwrapper
     SUBDIR += nuvolaplayer-8tracks
     SUBDIR += nuvolaplayer-all-services
@@ -1488,7 +1491,6 @@
     SUBDIR += phpvirtualbox
     SUBDIR += pivotx
     SUBDIR += piwigo
-    SUBDIR += piwik
     SUBDIR += planet
     SUBDIR += plexwatchweb
     SUBDIR += plone
@@ -1570,7 +1572,6 @@
     SUBDIR += py-django-crispy-forms
     SUBDIR += py-django-datetime-widget
     SUBDIR += py-django-debug-toolbar
-    SUBDIR += py-django-devel
     SUBDIR += py-django-dpaste
     SUBDIR += py-django-evolution
     SUBDIR += py-django-extensions
@@ -1714,6 +1715,7 @@
     SUBDIR += py-kallithea
     SUBDIR += py-lesscpy
     SUBDIR += py-libsass
+    SUBDIR += py-livereload
     SUBDIR += py-mechanize
     SUBDIR += py-meld
     SUBDIR += py-meld3

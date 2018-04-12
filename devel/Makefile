@@ -8,6 +8,7 @@
     SUBDIR += ElectricFence
     SUBDIR += ORBit2
     SUBDIR += ORBit2-reference
+    SUBDIR += R-cran-abind
     SUBDIR += R-cran-BH
     SUBDIR += R-cran-Defaults
     SUBDIR += R-cran-Hmisc
@@ -269,6 +270,7 @@
     SUBDIR += cdecl
     SUBDIR += cdialog
     SUBDIR += cdk
+    SUBDIR += cervisia
     SUBDIR += cervisia-kde4
     SUBDIR += cflow
     SUBDIR += cflow2vcg
@@ -454,6 +456,7 @@
     SUBDIR += dmalloc
     SUBDIR += dmucs
     SUBDIR += doctorj
+    SUBDIR += dolphin-plugins
     SUBDIR += dolphin-plugins-kde4
     SUBDIR += dotconf
     SUBDIR += doxygen
@@ -740,6 +743,7 @@
     SUBDIR += gettext-runtime
     SUBDIR += gettext-tools
     SUBDIR += gflags
+    SUBDIR += ghub
     SUBDIR += giggle
     SUBDIR += gindent
     SUBDIR += gio-sharp
@@ -888,6 +892,7 @@
     SUBDIR += hadoop2
     SUBDIR += hapy
     SUBDIR += hcs12mem
+    SUBDIR += heimdall
     SUBDIR += hexcompare
     SUBDIR += hexd
     SUBDIR += hg-git
@@ -1239,16 +1244,21 @@
     SUBDIR += jwasm
     SUBDIR += k8048
     SUBDIR += kBuild
+    SUBDIR += kapptemplate
     SUBDIR += kapptemplate-kde4
     SUBDIR += kaptain
+    SUBDIR += kcachegrind
     SUBDIR += kcachegrind-kde4
     SUBDIR += kdbg
+    SUBDIR += kde-dev-scripts
     SUBDIR += kde-dev-scripts-kde4
+    SUBDIR += kde-dev-utils
     SUBDIR += kde-dev-utils-kde4
     SUBDIR += kdebindings-kde4
     SUBDIR += kdesdk-kde4
     SUBDIR += kdesdk-kioslaves-kde4
     SUBDIR += kdesdk-strigi-analyzers-kde4
+    SUBDIR += kdesdk-thumbnailers
     SUBDIR += kdesdk-thumbnailers-kde4
     SUBDIR += kdesvn-kde4
     SUBDIR += kdevelop-kde4
@@ -1286,6 +1296,7 @@
     SUBDIR += kf5-threadweaver
     SUBDIR += kickassembler
     SUBDIR += kimwitu
+    SUBDIR += kio-extras
     SUBDIR += kore
     SUBDIR += ksql
     SUBDIR += kyra
@@ -1428,7 +1439,7 @@
     SUBDIR += libixp
     SUBDIR += libjson++
     SUBDIR += libk8055
-    SUBDIR += libkgapi
+    SUBDIR += libkgapi-kde4
     SUBDIR += libklel
     SUBDIR += libkolab
     SUBDIR += liblangtag
@@ -1647,6 +1658,7 @@
     SUBDIR += log4net
     SUBDIR += log4sh
     SUBDIR += log4shib
+    SUBDIR += lokalize
     SUBDIR += lokalize-kde4
     SUBDIR += loki
     SUBDIR += looks
@@ -1664,7 +1676,6 @@
     SUBDIR += lua-gettext
     SUBDIR += lua-lgi
     SUBDIR += lua-lpeg
-    SUBDIR += lua-lpeg51
     SUBDIR += lua-luacheck
     SUBDIR += lua-luarocks
     SUBDIR += lua-lunit
@@ -1689,6 +1700,7 @@
     SUBDIR += m17n-lib
     SUBDIR += m4
     SUBDIR += magit
+    SUBDIR += magit-popup
     SUBDIR += make++
     SUBDIR += makedepend
     SUBDIR += marisa-trie
@@ -1819,6 +1831,7 @@
     SUBDIR += oclgrind
     SUBDIR += ode
     SUBDIR += ois
+    SUBDIR += okteta
     SUBDIR += okteta-kde4
     SUBDIR += omake
     SUBDIR += omniNotify
@@ -3252,6 +3265,7 @@
     SUBDIR += p5-Rose-DateTime
     SUBDIR += p5-Rose-Object
     SUBDIR += p5-Router-R3
+    SUBDIR += p5-Routes-Tiny
     SUBDIR += p5-RunApp
     SUBDIR += p5-SDL
     SUBDIR += p5-SNMP-Persist
@@ -3490,6 +3504,7 @@
     SUBDIR += p5-Test-LeakTrace
     SUBDIR += p5-Test-LectroTest
     SUBDIR += p5-Test-LoadAllModules
+    SUBDIR += p5-Test-Log-Log4perl
     SUBDIR += p5-Test-Log4perl
     SUBDIR += p5-Test-LongString
     SUBDIR += p5-Test-Manifest
@@ -4111,6 +4126,7 @@
     SUBDIR += powerpc64-binutils
     SUBDIR += powerpc64-gcc
     SUBDIR += powerpc64-xtoolchain-gcc
+    SUBDIR += poxml
     SUBDIR += poxml-kde4
     SUBDIR += ppl
     SUBDIR += pragmarcs
@@ -4208,6 +4224,7 @@
     SUBDIR += py-PyExecJS
     SUBDIR += py-PyLD
     SUBDIR += py-PyODE
+    SUBDIR += py-PyUtilib
     SUBDIR += py-QtPy
     SUBDIR += py-RPyC
     SUBDIR += py-Record
@@ -4289,6 +4306,7 @@
     SUBDIR += py-backports_abc
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
+    SUBDIR += py-bidict
     SUBDIR += py-billiard
     SUBDIR += py-binplist
     SUBDIR += py-biplist
@@ -4434,6 +4452,7 @@
     SUBDIR += py-fabric
     SUBDIR += py-fabric3
     SUBDIR += py-fam
+    SUBDIR += py-fastcache
     SUBDIR += py-fasteners
     SUBDIR += py-fastentrypoints
     SUBDIR += py-fastimport
@@ -4453,6 +4472,7 @@
     SUBDIR += py-flake8-polyfill
     SUBDIR += py-flake8-quotes
     SUBDIR += py-flask-babel
+    SUBDIR += py-flex
     SUBDIR += py-flexmock
     SUBDIR += py-fluent-logger
     SUBDIR += py-flufl.i18n
@@ -4807,6 +4827,7 @@
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-django
+    SUBDIR += py-pytest-flake8
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
     SUBDIR += py-pytest-runner
@@ -4945,7 +4966,9 @@
     SUBDIR += py-stdnum
     SUBDIR += py-stevedore
     SUBDIR += py-stopit
+    SUBDIR += py-strategies
     SUBDIR += py-streamparse
+    SUBDIR += py-strict-rfc3339
     SUBDIR += py-structlog
     SUBDIR += py-stsci.distutils
     SUBDIR += py-subprocess32
@@ -4972,6 +4995,8 @@
     SUBDIR += py-testinfra
     SUBDIR += py-testoob
     SUBDIR += py-testpath
+    SUBDIR += py-testresources
+    SUBDIR += py-testscenarios
     SUBDIR += py-testtools
     SUBDIR += py-threema-msgapi
     SUBDIR += py-thrift
@@ -4980,6 +5005,7 @@
     SUBDIR += py-tinyarray
     SUBDIR += py-tinyrpc
     SUBDIR += py-tipper
+    SUBDIR += py-toolz
     SUBDIR += py-tooz
     SUBDIR += py-toposort
     SUBDIR += py-total-ordering
@@ -5016,6 +5042,7 @@
     SUBDIR += py-usb
     SUBDIR += py-user_agents
     SUBDIR += py-utils
+    SUBDIR += py-validators
     SUBDIR += py-validictory
     SUBDIR += py-vcrpy
     SUBDIR += py-vcversioner
@@ -5461,7 +5488,9 @@
     SUBDIR += rubygem-flipper
     SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper-active_support_cache_store011
+    SUBDIR += rubygem-flipper-active_support_cache_store013
     SUBDIR += rubygem-flipper011
+    SUBDIR += rubygem-flipper013
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
     SUBDIR += rubygem-fog-core
@@ -5588,6 +5617,7 @@
     SUBDIR += rubygem-lumberjack
     SUBDIR += rubygem-main
     SUBDIR += rubygem-map
+    SUBDIR += rubygem-marcel
     SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoizable
     SUBDIR += rubygem-memoize
@@ -6091,6 +6121,7 @@
     SUBDIR += ucpp
     SUBDIR += udis86
     SUBDIR += ultragetopt
+    SUBDIR += umbrello
     SUBDIR += umbrello-kde4
     SUBDIR += umem
     SUBDIR += umlgraph

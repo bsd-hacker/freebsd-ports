@@ -145,6 +145,7 @@
     SUBDIR += kf5-kwindowsystem
     SUBDIR += kf5-plasma-framework
     SUBDIR += kgamma-kde4
+    SUBDIR += konsole
     SUBDIR += konsole-kde4
     SUBDIR += leechcraft
     SUBDIR += lemonbar
@@ -274,6 +275,7 @@
     SUBDIR += py-qt4-opengl
     SUBDIR += py-qt5-opengl
     SUBDIR += py-xdot
+    SUBDIR += py-xdot06
     SUBDIR += qimageblitz
     SUBDIR += qt4-graphicssystems-opengl
     SUBDIR += qt4-inputmethods

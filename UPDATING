@@ -5,6 +5,65 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20180410:
+  AFFECTS: users of KDE SC4
+  AUTHOR: kde@FreeBSD.org
+
+  Most of KDE Applications 17.12.3 have now landed in the ports tree.
+  There are still some missing pieces, that will follow soon.
+
+  As mentioned in the commit messages, users of KDE SC4 should stick with the
+  <foo>-kde4 named package.
+
+  As the MOVED entries for ports like databases/akonadi-kde4 have been removed
+  in the process of updating (as there now is again a databases/akonad), there
+  might be issues for people that update from a too old installed package list
+  with portmaster.
+
+  These should be fixable by issuing a command à la
+  # pkg set --change-origin databases/akonadi:databases/akonadi-kde4 akonadi
+
+20180409:
+  AFFECTS: users of net-im/matterircd
+  AUTHOR: norrland@nullbyte.se
+
+  Matterircd has been updated to 0.17.0 and mattermost configuration settings
+  need to be migrated to [mattermost] section. See matterircd.toml.sample.
+
+20180404:
+  AFFECTS: users of www/nextcloud
+  AUTHOR: brnrd@FreeBSD.org
+
+  With the 13.0.1 update the path for Apps bundled with the package has
+  changed from "apps" to "apps-pkg". You must add an entry to the
+  "apps_paths" array in config/config.php of your nextcloud installation,
+  a patch for the default installation can be applied with:
+
+  # cd /usr/local/www/nextcloud
+  # su -m www -c "php ./occ config:import < /usr/local/share/nextcloud/fix-apps_paths.json"
+
+20180401:
+  AFFECTS: users of mail/dovecot and mail/dovecot-pigeonhole
+  AUTHOR: adamw@FreeBSD.org
+
+  Dovecot has been upgraded to 2.3.1, and pigeonhole to 0.5.1. Most
+  existing dovecot installations MUST be modified for 2.3, but for
+  most users the modifications are simple.
+
+  Modify your Dovecot conf.d/ files before spinning up 2.3.1. The
+  upgrading instructions are detailed here:
+
+  	https://wiki2.dovecot.org/Upgrading/2.3
+
+20180330:
+  AFFECTS: users of lang/perl5*
+  AUTHOR: mat@FreeBSD.org
+
+  The default Perl version has been switched to Perl 5.26.  If you are using
+  binary packages to upgrade your system, you do not have anything to do, pkg
+  upgrade will do the right thing.  For the other people, follow the
+  instructions in entry 20161103, it should still be the same.
+
 20180325:
   AFFECTS: users of net/samba48
   AUTHOR: timur@FreeBSD.org
@@ -34,6 +93,10 @@ you update your ports collection, before attempting any port upgrades.
   Note that with dnsmasq 2.79, some parts of the interface have changed in an
   incompatible way versus previous versions. This comprises changed recursion
   behaviour, signature support, a change for SIGINT (vs. SIGHUP) behaviour.
+
+  Note especially that dnsmasq will no longer answer non-recursive queries
+  unless it is marked authoritative!  Be sure to see the manual page for the
+  various --auth-* options, such as --auth-zone.
 
   Please see the CHANGELOG that ships with dnsmasq for details.
 
@@ -78,12 +141,18 @@ you update your ports collection, before attempting any port upgrades.
 
   PHP extensions and modules have been flavored.
 
-  People using Poudriere 3.2+ and binary packages do not have to do anything.
+  People using Poudriere 3.2+ and binary packages do not have to do anything if
+  they are using PHP applications.
 
   PHP modules and extensions may have change their names from php5- or php7- to
   fully versionned phpXY-.
   PECL extensions and PEAR modules package names have changed from pecl- and
   pear- to phpXX-pecl and phpXX-pear-.
+
+  To rename an installed package to match the new naming scheme, for example,
+  for the imagick pecl extension, run:
+
+    # pkg set -n pecl-imagick:php56-pecl-imagick
 
   For other people, to build the PHP 7.2 version of, for example,
   databases/php-memcached, you need to run:

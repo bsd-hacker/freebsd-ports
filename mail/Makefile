@@ -549,6 +549,7 @@
     SUBDIR += py-pyspf
     SUBDIR += py-pyzmail
     SUBDIR += py-spambayes
+    SUBDIR += py-validate_email
     SUBDIR += py-zope.sendmail
     SUBDIR += pymsgauth
     SUBDIR += pysieved
@@ -583,6 +584,7 @@
     SUBDIR += queue-repair
     SUBDIR += rainloop
     SUBDIR += rainloop-community
+    SUBDIR += ratelimit-policyd
     SUBDIR += raysfilter
     SUBDIR += razor-agents
     SUBDIR += rbl-milter
