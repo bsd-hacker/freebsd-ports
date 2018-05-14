@@ -1278,6 +1278,8 @@
     SUBDIR += py-bibtexparser
     SUBDIR += py-bugzillatools
     SUBDIR += py-chardet
+    SUBDIR += py-citeproc-py
+    SUBDIR += py-citeproc-py-styles
     SUBDIR += py-cjkwrap
     SUBDIR += py-cloud_sptheme
     SUBDIR += py-colorclass
@@ -1287,6 +1289,7 @@
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docutils
     SUBDIR += py-dsv
+    SUBDIR += py-duecredit
     SUBDIR += py-elasticsearch
     SUBDIR += py-elasticsearch-async
     SUBDIR += py-elasticsearch5
