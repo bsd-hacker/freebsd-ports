@@ -669,6 +669,7 @@
     SUBDIR += py-gmpy2
     SUBDIR += py-gnuplot
     SUBDIR += py-graphillion
+    SUBDIR += py-igakit
     SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
@@ -707,6 +708,7 @@
     SUBDIR += py-random2
     SUBDIR += py-roman
     SUBDIR += py-scientific
+    SUBDIR += py-scikit-umfpack
     SUBDIR += py-seaborn
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
