@@ -1,16 +1,15 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	private_address_check
-PORTVERSION=	0.5.0
-CATEGORIES=	net rubygems
+PORTNAME=	haversine_distance
+PORTVERSION=	1.1.1
+CATEGORIES=	misc rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Check address for private network (RFC 1918)
+COMMENT=	Calculate the great-circle distance
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 NO_ARCH=	yes
 USE_RUBY=	yes
