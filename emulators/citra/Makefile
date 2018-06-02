@@ -44,6 +44,7 @@ EXTRA_PATCHES_FreeBSD_10=	${PATCHDIR}/extra-patch-c++14
 CXXFLAGS+=	-D_GLIBCXX_USE_C99 -D_GLIBCXX_USE_C99_MATH_TR1 \
 		-D_DECLARE_C99_LDBL_MATH # XXX ports/193528
 LDFLAGS+=	-Wl,--as-needed # Qt5Network
+TEST_TARGET=	test
 
 OPTIONS_DEFINE=	ALSA PULSEAUDIO JACK SNDIO
 OPTIONS_DEFAULT=ALSA PULSEAUDIO JACK
@@ -52,11 +53,9 @@ OPTIONS_MULTI_GUI=	QT5 SDL
 OPTIONS_SLAVE?=	SDL
 OPTIONS_EXCLUDE:=	${OPTIONS_MULTI_GUI}
 
-CUBEB_DESC=	Cubeb audio backend
-
-ALSA_CMAKE_BOOL=	USE_ALSA
 ALSA_LIB_DEPENDS=	libasound.so:audio/alsa-lib
 ALSA_RUN_DEPENDS=	${LOCALBASE}/lib/alsa-lib/libasound_module_pcm_oss.so:audio/alsa-plugins
+ALSA_CMAKE_BOOL=	USE_ALSA
 
 JACK_BUILD_DEPENDS=	jackit>0:audio/jack
 JACK_CMAKE_BOOL=	USE_JACK
@@ -65,7 +64,7 @@ PULSEAUDIO_BUILD_DEPENDS=pulseaudio>0.:audio/pulseaudio
 PULSEAUDIO_CMAKE_BOOL=	USE_PULSE
 
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
-SNDIO_CMAKE_BOOL=	USE_
+SNDIO_CMAKE_BOOL=	USE_SNDIO
 
 SDL_CMAKE_BOOL=	ENABLE_SDL2
 SDL_PLIST_FILES=bin/${PORTNAME} \
@@ -89,5 +88,7 @@ post-patch:
 	@${REINPLACE_CMD} -e 's/@GIT_BRANCH@/master/' \
 		-e 's/@GIT_DESC@/${GH_TAGNAME}/' \
 		${WRKSRC}/src/common/scm_rev.cpp.in
+
+pre-install:	do-test
 
 .include <bsd.port.mk>
