@@ -1,9 +1,7 @@
-# Created by: Euan Thoms <euan@potensol.com>
 # $FreeBSD$
 
-PORTNAME=		sogo2
-PORTVERSION=		2.3.23
-PORTREVISION=	2
+PORTNAME=		sogo4
+PORTVERSION=		4.0.0
 CATEGORIES=		www gnustep
 MASTER_SITES=		http://www.sogo.nu/files/downloads/SOGo/Sources/
 DISTNAME=		SOGo-${PORTVERSION}
@@ -15,13 +13,13 @@ LICENSE=		GPLv2
 
 LIB_DEPENDS=		libmemcached.so:databases/libmemcached \
 			libcurl.so:ftp/curl \
-			libDOM.so:devel/sope2
+			libDOM.so:devel/sope4
+RUN_DEPENDS=		zip:archivers/zip
 
-OPTIONS_DEFINE=		ACTIVESYNC
+OPTIONS_DEFINE=	ACTIVESYNC
 OPTIONS_SUB=		yes
 
 ACTIVESYNC_DESC=	Enable support for ActiveSync protocol
-
 ACTIVESYNC_LIB_DEPENDS=	libwbxml2.so:textproc/wbxml2
 
 USERS=			sogod
@@ -31,20 +29,20 @@ USES=			gnustep ssl objc
 USE_GNUSTEP=		base build
 USE_LDCONFIG=		${GNUSTEP_LOCAL_LIBRARIES}/sogo
 
-CONFLICTS?=		sogo[2-4]-activesync-[0-9]* sogo[3-4]-[0-9]*
+CONFLICTS?=		sogo[2-4]-activesync-[0-9]* sogo[2-3]-[0-9]*
 
 USE_RC_SUBR=		sogod
 
+SUB_FILES+=		pkg-message
 SUB_LIST+=		GNUSTEP_LOCAL_TOOLS=${GNUSTEP_LOCAL_TOOLS} \
 			GNUSTEP_MAKEFILES=${GNUSTEP_MAKEFILES}
-ETCDIR=			${PREFIX}/etc/${PORTNAME:S/2//}
+ETCDIR=			${PREFIX}/etc/${PORTNAME:S/4//}
 CONFIGURE_ARGS=		--disable-debug --enable-strip
 
 post-patch:
 	@${GREP} -rlF '/etc/sogo' ${WRKSRC} \
 		| ${XARGS} ${REINPLACE_CMD} 's#/etc/sogo#${PREFIX}/etc/sogo#g'
-	@${REINPLACE_CMD} -e 's|/usr/lib/GNUstep|${GNUSTEP_LOCAL_ROOT}/Library|' ${WRKSRC}/Apache/SOGo.conf
-	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|g' ${WRKSRC}/configure
+	@${REINPLACE_CMD} -e 's|/usr/|/usr/local/|g' ${WRKSRC}/Apache/SOGo.conf
 
 post-patch-ACTIVESYNC-on:
 	@${REINPLACE_CMD} -e 's/Tools/Tools ActiveSync/' ${WRKSRC}/GNUmakefile
