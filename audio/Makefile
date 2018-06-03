@@ -57,6 +57,7 @@
     SUBDIR += baresip
     SUBDIR += baudline
     SUBDIR += bcg729
+    SUBDIR += beatslash-lv2
     SUBDIR += beep
     SUBDIR += beets
     SUBDIR += blop
@@ -317,8 +318,8 @@
     SUBDIR += gtkpod
     SUBDIR += gtmixer
     SUBDIR += guidolib
-    SUBDIR += guspat
     SUBDIR += guitarix-lv2
+    SUBDIR += guspat
     SUBDIR += gvolwheel
     SUBDIR += gxmms2
     SUBDIR += gxplugins-lv2
