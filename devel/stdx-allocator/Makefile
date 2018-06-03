@@ -1,12 +1,12 @@
-# Created by: Alonso Cardenas Marquez <acm@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	libdparse
-PORTVERSION=	0.8.3
+PORTNAME=	stdx-allocator
+PORTVERSION=	2.77.1.1
+DISTVERSIONPREFIX=	v
 CATEGORIES=	devel
 
 MAINTAINER=	acm@FreeBSD.org
-COMMENT=	Library for lexing and parsing D source code
+COMMENT=	Containers backed on dlang by std.experimental.allocator
 
 LICENSE=	BSL
 
@@ -15,7 +15,6 @@ BUILD_DEPENDS=	ldmd2:lang/ldc \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	dlang-community
-GH_TAGNAME=	v${PORTVERSION}
 
 DUB_CMD=	${LOCALBASE}/bin/dub build --build=release
 D_INCLUDE_DIR=	${PREFIX}/include/d
@@ -27,7 +26,7 @@ do-build:
 do-install:
 	@${MKDIR} ${STAGEDIR}${D_INCLUDE_DIR}
 	@${MKDIR} ${STAGEDIR}${D_LIB_DIR}
-	${INSTALL_DATA} ${WRKSRC}/libdparse.a ${STAGEDIR}${D_LIB_DIR}
-	cd ${WRKSRC}/src && ${COPYTREE_SHARE} . ${STAGEDIR}${D_INCLUDE_DIR} "-name *\.d"
+	${INSTALL_DATA} ${WRKSRC}/libstdx-allocator.a ${STAGEDIR}${D_LIB_DIR}
+	cd ${WRKSRC}/source && ${COPYTREE_SHARE} . ${STAGEDIR}${D_INCLUDE_DIR} "-name *\.d"
 
 .include <bsd.port.mk>
