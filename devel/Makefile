@@ -1209,6 +1209,7 @@
     SUBDIR += ice
     SUBDIR += icestorm
     SUBDIR += icmake
+    SUBDIR += icontheme
     SUBDIR += icu
     SUBDIR += icu-le-hb
     SUBDIR += icu-lx
@@ -1218,6 +1219,7 @@
     SUBDIR += include-what-you-use
     SUBDIR += inifiled
     SUBDIR += inilib
+    SUBDIR += inilike
     SUBDIR += iniparser
     SUBDIR += initutil
     SUBDIR += injeqt
@@ -1225,6 +1227,7 @@
     SUBDIR += ipython
     SUBDIR += ireport
     SUBDIR += isa-l
+    SUBDIR += isfreedesktop
     SUBDIR += isl
     SUBDIR += ispc
     SUBDIR += itext
@@ -6222,6 +6225,7 @@
     SUBDIR += xc3sprog
     SUBDIR += xdg-user-dirs
     SUBDIR += xdg-utils
+    SUBDIR += xdgpaths
     SUBDIR += xfce4-dev-tools
     SUBDIR += xfce4-vala
     SUBDIR += xmake
