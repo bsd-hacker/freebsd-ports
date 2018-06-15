@@ -155,11 +155,6 @@
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
     SUBDIR += elasticsearch-plugin-head
-    SUBDIR += elasticsearch2
-    SUBDIR += elasticsearch2-plugin-hq
-    SUBDIR += elasticsearch2-plugin-marvel
-    SUBDIR += elasticsearch2-plugin-migration
-    SUBDIR += elasticsearch2-plugin-sql
     SUBDIR += elasticsearch5
     SUBDIR += elasticsearch5-search-guard
     SUBDIR += elasticsearch6
@@ -1296,8 +1291,6 @@
     SUBDIR += py-elasticsearch5
     SUBDIR += py-elasticsearch-curator
     SUBDIR += py-elasticsearch-dsl
-    SUBDIR += py-elasticsearch-dsl-py
-    SUBDIR += py-elasticsearch2-dsl-py
     SUBDIR += py-elib.intl
     SUBDIR += py-empy
     SUBDIR += py-enchant
