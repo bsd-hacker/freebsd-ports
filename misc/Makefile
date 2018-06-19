@@ -401,7 +401,9 @@
     SUBDIR += ptsort
     SUBDIR += pubs
     SUBDIR += py-PyUserInput
+    SUBDIR += py-QSpectrumAnalyzer
     SUBDIR += py-SimpleSoapy
+    SUBDIR += py-SoapySDR
     SUBDIR += py-YABT
     SUBDIR += py-cinder
     SUBDIR += py-colorbrewer
