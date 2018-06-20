@@ -21,7 +21,7 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 USES=		desktop-file-utils qmake
 USE_GITHUB=	yes
 GH_ACCOUNT=	markummitchell
-USE_QT5=	core gui printsupport sql xml widgets buildtools_build linguist_build
+USE_QT5=	core gui printsupport sql xml widgets buildtools_build
 USE_GL=		gl
 CONFIGURE_ENV=	OPENJPEG_INCLUDE=${PREFIX}/include/openjpeg-2.3 OPENJPEG_LIB=${PREFIX}/lib \
 		POPPLER_INCLUDE=${PREFIX}/include/poppler/qt5 POPPLER_LIB=${PREFIX}/lib
@@ -30,7 +30,7 @@ QMAKE_ARGS=	"CONFIG+=jpeg2000 pdf"
 OPTIONS_DEFINE=	NLS DOCS
 OPTIONS_SUB=	yes
 
-DOCS_USE=	QT5=help
+DOCS_USE=	QT5=help,linguist_build
 
 do-patch-NLS-on:
 	@${REINPLACE_CMD} -e 's|QCoreApplication::applicationDirPath () + "/translations",|"${DATADIR}/translations",|' ${WRKSRC}/src/Translator/TranslatorContainer.cpp
