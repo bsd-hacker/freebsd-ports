@@ -3508,12 +3508,14 @@
     SUBDIR += p5-Test-Debugger
     SUBDIR += p5-Test-Declare
     SUBDIR += p5-Test-Deep
+    SUBDIR += p5-Test-Deep-UnorderedPairs
     SUBDIR += p5-Test-Dependencies
     SUBDIR += p5-Test-DependentModules
     SUBDIR += p5-Test-Differences
     SUBDIR += p5-Test-Distribution
     SUBDIR += p5-Test-EOL
     SUBDIR += p5-Test-Exception
+    SUBDIR += p5-Test-Exit
     SUBDIR += p5-Test-Expect
     SUBDIR += p5-Test-FailWarnings
     SUBDIR += p5-Test-Fake-HTTPD
@@ -3553,6 +3555,7 @@
     SUBDIR += p5-Test-Mock-Guard
     SUBDIR += p5-Test-Mock-LWP
     SUBDIR += p5-Test-Mock-LWP-Dispatch
+    SUBDIR += p5-Test-Mock-Redis
     SUBDIR += p5-Test-MockDateTime
     SUBDIR += p5-Test-MockModule
     SUBDIR += p5-Test-MockObject
