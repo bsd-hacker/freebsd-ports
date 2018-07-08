@@ -42,6 +42,7 @@
 # squid_krb5_ktname:
 #		Alternative Kerberos 5 Key Table.
 #		Default: none
+#
 # squid_krb5_config:
 #		Alternative Kerberos 5 config file
 #		Default: none
@@ -80,8 +81,7 @@ squid_load_rc_config()
 	required_dirs=$chdir
 	required_files=$squid_conf
 	command_args="${required_args} ${squid_flags}"
-#	We used to need it in squid3 to match pid and proc name
-#	procname="?squid-*"
+	procname="?squid-*"
 	pidfile=$squid_pidfile
 }
 
