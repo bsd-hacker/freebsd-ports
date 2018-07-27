@@ -1352,6 +1352,7 @@
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyhwp
     SUBDIR += py-pylons-sphinx-themes
+    SUBDIR += py-pypa-docs-theme
     SUBDIR += py-pypandoc
     SUBDIR += py-pyphen
     SUBDIR += py-pyscss
@@ -1360,6 +1361,7 @@
     SUBDIR += py-pystemmer
     SUBDIR += py-python-augeas
     SUBDIR += py-python-bidi
+    SUBDIR += py-python-docs-theme
     SUBDIR += py-python-docx
     SUBDIR += py-python-gettext
     SUBDIR += py-python-slugify
