@@ -558,6 +558,7 @@
     SUBDIR += libpano13
     SUBDIR += libpcd
     SUBDIR += libpgf
+    SUBDIR += libpillowfight
     SUBDIR += libpotrace
     SUBDIR += libprojectm
     SUBDIR += libpuzzle
@@ -936,6 +937,9 @@
     SUBDIR += py-pyglet
     SUBDIR += py-pygooglechart
     SUBDIR += py-pygraphviz
+    SUBDIR += py-pyinsane2
+    SUBDIR += py-pyocr
+    SUBDIR += py-pypillowfight
     SUBDIR += py-pyproj
     SUBDIR += py-pyqtgraph
     SUBDIR += py-qt4-svg
