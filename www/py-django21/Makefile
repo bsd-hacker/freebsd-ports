@@ -2,12 +2,12 @@
 # $FreeBSD$
 
 PORTNAME=	django
-PORTVERSION=	2.0.8
+PORTVERSION=	2.1
 CATEGORIES=	www python
 MASTER_SITES=	CHEESESHOP \
 		https://www.djangoproject.com/m/releases/${PORTVERSION}/
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-PKGNAMESUFFIX=	20
+PKGNAMESUFFIX=	21
 DISTNAME=	Django-${PORTVERSION}
 DIST_SUBDIR=	python
 
@@ -20,14 +20,13 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytz>0:devel/py-pytz@${PY_FLAVOR}
 
 NO_ARCH=	yes
-USES=		cpe python:3.4+ shebangfix
+USES=		cpe python:3.5+ shebangfix
 USE_PYTHON=	autoplist distutils
 SHEBANG_FILES=	django/bin/django-admin.py \
 		django/conf/project_template/manage.py-tpl
 
-CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}django18 \
-			${PYTHON_PKGNAMEPREFIX}django11[01] \
-			${PYTHON_PKGNAMEPREFIX}django21
+CONFLICTS_INSTALL=	${PYTHON_PKGNAMEPREFIX}django18 ${PYTHON_PKGNAMEPREFIX}django11[01] \
+			${PYTHON_PKGNAMEPREFIX}django20
 CPE_VENDOR=		djangoproject
 
 DOCSDIR=		${PREFIX}/share/doc/py-django
