@@ -4413,6 +4413,7 @@
     SUBDIR += py-cclib
     SUBDIR += py-cdg
     SUBDIR += py-celery
+    SUBDIR += py-cerberus
     SUBDIR += py-certsrv
     SUBDIR += py-cffi
     SUBDIR += py-cfgparse
@@ -5047,6 +5048,7 @@
     SUBDIR += py-setuptools_scm
     SUBDIR += py-sh
     SUBDIR += py-shapely
+    SUBDIR += py-shellingham
     SUBDIR += py-should_dsl
     SUBDIR += py-simpleeval
     SUBDIR += py-simplegeneric
