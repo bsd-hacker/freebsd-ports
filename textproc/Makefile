@@ -762,6 +762,7 @@
     SUBDIR += p5-Regexp-Common-Email-Address
     SUBDIR += p5-Regexp-Common-net-CIDR
     SUBDIR += p5-Regexp-Common-profanity_us
+    SUBDIR += p5-Regexp-Common-time
     SUBDIR += p5-Regexp-Copy
     SUBDIR += p5-Regexp-Debugger
     SUBDIR += p5-Regexp-DefaultFlags
@@ -1424,6 +1425,7 @@
     SUBDIR += py-trans
     SUBDIR += py-transifex-client
     SUBDIR += py-translationstring
+    SUBDIR += py-transpopy
     SUBDIR += py-tvgrab
     SUBDIR += py-ucl
     SUBDIR += py-whoosh
@@ -1832,6 +1834,7 @@
     SUBDIR += xmlcharent
     SUBDIR += xmldiff
     SUBDIR += xmlenc
+    SUBDIR += xmlf90
     SUBDIR += xmlformat
     SUBDIR += xmlgen
     SUBDIR += xmlindent
