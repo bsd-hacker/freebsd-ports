@@ -1318,8 +1318,8 @@ WITH_DEBUG=	yes
 # Start of pre-makefile section.
 .if !defined(AFTERPORTMK) && !defined(INOPTIONSMK)
 
-.if defined(PORTNAME)
-.include "${PORTSDIR}/Mk/bsd.sanity.mk"
+.if defined(_PREMKINCLUDED)
+DEV_ERROR+=	"you cannot include bsd.port[.pre].mk twice"
 .endif
 
 _PREMKINCLUDED=	yes
@@ -2007,6 +2007,10 @@ ${_f}_ARGS:=	${f:C/^[^\:]*(\:|\$)//:S/,/ /g}
 .for f in ${_USES_POST}
 .include "${USESDIR}/${f:C/\:.*//}.mk"
 .endfor
+
+.if defined(PORTNAME)
+.include "${PORTSDIR}/Mk/bsd.sanity.mk"
+.endif
 
 .if defined(USE_LOCALE)
 CONFIGURE_ENV+=	LANG=${USE_LOCALE} LC_ALL=${USE_LOCALE}
@@ -4538,6 +4542,7 @@ ${TMPPLIST}:
 	@cd ${.CURDIR} && ${MAKE} generate-plist
 
 .for _type in EXAMPLES DOCS
+.if !empty(_REALLY_ALL_POSSIBLE_OPTIONS:M${_type})
 .if !target(add-plist-${_type:tl})
 .if defined(PORT${_type}) && !empty(PORT_OPTIONS:M${_type})
 add-plist-${_type:tl}:
@@ -4549,6 +4554,7 @@ add-plist-${_type:tl}:
 .endfor
 	@${FIND} -P ${PORT${_type}:S/^/${STAGEDIR}${${_type}DIR}\//} ! -type d 2>/dev/null | \
 		${SED} -ne 's,^${STAGEDIR},,p' >> ${TMPPLIST}
+.endif
 .endif
 .endif
 .endfor
