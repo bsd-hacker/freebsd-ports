@@ -11,30 +11,29 @@
 # complain to me about it.
 
 PORTNAME=	ksh93
-PORTVERSION=	${KSHVERSION:S/-//g}
-PORTREVISION=	2
+PORTVERSION=	${AST_COMMIT_DATE}
 CATEGORIES=	shells
-MASTER_SITES=	http://www2.research.att.com/~astopen/download/tgz/ \
-		LOCAL/sunpoet/${PORTNAME}
-DISTFILES=	INIT.${INITVERSION}.tgz ast-ksh.${KSHVERSION}.tgz
-DIST_SUBDIR=	${PORTNAME}
+PKGNAMESUFFIX=	-devel
+HASH=		4b26777
+AST_COMMIT_DATE=	2018.09.20
 
-MAINTAINER=	saper@saper.info
-COMMENT=	Official AT&T release of KornShell 93
+MAINTAINER=	cy@FreeBSD.org
+COMMENT=	Development branch of AT&T KornShell 93
 
 LICENSE=	EPL
 
-CONFLICTS=	ksh93-devel-*
+USE_GITHUB=	yes
+GH_ACCOUNT=	att
+GH_PROJECT=	ast
+GH_TAGNAME=	${HASH}
 
-OPTIONS_DEFINE=	EXAMPLES STATIC
+CONFLICTS=	ksh93-*
 
+USES=		meson ninja
 FETCH_ENV=	HTTP_AUTH=basic:*:I\ accept\ www.opensource.org/licenses/cpl:.
-LDFLAGS+=	-lm
+LDFLAGS+=	-lm 
+MESON_BUILD_DIR=	build
 MAKE_ENV=	CCFLAGS="${CFLAGS}"
-NO_WRKSUBDIR=	yes
-
-INITVERSION=	2013-05-24
-KSHVERSION=	2012-08-01
 
 STATIC_MAKE_ENV=	LDFLAGS+=-static
 
@@ -46,15 +45,7 @@ post-patch:
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1100093
 	@${REINPLACE_CMD} -e 's|SF_FLAGS|SFIO_FLAGS|g' ${WRKSRC}/src/lib/libast/include/sfio*.h ${WRKSRC}/src/lib/libast/sfio/*.c
 .endif
-
-do-build:
-	@cd ${WRKSRC}/ && ${SETENV} -i ${MAKE_ENV} ${SH} bin/package flat make
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/ksh ${STAGEDIR}${PREFIX}/bin/ksh93
-	${INSTALL_MAN} ${WRKSRC}/man/man1/sh.1 ${STAGEDIR}${MAN1PREFIX}/man/man1/ksh93.1
-	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}/
-	cd ${WRKSRC}/fun/ && ${INSTALL_SCRIPT} dirs popd pushd ${STAGEDIR}${EXAMPLESDIR}/
+	@${MV} ${WRKSRC}/src/cmd/ksh93/ksh.1 ${WRKSRC}/src/cmd/ksh93/ksh93.1
 
 do-test:
 	cd ${WRKSRC}/src/cmd/ksh93/tests/ && ${SETENV} SHELL=${WRKSRC}/bin/ksh ${WRKSRC}/bin/ksh shtests
