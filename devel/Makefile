@@ -4694,6 +4694,7 @@
     SUBDIR += py-lazr.delegates
     SUBDIR += py-lazy
     SUBDIR += py-lazy-object-proxy
+    SUBDIR += py-libiocage
     SUBDIR += py-liblarch
     SUBDIR += py-libpeas
     SUBDIR += py-libplist
@@ -6120,6 +6121,7 @@
     SUBDIR += sbt
     SUBDIR += scalatest
     SUBDIR += scandoc
+    SUBDIR += sccache
     SUBDIR += scons
     SUBDIR += sdl12
     SUBDIR += sdl20
