@@ -723,6 +723,7 @@
     SUBDIR += py-numexpr
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
+    SUBDIR += py-osqp
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
@@ -811,6 +812,7 @@
     SUBDIR += scalapack
     SUBDIR += scilab
     SUBDIR += scilab-toolbox-swt
+    SUBDIR += scs
     SUBDIR += sdpa
     SUBDIR += sdpara
     SUBDIR += secp256k1
