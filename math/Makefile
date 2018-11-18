@@ -692,6 +692,7 @@
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
+    SUBDIR += py-cvxpy
     SUBDIR += py-cyipopt
     SUBDIR += py-ecos
     SUBDIR += py-fastcluster
@@ -757,6 +758,7 @@
     SUBDIR += py-rpy2
     SUBDIR += py-scientific
     SUBDIR += py-scikit-umfpack
+    SUBDIR += py-scs
     SUBDIR += py-seaborn
     SUBDIR += py-secp256k1
     SUBDIR += py-simhash
