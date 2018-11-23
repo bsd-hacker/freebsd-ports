@@ -2,12 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	cfengine
-PORTVERSION=	3.${CFENGINE_COMMIT_DATE}
+PORTVERSION=	3.13.0
 CATEGORIES=	sysutils
 MASTER_SITES=	https://s3.amazonaws.com/cfengine-package-repos/tarballs/
-PKGNAMESUFFIX=	-devel
-HASH=		a56bc72
-CFENGINE_COMMIT_DATE=	2018.11.23
 
 MAINTAINER=	cy@FreeBSD.org
 #		gjb@FreeBSD.org is also committer for this port
@@ -16,14 +13,13 @@ COMMENT=	Systems administration tool for networks
 
 LICENSE=	GPLv3
 
-USE_GITHUB=	yes
-GH_PROJECT=	core
-GH_TAGNAME=	${HASH}
 CPE_VENDOR=	gnu
 
-USE_GCC=	any
-
-CONFLICTS=	cfengine-2* cfengine3[0-9]-* cfengine31[02-9]-* cfengine-3.*
+CONFLICTS=	cfengine-2* cfengine3[0-9]-* cfengine31[013-9]-*
+.if !defined(MASTERDIR)
+PKGNAMESUFFIX=	313
+CONFLICTS+=	cfengine-3.*
+.endif
 
 FETCH_BEFORE_ARGS=	-o ${DISTDIR}/${DISTFILES}
 
@@ -34,17 +30,15 @@ USE_RC_SUBR=	cf-execd cf-serverd cf-monitord
 MAKE_JOBS_UNSAFE=	yes
 USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
-USES=		autoreconf:build \
+USES=		autoreconf \
 		cpe gmake localbase libtool shebangfix ssl
 USE_GNOME=	libxml2
 SHEBANG_FILES=	examples/remake_outputs.pl
 CFLAGS+=	-Wno-return-type
 # EXAMPLESDIR=	${PREFIX}/share/examples/cfengine3
 DOCSDIR=	${PREFIX}/share/doc/cfengine
-MAKE_ENV=	EXPLICIT_VERSION=${PORTVERSION}-${HASH}
-EXPLICIT_VERSION=${PORTVERSION}-${HASH}
-CONFIGURE_SCRIPT=	./autogen.sh
-CONFIGURE_ENV=	EXPLICIT_VERSION=${PORTVERSION}-${HASH}
+MAKE_ENV=	EXPLICIT_VERSION=${PORTVERSION}
+CONFIGURE_ENV=	EXPLICIT_VERSION=${PORTVERSION}
 CONFIGURE_ARGS=	--docdir=${DOCSDIR} \
 		--htmldir=${DOCSDIR}/html \
 		--libexecdir=${PREFIX}/libexec \
