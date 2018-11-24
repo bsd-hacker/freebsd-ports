@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	googleauth
-PORTVERSION=	0.7.1
+PORTVERSION=	0.6.7
 CATEGORIES=	security rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	06
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Google Auth Library for Ruby
