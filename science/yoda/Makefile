@@ -9,19 +9,17 @@ DISTNAME=	${PORTNAME:tu}-${DISTVERSION}
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	Particle physics package with classes for data analysis, histogramming
 
-LICENSE=	GPLv2
-xLICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE=	GPLv3
+LICENSE_FILE=	${WRKSRC}/COPYING
 
-LIB_DEPENDS=	libderiv.so:science/libint
-
-USES=		gmake libtool shebangfix
+USES=		gmake libtool
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 
 OPTIONS_DEFINE=	PYTHON
 OPTIONS_SUB=	yes
 
-PYTHON_USES=			python
+PYTHON_USES=			python shebangfix
 PYTHON_USE=			PYTHON=cython
 PYTHON_CONFIGURE_ENABLE=	pyext
 PYTHON_MAKE_ENV=		PYTHON_VERSION=${PYTHON_VER} PYTHON=${PYTHON_CMD}
