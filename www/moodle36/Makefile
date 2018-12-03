@@ -2,9 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	moodle
-PORTVERSION=	3.5.3
+PORTVERSION=	3.6
 CATEGORIES=	www
-MASTER_SITES=	SF/moodle/Moodle/stable35/
+MASTER_SITES=	SF/moodle/Moodle/stable36/
 PKGNAMESUFFIX=	${PKGORIGIN:T:S/moodle//}${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
@@ -13,7 +13,7 @@ COMMENT=	Course management system based on social constructionism
 LICENSE=	GPLv3
 
 CONFLICTS=	moodle31-3.1.[0-9]* moodle33-3.3.[0-9]* moodle34-3.4.[0-9]* \
-		moodle36-3.6
+		moodle35-3.5.[0-9]*
 
 IGNORE_WITH_PHP=	56
 
@@ -25,16 +25,14 @@ WRKSRC=		${WRKDIR}/moodle
 
 OPTIONS_SINGLE=		BACKEND
 OPTIONS_SINGLE_BACKEND=	MYSQL PGSQL MSSQL
-OPTIONS_DEFINE=		LDAP MIMETEX
+OPTIONS_DEFINE=		LDAP
 OPTIONS_DEFAULT=	MYSQL
-MIMETEX_DESC=		mimeTeX filter functionality support
 
 MYSQL_USES=	mysql
 MYSQL_USE=	php=mysqli
 PGSQL_USE=	php=pgsql
 MSSQL_USE=	php=mssql
 LDAP_USE=	php=ldap
-MIMETEX_RUN_DEPENDS=	${LOCALBASE}/www/mimetex/cgi-bin/mimetex.cgi:www/mimetex
 
 NO_BUILD=	yes
 PLIST=		${WRKDIR}/plist
@@ -62,9 +60,5 @@ pre-install:
 do-install:
 	@cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/${MOODLEDIR}
 	@${INSTALL} -d ${STAGEDIR}${PREFIX}/${MOODLEDATADIR}
-
-do-install-MIMETEX-on:
-	${LN} -sf ${PREFIX}/www/mimetex/cgi-bin/mimetex.cgi \
-		${STAGEDIR}${PREFIX}/${MOODLEDIR}/filter/tex/mimetex.freebsd
 
 .include <bsd.port.mk>
