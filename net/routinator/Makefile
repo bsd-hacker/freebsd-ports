@@ -1,150 +1,139 @@
-# Created by: Sergey A. Osokin <osa@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	websocat
-DISTVERSION=	1.2.0
+PORTNAME=	routinator
+PORTVERSION=	0.1.2
 DISTVERSIONPREFIX=	v
 PORTREVISION=	1
-CATEGORIES=	www
+CATEGORIES=	net
 
-MAINTAINER=	osa@FreeBSD.org
-COMMENT=	WebSockets tools
+MAINTAINER=	jaap@NLnetLabs.nl
+COMMENT=	RPKI signed route collector and validator
 
-LICENSE=	MIT
+LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=	cargo
+RUN_DEPENDS=	rsync:net/rsync
+
+USES=		cargo
 USE_GITHUB=	yes
-GH_ACCOUNT=	vi
+GH_ACCOUNT=	NLnetLabs
 
-CARGO_FEATURES=	ssl seqpacket
-
-CARGO_CRATES=	arrayvec-0.4.7 \
+CARGO_CRATES=	aho-corasick-0.6.9 \
+		ansi_term-0.11.0 \
+		arc-swap-0.3.4 \
+		argon2rs-0.2.5 \
+		arrayvec-0.4.7 \
 		atty-0.2.11 \
+		backtrace-0.3.9 \
+		backtrace-sys-0.1.24 \
 		base64-0.9.3 \
-		bitflags-0.9.1 \
+		bcder-0.1.0 \
 		bitflags-1.0.4 \
+		blake2-rfc-0.2.18 \
 		byteorder-1.2.7 \
 		bytes-0.4.10 \
 		cc-1.0.25 \
 		cfg-if-0.1.6 \
+		chrono-0.4.6 \
 		clap-2.32.0 \
 		cloudabi-0.0.3 \
-		core-foundation-0.5.1 \
-		core-foundation-sys-0.5.1 \
+		constant_time_eq-0.1.3 \
 		crossbeam-deque-0.6.1 \
 		crossbeam-epoch-0.5.2 \
 		crossbeam-utils-0.5.0 \
-		derivative-1.0.1 \
+		daemonize-0.3.0 \
+		dirs-1.0.4 \
 		env_logger-0.5.13 \
-		foreign-types-0.3.2 \
-		foreign-types-shared-0.1.1 \
+		error-chain-0.11.0 \
+		failure-0.1.3 \
+		failure_derive-0.1.3 \
 		fuchsia-zircon-0.3.3 \
 		fuchsia-zircon-sys-0.3.3 \
 		futures-0.1.25 \
-		httparse-1.3.3 \
+		futures-cpupool-0.1.8 \
+		hex-0.3.2 \
 		humantime-1.1.1 \
-		hyper-0.10.15 \
-		idna-0.1.5 \
 		iovec-0.1.2 \
+		json-0.11.13 \
 		kernel32-sys-0.2.2 \
-		language-tags-0.2.2 \
-		lazy_static-1.1.0 \
+		lazy_static-1.2.0 \
 		lazycell-1.2.0 \
 		libc-0.2.43 \
 		lock_api-0.1.4 \
-		log-0.3.9 \
 		log-0.4.6 \
-		matches-0.1.8 \
+		memchr-2.1.1 \
 		memoffset-0.2.1 \
-		mime-0.2.6 \
 		mio-0.6.16 \
 		mio-named-pipes-0.1.6 \
 		mio-uds-0.6.7 \
 		miow-0.2.1 \
 		miow-0.3.3 \
-		native-tls-0.2.2 \
 		net2-0.2.33 \
 		nodrop-0.1.12 \
+		num-integer-0.1.39 \
+		num-traits-0.2.6 \
 		num_cpus-1.8.0 \
-		openssl-0.10.15 \
-		openssl-probe-0.1.2 \
-		openssl-sys-0.9.39 \
 		owning_ref-0.3.3 \
 		parking_lot-0.6.4 \
 		parking_lot_core-0.3.1 \
-		percent-encoding-1.0.1 \
-		pkg-config-0.3.14 \
 		proc-macro2-0.4.20 \
 		quick-error-1.2.2 \
-		quote-0.3.15 \
 		quote-0.6.9 \
+		rand-0.4.3 \
 		rand-0.5.5 \
 		rand_core-0.2.2 \
 		rand_core-0.3.0 \
-		readwrite-0.1.1 \
 		redox_syscall-0.1.40 \
 		redox_termios-0.1.1 \
-		remove_dir_all-0.5.1 \
+		redox_users-0.2.0 \
+		regex-1.0.6 \
+		regex-syntax-0.6.2 \
+		ring-0.13.3 \
+		rpki-0.1.0 \
+		rustc-demangle-0.1.9 \
 		rustc_version-0.2.3 \
 		safemem-0.3.0 \
-		schannel-0.1.14 \
-		scoped-tls-0.1.2 \
+		scoped_threadpool-0.1.9 \
 		scopeguard-0.3.3 \
-		security-framework-0.2.1 \
-		security-framework-sys-0.2.1 \
 		semver-0.9.0 \
 		semver-parser-0.7.0 \
-		sha1-0.6.0 \
+		signal-hook-0.1.5 \
 		slab-0.4.1 \
-		slab_typesafe-0.1.2 \
 		smallvec-0.6.5 \
-		smart-default-0.2.0 \
 		socket2-0.3.8 \
 		stable_deref_trait-1.1.1 \
-		structopt-0.2.12 \
-		structopt-derive-0.2.12 \
-		syn-0.11.11 \
-		syn-0.15.17 \
-		synom-0.11.3 \
-		tempfile-3.0.4 \
+		strsim-0.7.0 \
+		syn-0.15.18 \
+		synstructure-0.10.1 \
+		syslog-4.0.1 \
 		termcolor-1.0.4 \
 		termion-1.5.1 \
 		textwrap-0.10.0 \
+		thread_local-0.3.6 \
 		time-0.1.40 \
 		tokio-0.1.11 \
 		tokio-codec-0.1.1 \
-		tokio-core-0.1.17 \
 		tokio-current-thread-0.1.3 \
 		tokio-executor-0.1.5 \
-		tokio-file-unix-0.4.2 \
 		tokio-fs-0.1.4 \
 		tokio-io-0.1.10 \
-		tokio-process-0.1.6 \
+		tokio-process-0.2.3 \
 		tokio-reactor-0.1.6 \
-		tokio-signal-0.1.5 \
-		tokio-stdin-stdout-0.1.5 \
+		tokio-signal-0.2.6 \
 		tokio-tcp-0.1.2 \
 		tokio-threadpool-0.1.8 \
 		tokio-timer-0.2.7 \
-		tokio-tls-0.2.0 \
 		tokio-udp-0.1.2 \
-		tokio-uds-0.1.5 \
 		tokio-uds-0.2.3 \
-		traitobject-0.1.0 \
-		typeable-0.1.2 \
-		unicase-1.4.2 \
-		unicode-bidi-0.3.4 \
-		unicode-normalization-0.1.7 \
+		ucd-util-0.1.2 \
 		unicode-width-0.1.5 \
-		unicode-xid-0.0.4 \
 		unicode-xid-0.1.0 \
 		unreachable-1.0.0 \
-		url-1.7.1 \
-		vcpkg-0.2.6 \
+		untrusted-0.6.2 \
+		utf8-ranges-1.0.2 \
+		vec_map-0.8.1 \
 		version_check-0.1.5 \
 		void-1.0.2 \
-		websocket-0.21.1 \
 		winapi-0.2.8 \
 		winapi-0.3.6 \
 		winapi-build-0.1.1 \
@@ -152,11 +141,14 @@ CARGO_CRATES=	arrayvec-0.4.7 \
 		winapi-util-0.1.1 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		wincolor-1.0.1 \
-		ws2_32-sys-0.2.1
+		ws2_32-sys-0.2.1 \
+		xml-rs-0.8.0
 
-PLIST_FILES=	bin/websocat
+PLIST_FILES=	bin/routinator \
+		man/man1/routinator.1.gz
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/websocat
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/routinator
+	${INSTALL_MAN} ${WRKSRC}/doc/routinator.1 ${STAGEDIR}${PREFIX}/man/man1/
 
 .include <bsd.port.mk>
