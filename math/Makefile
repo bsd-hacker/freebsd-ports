@@ -306,6 +306,7 @@
     SUBDIR += kmplot
     SUBDIR += kmplot-kde4
     SUBDIR += labplot
+    SUBDIR += latte-integrale
     SUBDIR += lambda
     SUBDIR += lapack
     SUBDIR += lapack++
@@ -860,6 +861,7 @@
     SUBDIR += tmv
     SUBDIR += tomsfastmath
     SUBDIR += topaz
+    SUBDIR += topcom
     SUBDIR += triangle
     SUBDIR += trlan
     SUBDIR += truthtable
