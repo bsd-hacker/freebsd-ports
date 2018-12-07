@@ -671,6 +671,7 @@
     SUBDIR += ploticus-nox11
     SUBDIR += plplot
     SUBDIR += plplot-ada
+    SUBDIR += polylib
     SUBDIR += primegen
     SUBDIR += primme
     SUBDIR += prng
@@ -870,6 +871,7 @@
     SUBDIR += units
     SUBDIR += unuran
     SUBDIR += viennacl
+    SUBDIR += visualpolylib
     SUBDIR += vowpal_wabbit
     SUBDIR += vtk6
     SUBDIR += vtk8
