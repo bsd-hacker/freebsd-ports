@@ -318,6 +318,7 @@
     SUBDIR += laspack
     SUBDIR += ldouble
     SUBDIR += lean
+    SUBDIR += lemon
     SUBDIR += levmar
     SUBDIR += libRmath
     SUBDIR += libccd
@@ -794,6 +795,7 @@
     SUBDIR += qd
     SUBDIR += qhull
     SUBDIR += qhull5
+    SUBDIR += qposases
     SUBDIR += qrupdate
     SUBDIR += qtiplot
     SUBDIR += qtiplot-doc
