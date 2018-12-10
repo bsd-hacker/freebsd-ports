@@ -169,6 +169,9 @@
     SUBDIR += clrng
     SUBDIR += cminpack
     SUBDIR += cmlib
+    SUBDIR += coin-or-data-netlib
+    SUBDIR += coin-or-data-sample
+    SUBDIR += coin-or-data-stochastic
     SUBDIR += coinmp
     SUBDIR += coinutils
     SUBDIR += concorde
@@ -495,6 +498,7 @@
     SUBDIR += openmesh
     SUBDIR += opensolaris-libm
     SUBDIR += orpie
+    SUBDIR += osi
     SUBDIR += osqp
     SUBDIR += p5-AI-DecisionTree
     SUBDIR += p5-AI-Genetic
