@@ -1,9 +1,10 @@
+# Created by: gahr
 # $FreeBSD$
 
 PORTNAME=	dcmtk
 DISTVERSIONPREFIX=	${PORTNAME:tu}-
 DISTVERSION=	3.6.4
-CATEGORIES=	graphics
+CATEGORIES=	graphics devel
 
 MAINTAINER=	yuri@FreeBSD.org
 COMMENT=	DICOM ToolKit, libraries and applications for DICOM/MEDICOM standard
@@ -22,6 +23,7 @@ USE_GNOME=	libxml2
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_OFF=	DCMTK_WITH_DOXYGEN
 
 OPTIONS_DEFINE=	DOCS
 
