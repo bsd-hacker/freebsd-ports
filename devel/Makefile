@@ -612,6 +612,7 @@
     SUBDIR += etcd33
     SUBDIR += etl
     SUBDIR += euca2ools
+    SUPDIR += evdev-proto
     SUBDIR += evemu
     SUBDIR += eventxx
     SUBDIR += evolution-gconf-tools
@@ -6426,6 +6427,7 @@
     SUBDIR += zanata-cli
     SUBDIR += zapcc
     SUBDIR += zeal
+    SUBDIR += zfp
     SUBDIR += zookeeper
     SUBDIR += zpu-binutils
     SUBDIR += zpu-gcc
