@@ -24,6 +24,7 @@
     SUBDIR += R-cran-udunits2
     SUBDIR += abinit
     SUBDIR += afni
+    SUBDIR += agrum
     SUBDIR += aircraft-datcom
     SUBDIR += antioch
     SUBDIR += atom
@@ -303,6 +304,7 @@
     SUBDIR += triqs
     SUBDIR += udunits
     SUBDIR += v_sim
+    SUBDIR += vipster
     SUBDIR += vmd
     SUBDIR += voro++
     SUBDIR += wannier90
