@@ -6037,6 +6037,7 @@
     SUBDIR += rubygem-trollop
     SUBDIR += rubygem-trollop1
     SUBDIR += rubygem-tty
+    SUBDIR += rubygem-tty-box
     SUBDIR += rubygem-tty-color
     SUBDIR += rubygem-tty-command
     SUBDIR += rubygem-tty-config
@@ -6046,6 +6047,7 @@
     SUBDIR += rubygem-tty-font
     SUBDIR += rubygem-tty-markdown
     SUBDIR += rubygem-tty-pager
+    SUBDIR += rubygem-tty-pie
     SUBDIR += rubygem-tty-platform
     SUBDIR += rubygem-tty-progressbar
     SUBDIR += rubygem-tty-prompt
