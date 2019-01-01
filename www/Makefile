@@ -446,7 +446,6 @@
     SUBDIR += mod_mpm_itk
     SUBDIR += mod_pagespeed
     SUBDIR += mod_perl2
-    SUBDIR += mod_php56
     SUBDIR += mod_php71
     SUBDIR += mod_php72
     SUBDIR += mod_php73
@@ -1425,9 +1424,6 @@
     SUBDIR += phalcon
     SUBDIR += photo_gallery
     SUBDIR += php-screw
-    SUBDIR += php56-opcache
-    SUBDIR += php56-session
-    SUBDIR += php56-tidy
     SUBDIR += php71-opcache
     SUBDIR += php71-session
     SUBDIR += php71-tidy
