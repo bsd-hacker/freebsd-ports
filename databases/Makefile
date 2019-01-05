@@ -274,6 +274,7 @@
     SUBDIR += p5-CGI-Session-Driver-memcached
     SUBDIR += p5-CHI-Driver-Memcached
     SUBDIR += p5-CHI-Driver-Redis
+    SUBDIR += p5-CHI-Driver-TokyoTyrant
     SUBDIR += p5-Cache-BDB
     SUBDIR += p5-Cache-Memcached
     SUBDIR += p5-Cache-Memcached-Fast
@@ -346,6 +347,7 @@
     SUBDIR += p5-DBIx-Browse
     SUBDIR += p5-DBIx-Class
     SUBDIR += p5-DBIx-Class-AsFdat
+    SUBDIR += p5-DBIx-Class-AuditLog
     SUBDIR += p5-DBIx-Class-BitField
     SUBDIR += p5-DBIx-Class-Candy
     SUBDIR += p5-DBIx-Class-Cursor-Cached

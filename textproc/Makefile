@@ -802,6 +802,7 @@
     SUBDIR += p5-Sphinx-Search
     SUBDIR += p5-Spreadsheet-GenerateXLSX
     SUBDIR += p5-Spreadsheet-ParseExcel
+    SUBDIR += p5-Spreadsheet-ParseXLSX
     SUBDIR += p5-Spreadsheet-Read
     SUBDIR += p5-Spreadsheet-ReadSXC
     SUBDIR += p5-Spreadsheet-WriteExcel
@@ -887,6 +888,7 @@
     SUBDIR += p5-Text-Diff-HTML
     SUBDIR += p5-Text-Diff-Parser
     SUBDIR += p5-Text-Diff3
+    SUBDIR += p5-Text-Distill
     SUBDIR += p5-Text-DoubleMetaphone
     SUBDIR += p5-Text-Emoticon
     SUBDIR += p5-Text-Emoticon-GoogleTalk
