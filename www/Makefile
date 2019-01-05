@@ -844,6 +844,7 @@
     SUBDIR += p5-Furl
     SUBDIR += p5-FurlX-Coro
     SUBDIR += p5-Gantry
+    SUBDIR += p5-Gazelle
     SUBDIR += p5-Geo-Caching
     SUBDIR += p5-Google-Search
     SUBDIR += p5-Gtk2-WebKit
@@ -1350,6 +1351,7 @@
     SUBDIR += p5-WebService-Simple
     SUBDIR += p5-WebService-Technorati
     SUBDIR += p5-WebService-YouTube
+    SUBDIR += p5-Woothee
     SUBDIR += p5-WordPress-XMLRPC
     SUBDIR += p5-Yahoo-Search
     SUBDIR += p5-chklinks

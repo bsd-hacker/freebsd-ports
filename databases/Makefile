@@ -365,6 +365,7 @@
     SUBDIR += p5-DBIx-Class-InflateColumn-Authen-Passphrase
     SUBDIR += p5-DBIx-Class-InflateColumn-FS
     SUBDIR += p5-DBIx-Class-InflateColumn-IP
+    SUBDIR += p5-DBIx-Class-InflateColumn-Serializer
     SUBDIR += p5-DBIx-Class-IntrospectableM2M
     SUBDIR += p5-DBIx-Class-Loader
     SUBDIR += p5-DBIx-Class-Migration
@@ -377,6 +378,7 @@
     SUBDIR += p5-DBIx-Class-Schema-Config
     SUBDIR += p5-DBIx-Class-Schema-Loader
     SUBDIR += p5-DBIx-Class-Schema-PopulateMore
+    SUBDIR += p5-DBIx-Class-Storage-TxnEndHook
     SUBDIR += p5-DBIx-Class-TimeStamp
     SUBDIR += p5-DBIx-Class-Tree
     SUBDIR += p5-DBIx-Class-Tree-NestedSet
