@@ -2,32 +2,28 @@
 # $FreeBSD$
 
 PORTNAME=	mediawiki
-PORTVERSION=	1.27.5
+PORTVERSION=	1.32.0
 CATEGORIES=	www
 MASTER_SITES=	http://releases.wikimedia.org/mediawiki/${PORTVERSION:R}/
-PKGNAMESUFFIX=	127
+PKGNAMESUFFIX=	132${PHP_PKGNAMESUFFIX}
 
 MAINTAINER=	wen@FreeBSD.org
 COMMENT=	Wiki engine used by Wikipedia
 
 LICENSE=	GPLv2
 
-DEPRECATED=	Upstream no longer maintained
-EXPIRATION_DATE=2019-04-14
+CONFLICTS=	mediawiki127-[0-9]* mediawiki13[01]-[0-9]*
 
-CONFLICTS=	mediawiki13[0-2]-[0-9]*
-
-USES=		php:web shebangfix
+USES=		php:flavors shebangfix
 SHEBANG_FILES=	maintenance/dev/*.sh \
-		maintenance/hiphop/run-server \
 		maintenance/postgres/*.pl \
 		maintenance/storage/make-blobs \
-		includes/limit.sh
+		includes/shell/limit.sh
 SHEBANG_LANG=	hhvm
 hhvm_OLD_CMD=	/usr/bin/hhvm
 hhvm_CMD=	${LOCALBASE}/bin/hhvm # not installed by anything yet
-USE_PHP=	ctype dom hash iconv intl json mbstring pcre readline \
-		session xml xmlreader zlib
+USE_PHP=	ctype dom fileinfo hash iconv intl json mbstring openssl pcre \
+		readline session xml xmlreader zlib
 MEDIAWIKIDIR?=	www/mediawiki
 
 NO_BUILD=	yes
@@ -36,8 +32,8 @@ PLIST=		${WRKDIR}/plist
 SUB_FILES=	pkg-message
 SUB_LIST=	MEDIAWIKIDIR=${PREFIX}/${MEDIAWIKIDIR}
 
-OPTIONS_DEFINE=		LDAP MEMCACHED IMAGICK SOCKETS
-OPTIONS_SINGLE=		DB
+OPTIONS_DEFINE=	LDAP MEMCACHED IMAGICK SOCKETS
+OPTIONS_SINGLE=	DB
 OPTIONS_SINGLE_DB=	MYSQL PGSQL SQLITE
 OPTIONS_DEFAULT=	MYSQL SOCKETS
 
@@ -56,6 +52,7 @@ IMAGICK_RUN_DEPENDS=	${LOCALBASE}/lib/php/${PHP_EXT_DIR}/imagick.so:graphics/pec
 
 pre-install:
 	@${FIND} -s -d ${WRKSRC} -not -type d | ${SED} "s?${WRKSRC}?${MEDIAWIKIDIR}?g" >>${PLIST}
+	@${ECHO} "@dir %%WWWDIR%%/cache" >> ${PLIST}
 	@${ECHO} "@mode 0777" >> ${PLIST}
 	@${ECHO} "@dir %%WWWDIR%%/images" >> ${PLIST}
 	@${ECHO} "@mode" >> ${PLIST}
