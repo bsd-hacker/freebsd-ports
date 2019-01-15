@@ -1,28 +1,25 @@
 # $FreeBSD$
 
-PORTNAME=	slurp
-DISTVERSIONPREFIX=	v
-DISTVERSION=	1.0
+PORTNAME=	swayidle
+DISTVERSION=	1.1
 CATEGORIES=	x11
 
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
-PATCHFILES=	74c4bdff012a.patch:-p1 7976828fe1a9.patch:-p1
-
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Select a region in a Wayland compositor
+COMMENT=	Idle management daemon for Wayland
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	evdev-proto>0:devel/evdev-proto \
-		wayland-protocols>=1.14:graphics/wayland-protocols
+BUILD_DEPENDS=	wayland-protocols>=1.14:graphics/wayland-protocols
 LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 
-USES=		compiler:c11 gnome meson pkgconfig
+USES=		compiler:c11 meson pkgconfig
 USE_GITHUB=	yes
-USE_GNOME=	cairo
-GH_ACCOUNT=	emersion
-PLIST_FILES=	bin/${PORTNAME}
+GH_ACCOUNT=	swaywm
+PLIST_FILES=	bin/${PORTNAME} \
+		share/bash-completion/completions/${PORTNAME} \
+		share/fish/completions/${PORTNAME}.fish \
+		share/zsh/site-functions/_${PORTNAME}
 
 OPTIONS_DEFINE=	MANPAGES
 OPTIONS_DEFAULT=MANPAGES
