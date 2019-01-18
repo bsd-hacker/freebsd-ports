@@ -18,17 +18,14 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 LIB_DEPENDS=	libdrm.so:graphics/libdrm
 
 USES=		meson pkgconfig
-USE_LDCONFIG=	yes
 USE_GITHUB=	yes
+USE_LDCONFIG=	yes
 GH_ACCOUNT=	intel
 LDFLAGS+=	-lpthread # for pthread_getthreadid_np
 
-OPTIONS_DEFINE=	DEBUG WAYLAND X11
+OPTIONS_DEFINE=	WAYLAND X11
 OPTIONS_DEFAULT=WAYLAND X11
 OPTIONS_SUB=	yes
-
-DEBUG_CFLAGS=		-D_DEBUG
-DEBUG_CFLAGS_OFF=	-DNDEBUG
 
 WAYLAND_LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 WAYLAND_MESON_YES=	with_wayland
