@@ -120,6 +120,8 @@
     SUBDIR += junicode
     SUBDIR += kaputa
     SUBDIR += khmeros
+    SUBDIR += league-gothic
+    SUBDIR += league-spartan
     SUBDIR += lfpfonts-fix
     SUBDIR += lfpfonts-var
     SUBDIR += libFS
@@ -129,6 +131,7 @@
     SUBDIR += libXft
     SUBDIR += liberation-fonts-ttf
     SUBDIR += libfontenc
+    SUBDIR += linden-hill
     SUBDIR += linux-c6-fontconfig
     SUBDIR += linux-c7-fontconfig
     SUBDIR += linuxlibertine
@@ -164,6 +167,7 @@
     SUBDIR += pingwi
     SUBDIR += plex-ttf
     SUBDIR += powerline-fonts
+    SUBDIR += prociono
     SUBDIR += profont
     SUBDIR += proggy_fonts
     SUBDIR += proggy_fonts-ttf
