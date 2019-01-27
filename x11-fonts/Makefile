@@ -42,10 +42,12 @@
     SUBDIR += encodings
     SUBDIR += exo
     SUBDIR += fantasque-sans-mono
+    SUBDIR += fanwood
     SUBDIR += farsifonts
     SUBDIR += fifteen
     SUBDIR += fira
     SUBDIR += firacode
+    SUBDIR += firago
     SUBDIR += fntsample
     SUBDIR += font-adobe-100dpi
     SUBDIR += font-adobe-75dpi
