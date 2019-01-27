@@ -4541,6 +4541,7 @@
     SUBDIR += py-dtfabric
     SUBDIR += py-durus
     SUBDIR += py-dynrules
+    SUBDIR += py-easyconfig
     SUBDIR += py-easyprocess
     SUBDIR += py-editdistance
     SUBDIR += py-efilter
@@ -4709,6 +4710,7 @@
     SUBDIR += py-jsonrpclib
     SUBDIR += py-jsonrpclib-pelix
     SUBDIR += py-jsonschema
+    SUBDIR += py-jsonsir
     SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
     SUBDIR += py-jupyter_core
@@ -4818,6 +4820,7 @@
     SUBDIR += py-omniorb-3
     SUBDIR += py-openapi-codec
     SUBDIR += py-opendht
+    SUBDIR += py-opengrok-tools
     SUBDIR += py-openstacksdk
     SUBDIR += py-opentracing
     SUBDIR += py-opster
@@ -5075,6 +5078,7 @@
     SUBDIR += py-represent
     SUBDIR += py-requestsexceptions
     SUBDIR += py-resolver
+    SUBDIR += py-resource
     SUBDIR += py-resourcepackage
     SUBDIR += py-responses
     SUBDIR += py-retrying
