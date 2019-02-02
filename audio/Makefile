@@ -765,6 +765,7 @@
     SUBDIR += snack
     SUBDIR += snd
     SUBDIR += sndio
+    SUBDIR += so-synth-lv2
     SUBDIR += solfege
     SUBDIR += sonata
     SUBDIR += sonic-visualiser
@@ -793,6 +794,7 @@
     SUBDIR += spotifyd
     SUBDIR += squash
     SUBDIR += sratom
+    SUBDIR += stegosaurus-lv2
     SUBDIR += stk
     SUBDIR += streamripper
     SUBDIR += streamtranscoder
