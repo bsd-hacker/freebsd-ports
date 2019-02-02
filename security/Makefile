@@ -926,6 +926,7 @@
     SUBDIR += py-certbot-nginx
     SUBDIR += py-certifi
     SUBDIR += py-certstream
+    SUBDIR += py-ckcc-protocol
     SUBDIR += py-cpe
     SUBDIR += py-cracklib
     SUBDIR += py-cryptkit
@@ -959,6 +960,7 @@
     SUBDIR += py-htpasswd
     SUBDIR += py-itsdangerous
     SUBDIR += py-josepy
+    SUBDIR += py-keepkey
     SUBDIR += py-kerberos
     SUBDIR += py-keyczar
     SUBDIR += py-keyring
