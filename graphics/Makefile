@@ -491,6 +491,7 @@
     SUBDIR += libpcd
     SUBDIR += libpgf
     SUBDIR += libpillowfight
+    SUBDIR += libplacebo
     SUBDIR += libpotrace
     SUBDIR += libprojectm
     SUBDIR += libpuzzle
@@ -992,6 +993,7 @@
     SUBDIR += seom
     SUBDIR += separate
     SUBDIR += seq2gif
+    SUBDIR += shaderc
     SUBDIR += shared-color-profiles
     SUBDIR += sharpconstruct
     SUBDIR += shotwell
