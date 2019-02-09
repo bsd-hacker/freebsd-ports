@@ -14,6 +14,7 @@
     SUBDIR += bfhist
     SUBDIR += bforce-kst
     SUBDIR += birda
+    SUBDIR += bladerf
     SUBDIR += bluegps
     SUBDIR += bluez-firmware
     SUBDIR += bpl+
@@ -167,7 +168,9 @@
     SUBDIR += smstools3
     SUBDIR += snap7
     SUBDIR += soapyairspy
+    SUBDIR += soapybladerf
     SUBDIR += soapyplutosdr
+    SUBDIR += soapyredpitaya
     SUBDIR += soapyremote
     SUBDIR += soapysdrhackrf
     SUBDIR += soapyuhd
