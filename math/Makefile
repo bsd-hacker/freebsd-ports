@@ -719,6 +719,8 @@
     SUBDIR += py-igraph
     SUBDIR += py-intspan
     SUBDIR += py-keras
+    SUBDIR += py-keras-applications
+    SUBDIR += py-keras-preprocessing
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
     SUBDIR += py-luminol
