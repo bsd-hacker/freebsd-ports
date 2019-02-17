@@ -3477,6 +3477,8 @@
     SUBDIR += p5-Term-ANSIScreen
     SUBDIR += p5-Term-Animation
     SUBDIR += p5-Term-CallEditor
+    SUBDIR += p5-Term-Choose
+    SUBDIR += p5-Term-Choose-Util
     SUBDIR += p5-Term-Clui
     SUBDIR += p5-Term-EditLine
     SUBDIR += p5-Term-Encoding
@@ -3502,6 +3504,7 @@
     SUBDIR += p5-Term-Size-Perl
     SUBDIR += p5-Term-Sk
     SUBDIR += p5-Term-Table
+    SUBDIR += p5-Term-TablePrint
     SUBDIR += p5-Term-Title
     SUBDIR += p5-Term-UI
     SUBDIR += p5-Term-VT102
