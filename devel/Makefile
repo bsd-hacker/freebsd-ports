@@ -478,6 +478,7 @@
     SUBDIR += doctorj
     SUBDIR += dolphin-plugins
     SUBDIR += dotconf
+    SUBDIR += double-conversion
     SUBDIR += doxygen
     SUBDIR += dparser
     SUBDIR += dprog
@@ -814,6 +815,7 @@
     SUBDIR += glslang
     SUBDIR += glui
     SUBDIR += gmake
+    SUBDIR += gn
     SUBDIR += gnatcoll
     SUBDIR += gnatpython
     SUBDIR += gnome-builder
@@ -1413,7 +1415,6 @@
     SUBDIR += libdlna
     SUBDIR += libdnsres
     SUBDIR += libdombey
-    SUBDIR += libdouble-conversion
     SUBDIR += libdparse
     SUBDIR += libds
     SUBDIR += libdsp
@@ -4290,6 +4291,7 @@
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
     SUBDIR += py-aenum
+    SUBDIR += py-aiofiles
     SUBDIR += py-aioice
     SUBDIR += py-aiorpcX
     SUBDIR += py-aiortc
@@ -4388,6 +4390,7 @@
     SUBDIR += py-azure-mgmt-servicefabric
     SUBDIR += py-azure-mgmt-signalr
     SUBDIR += py-azure-mgmt-sql
+    SUBDIR += py-azure-mgmt-sqlvirtualmachine
     SUBDIR += py-azure-mgmt-storage
     SUBDIR += py-azure-mgmt-trafficmanager
     SUBDIR += py-azure-mgmt-web
@@ -4639,6 +4642,9 @@
     SUBDIR += py-google-apputils
     SUBDIR += py-googleapis-common-protos
     SUBDIR += py-grab
+    SUBDIR += py-graphene
+    SUBDIR += py-graphql-core
+    SUBDIR += py-graphql-relay
     SUBDIR += py-greenlet
     SUBDIR += py-grizzled
     SUBDIR += py-grouch
@@ -4912,6 +4918,8 @@
     SUBDIR += py-pretend
     SUBDIR += py-prettytable
     SUBDIR += py-prioritized_methods
+    SUBDIR += py-proglog
+    SUBDIR += py-promise
     SUBDIR += py-prompt_toolkit
     SUBDIR += py-prompt_toolkit2
     SUBDIR += py-protobuf
@@ -5107,6 +5115,7 @@
     SUBDIR += py-ruamel.yaml
     SUBDIR += py-rubymarshal
     SUBDIR += py-rwt
+    SUBDIR += py-rx
     SUBDIR += py-sanetime
     SUBDIR += py-sarge
     SUBDIR += py-schema
@@ -5489,6 +5498,7 @@
     SUBDIR += regexxer
     SUBDIR += relx
     SUBDIR += remake
+    SUBDIR += remotery
     SUBDIR += replay
     SUBDIR += replxx
     SUBDIR += resolv_wrapper
