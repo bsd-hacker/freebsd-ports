@@ -1,12 +1,11 @@
 # $FreeBSD$
 
-PORTNAME=	svt-av1
+PORTNAME=	svt-vp9
 PORTVERSION=	s20180215
-PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Scalable AV1 encoder
+COMMENT=	Scalable VP9 encoder
 
 LICENSE=	BSD2CLAUSE+PATENT
 LICENSE_GROUPS=	FSF OSI COPYFREE
@@ -23,28 +22,31 @@ USES=		cmake
 USE_GITHUB=	yes
 USE_LDCONFIG=	yes
 GH_ACCOUNT=	OpenVisualCloud
-GH_PROJECT=	SVT-AV1
-GH_TAGNAME=	37a5b96
+GH_PROJECT=	SVT-VP9
+GH_TAGNAME=	2437369
 
 post-patch:
 # Default CFLAGS are already set by USES=cmake
 	@${REINPLACE_CMD} -i .flags -E -e 's/ -mavx//' \
-		-e 's/CMAKE_C_FLAGS "/&$${CMAKE_C_FLAGS} /' \
+		-e 's/-O2 -flto //' \
 		-e '/C_FLAGS_(RELEASE|DEBUG)/d' \
+		${WRKSRC}/CMakeLists.txt
+# Avoid devel/yasm dependency
+	@${REINPLACE_CMD} -i .typo 's/MAKE_ASM_NASM_COMPILER/s&/' \
 		${WRKSRC}/CMakeLists.txt
 # Avoid lang/gcc* dependency
 	@${REINPLACE_CMD} -i .gcc -e 's/gcc-//' \
 		-e '/CMAKE_C/{ s/STREQUAL/MATCHES/; s/"GNU/&|Clang/; }' \
 		${WRKSRC}/CMakeLists.txt \
 		${WRKSRC}/Source/Lib/*/CMakeLists.txt
+# Avoid conflict with standard types
+	@${GREP} -Flr '_T_DEFINED' ${WRKSRC} | ${XARGS} \
+		${REINPLACE_CMD} -i .types 's/_T_DEFINED/_DEFINED/'
 # Avoid platform whitelists for generic non-Windows code
 	@${REINPLACE_CMD} -i .opsys 's/Linux/${OPSYS}/' \
 		${WRKSRC}/CMakeLists.txt \
 		${WRKSRC}/Source/Lib/*/CMakeLists.txt
 	@${GREP} -Flr '__linux' ${WRKSRC} | ${XARGS} \
 		${REINPLACE_CMD} -i .opsys 's/__linux/__${OPSYS}/'
-# Avoid -msse4.1 for (unused) function not under Source/Lib/ASM_SSE4_1/
-	@${REINPLACE_CMD} -e '/_sse4_1/,/}/d; /smmintrin\.h/d' \
-		${WRKSRC}/Source/Lib/Codec/EbInterPrediction.c
 
 .include <bsd.port.mk>
