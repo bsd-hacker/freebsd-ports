@@ -8,6 +8,7 @@
     SUBDIR += PDL
     SUBDIR += R
     SUBDIR += R-cran-Amelia
+    SUBDIR += R-cran-BsMD
     SUBDIR += R-cran-CVST
     SUBDIR += R-cran-ChangeAnomalyDetection
     SUBDIR += R-cran-DEoptimR
@@ -93,6 +94,7 @@
     SUBDIR += R-cran-rgenoud
     SUBDIR += R-cran-robustbase
     SUBDIR += R-cran-sandwich
+    SUBDIR += R-cran-scatterplot3d
     SUBDIR += R-cran-sf
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
