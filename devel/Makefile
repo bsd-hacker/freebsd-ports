@@ -506,7 +506,6 @@
     SUBDIR += editline
     SUBDIR += efivar
     SUBDIR += efl
-    SUBDIR += eggdbus
     SUBDIR += egypt
     SUBDIR += eiffelstudio
     SUBDIR += elf
@@ -1457,7 +1456,6 @@
     SUBDIR += libfwsi
     SUBDIR += libg19
     SUBDIR += libg19draw
-    SUBDIR += libgalago
     SUBDIR += libgamepad
     SUBDIR += libgdata
     SUBDIR += libgee
