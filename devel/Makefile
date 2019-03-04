@@ -2824,6 +2824,7 @@
     SUBDIR += p5-JSON-Schema
     SUBDIR += p5-Java
     SUBDIR += p5-Jonk
+    SUBDIR += p5-Keyword-Pluggable
     SUBDIR += p5-LV
     SUBDIR += p5-Lexical-Alias
     SUBDIR += p5-Lexical-Import
@@ -4475,6 +4476,7 @@
     SUBDIR += py-click-log
     SUBDIR += py-click-plugins
     SUBDIR += py-click-threading
+    SUBDIR += py-click6
     SUBDIR += py-cliff
     SUBDIR += py-cligj
     SUBDIR += py-clint
