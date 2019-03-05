@@ -4,9 +4,9 @@
 
 PORTNAME=	itstool
 PORTVERSION=	2.0.5
+PORTREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://files.itstool.org/itstool/
-PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	kwm@FreeBSD.org
 COMMENT=	Make XML documents translatable through po files
@@ -16,7 +16,7 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:textproc/py-libxml2@${PY_FLAVOR}
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libxml2.py:textproc/py-libxml2@${PY_FLAVOR}
 
-USES=		python:run tar:bzip2
+USES=		python tar:bzip2
 GNU_CONFIGURE=	yes
 
 post-patch:
