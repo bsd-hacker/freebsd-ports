@@ -3,9 +3,9 @@
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
-DISTVERSION=	3_6_0
-PORTREVISION=	1
+DISTVERSION=	3_4_5
 CATEGORIES=	graphics geography
+PKGNAMESUFFIX=	-ltr
 
 MAINTAINER=	rhurlin@gwdg.de
 COMMENT=	Free and Open Source Geographic Information System
@@ -87,7 +87,7 @@ USE_QT=		3d buildtools_build core concurrent dbus declarative \
 USE_PYQT=	core gui network qml qscintilla2 sip sql svg xml webkit_run
 USE_LDCONFIG=	yes
 
-CONFLICTS_INSTALL=	qgis-ltr
+CONFLICTS_INSTALL=	qgis
 
 USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME:tu}
