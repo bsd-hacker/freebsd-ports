@@ -4079,7 +4079,6 @@ net-p2p/transmission25|net-p2p/transmission|2013-03-09|gtk version is now fine
 net-p2p/transmission25-cli|net-p2p/transmission-cli|2013-03-09|gtk version is now fine
 net-p2p/transmission25-daemon|net-p2p/transmission-daemon|2013-03-09|gtk version is now fine
 net-p2p/transmission25-gtk2|net-p2p/transmission-gtk2|2013-03-09|gtk version is now fine
-net-p2p/transmission25-qt4|net-p2p/transmission-qt4|2013-03-09|gtk version is now fine
 www/transmission25-web|www/transmission-web|2013-03-09|gtk version is now fine
 net-p2p/transmission-gtk2|net-p2p/transmission-gtk|2013-03-09|Now uses GTK 3
 ftp/proma||2013-03-09|Has expired: Broken for more than 6 months
@@ -10016,10 +10015,7 @@ www/phpmp||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs t
 www/lionwiki||2018-03-08|Has expired: Unmaintained, all www files wrongly belongs to www user
 databases/php-memcached|databases/pecl-memcached|2018-03-10|Remove duplicate port, use databases/pecl-memcached instead
 emulators/i386-wine-staging|emulators/i386-wine-devel|2018-03-10|Broken for months, abandoned upstream
-archivers/quazip-qt5|archivers/quazip@qt5|2018-03-11|Moved to a flavoured version
 devel/go-json-rest||2018-03-11|Go libraries aren't allowed (GH/ant0ine/go-json-rest)
-security/qtkeychain-qt4|security/qtkeychain@qt4|2018-03-12|Moved to a flavoured version
-security/qtkeychain-qt5|security/qtkeychain@qt5|2018-03-12|Moved to a flavoured version
 devel/libdbusmenu-qt5|devel/libdbusmenu-qt@qt5|2018-03-12|Moved to a flavoured version
 finance/electrum2|finance/electrum|2018-03-13|Has expired: Vulnerable legacy port, please use finance/electrum instead
 math/py-gsl|math/py-pygsl|2018-03-13|Rename to match PyPI naming
@@ -10081,7 +10077,6 @@ finance/libalkimia|finance/alkimia-qt4|2018-04-13|Project renamed
 security/py-zxcvbn-python|security/py-zxcvbn|2018-04-13|Renamed upstream
 devel/py-libusb115|devel/py-libusb1|2018-04-14|Unused and unmaintained upstream
 devel/qca-qt5|devel/qca@qt5|2018-04-14|Moved to a flavoured version
-devel/qjson-qt5|devel/qjson@qt5|2018-04-14|Moved to a flavoured version
 multimedia/gstreamer1-qt4|multimedia/gstreamer1-qt@qt4|2018-04-14|Moved to a flavoured version
 multimedia/gstreamer1-qt5|multimedia/gstreamer1-qt@qt5|2018-04-14|Moved to a flavoured version
 www/mod_antiloris||2018-04-16|Apache 2.2 End of Life
@@ -10282,8 +10277,6 @@ textproc/kibana46|textproc/kibana5|2018-07-10|Has expired: End of Life was 2018-
 print/cups-connector|print/cloud-print-connector|2018-07-11|Project renamed upstream
 net/wpa_gui|net/wpa_supplicant_gui|2018-07-12|Rename to wpa_supplicant_gui for ease of search
 lang/gcc47|lang/gcc6|2018-07-15|Has expired: Unsupported by upstream. Use GCC 6 or newer instead
-net-p2p/transmission-qt4|net-p2p/transmission-qt@qt4|2018-07-15|Moved into flavored version
-net-p2p/transmission-qt5|net-p2p/transmission-qt@qt5|2018-07-15|Moved into flavored version
 java/jaf||2018-07-16|Included in JRE since 1.6 version
 net/p5-ZConf-Bookmarks||2018-07-16|Has expired: Unmaintained
 net/p5-ZConf||2018-07-16|Has expired: Unmaintained
@@ -10447,8 +10440,6 @@ devel/libbobcat||2018-08-21|Has expired: Broken for more than 5 months
 net-p2p/dogecoin||2018-08-21|Has expired: Broken for more than 5 months
 misc/freebsd-doc-sr||2018-08-23|Removed
 www/py-django18|www/py-django111|2018-08-25|Has expired: End of Live since 01/04/2018
-x11-themes/qt4-style-Kvantum|x11-themes/Kvantum@qt4|2018-08-26|Moved to flavored version
-x11-themes/qt5-style-Kvantum|x11-themes/Kvantum@qt5|2018-08-26|Moved to flavored version
 devel/gps||2018-08-28|Has expired: Depends on obsolete LLVM 3.8
 net-mgmt/ocsinventory-ng|net-mgmt/ocsinventory-server|2018-08-30|split port
 www/py-buku|www/buku|2018-09-01|Moved to correct directory, port is not a python library
@@ -10525,8 +10516,6 @@ editors/latexila|editors/gnome-latex|2018-10-05|Project was renamed
 math/arpack|math/arpack-ng|2018-10-06|math/arpack is the old, unmaintained version, math/arpack-ng should be used instead
 net-p2p/libtorrent-rasterbar-python|net-p2p/py-libtorrent-rasterbar|2018-10-06|Rename to the canonical name for a python port
 biology/tinker|science/tinker|2018-10-06|Move to proper category
-net-im/telepathy-qt4|net-im/telepathy-qt@qt4|2018-10-07|Moved to flavored version
-net-im/telepathy-qt5|net-im/telepathy-qt@qt5|2018-10-07|Moved to flavored version
 graphics/gegl3|graphics/gegl|2018-10-07|Replaced old gegl version with the newer version
 www/mediawiki129|www/mediawiki131|2018-10-08|Has expired: Deprecated by upstream
 devel/pecl-xdebug26|devel/pecl-xdebug|2018-10-09|Renamed because 2.6 is the new default
@@ -11672,3 +11661,21 @@ x11-fonts/mkfontdir|x11-fonts/mkfontscale|2019-03-11|Merged into one package
 emulators/ppsspp-devel|emulators/ppsspp|2019-03-14|Out of date: use emulators/ppsspp for now
 sysutils/polkit-qt@qt4||2019-03-16|Qt4 deprecation
 sysutils/polkit-qt@qt5|sysutils/polkit-qt|2019-03-16|Flavor has been removed
+security/qtkeychain@qt4||2019-03-16|Qt4 deprecation
+security/qtkeychain@qt5|security/qtkeychain|2019-03-16|Flavor has been removed
+deskutils/znotes@qt4||2019-03-16|Qt4 deprecation
+deskutils/znotes@qt5|deskutils/znotes|2019-03-16|Flavor has been removed
+net-im/telepathy-qt@qt4||2019-03-16|Qt4 deprecation
+net-im/telepathy-qt@qt5|net-im/telepathy-qt|2019-03-16|Flavor has been removed
+graphics/fracplanet@qt4||2019-03-16|Qt4 deprecation
+graphics/fracplanet@qt5|graphics/fracplanet|2019-03-16|Flavor has been removed
+graphics/photivo@qt4||2019-03-16|Qt4 deprecation
+graphics/photivo@qt5|graphics/photivo|2019-03-16|Flavor has been removed
+archivers/quazip@qt4||2019-03-16|Qt4 deprecation
+archivers/quazip@qt5|archivers/quazip|2019-03-16|Flavor has been removed
+net-p2p/transmission@qt4||2019-03-16|Qt4 deprecation
+net-p2p/transmission@qt5|net-p2p/transmission-qt|2019-03-16|Flavor has been removed
+x11-themes/Kvantum@qt4||2019-03-16|Qt4 deprecation
+x11-themes/Kvantum@qt5|x11-themes/Kvantum|2019-03-16|Flavor has been removed
+devel/qjson@qt4||2019-03-16|Qt4 deprecation
+devel/qjson@qt5|devel/qjson|2019-03-16|Flavor has been removed
