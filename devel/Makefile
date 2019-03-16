@@ -248,7 +248,6 @@
     SUBDIR += bzr
     SUBDIR += bzr-builder
     SUBDIR += bzr-colo
-    SUBDIR += bzr-explorer
     SUBDIR += bzr-externals
     SUBDIR += bzr-fastimport
     SUBDIR += bzr-git
@@ -5414,7 +5413,6 @@
     SUBDIR += qscintilla2-designerplugin-qt5
     SUBDIR += qscintilla2-qt5
     SUBDIR += qt-maybe
-    SUBDIR += qt4-help
     SUBDIR += qt5
     SUBDIR += qt5-assistant
     SUBDIR += qt5-buildtools

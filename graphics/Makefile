@@ -62,7 +62,6 @@
     SUBDIR += autopano-sift-c
     SUBDIR += autotrace
     SUBDIR += aview
-    SUBDIR += ayam
     SUBDIR += azpainter
     SUBDIR += backfract
     SUBDIR += barbecue
@@ -349,7 +348,6 @@
     SUBDIR += icc-profiles-adobe-cs4
     SUBDIR += icc-profiles-basiccolor
     SUBDIR += icc-profiles-openicc
-    SUBDIR += iccexamin
     SUBDIR += iccxml
     SUBDIR += icon-slicer
     SUBDIR += icontact
@@ -594,7 +592,6 @@
     SUBDIR += opendx
     SUBDIR += openexr
     SUBDIR += openfx-arena
-    SUBDIR += openfx-io
     SUBDIR += openfx-misc
     SUBDIR += opengl-man
     SUBDIR += opengv
