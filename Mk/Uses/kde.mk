@@ -249,10 +249,10 @@ _USE_KDEPIM5_ALL=	akonadicontacts akonadiimportwizard akonadimime akonadinotes \
 			ksmtp ldap libkdepim libkleo libksieve mailcommon \
 			mailimporter mailtransport mbox messagelib \
 			mime pimcommon pimtextedit tnef \
-			kalarm kontact kmail account-wizard mbox-importer \
+			kalarm kontact kmail mbox-importer \
 			akonadiconsole akregator grantlee-editor kaddressbook \
 			kalarm kmail-account-wizard kmail knotes kontact \
-			korganizer mbox-importer pim-data-exporter
+			korganizer pim-data-exporter
 
 _USE_KDE5_ALL=		${_USE_FRAMEWORKS_ALL} \
 			${_USE_PLASMA_ALL} \
@@ -778,7 +778,7 @@ kate5_PATH=		${QT_PLUGINDIR}/ktexteditor/katebacktracebrowserplugin.so
 libkcddb5_PORT=		audio/libkcddb
 libkcddb5_LIB=		libKF5Cddb.so
 
-libkcompactdisc5_PORT=	audio/libkcompactdisc-kde5
+libkcompactdisc5_PORT=	audio/libkcompactdisc
 libkcompactdisc5_LIB=	libKF5CompactDisc.so
 
 libkdcraw5_PORT=	graphics/libkdcraw
