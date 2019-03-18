@@ -10,17 +10,18 @@ DISTNAME=	jdk-${PORTVERSION}_doc-all
 MAINTAINER=	java@FreeBSD.org
 COMMENT=	Java Development Kit ${JDK_VERSION} Documentation
 
+USES=		zip
+
 DOCSDIR?=	${PREFIX}/share/doc/jdk${JDK_VERSION}
 RESTRICTED=	This documentation is under license and export control.
 
 WRKSRC=		${WRKDIR}/docs
-JDK_VERSION=		10
+JDK_VERSION=		11
 JDK_UPDATE_VERSION=	0
 JDK_PATCH_VERSION=	2
 DOWNLOAD_URL=	http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
 NO_BUILD=	yes
-USES=		zip
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
@@ -28,7 +29,7 @@ OPTIONS_DEFINE=	DOCS
 .include <bsd.port.pre.mk>
 
 .if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
-IGNORE=You must manually fetch ${DISTNAME}${EXTRACT_SUFX} from ${DOWNLOAD_URL} by selecting the "Download" link for the "Java SE 10 Documentation", place it in ${DISTDIR} and then run make again
+IGNORE=You must manually fetch ${DISTNAME}${EXTRACT_SUFX} from ${DOWNLOAD_URL} by selecting the "Download" link for the "Java SE 11 Documentation", place it in ${DISTDIR} and then run make again
 .endif
 
 do-install:
