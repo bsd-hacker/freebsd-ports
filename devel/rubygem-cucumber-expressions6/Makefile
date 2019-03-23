@@ -1,13 +1,14 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	c21e
-PORTVERSION=	1.1.9
+PORTNAME=	cucumber-expressions
+PORTVERSION=	6.0.1
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	6
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Run cross-platform executables
+COMMENT=	Cucumber Expressions for Ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -16,5 +17,7 @@ USES=		gem
 USE_RUBY=	yes
 
 NO_ARCH=	yes
+
+PORTSCOUT=	limit:^6\.
 
 .include <bsd.port.mk>
