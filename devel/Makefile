@@ -2602,6 +2602,7 @@
     SUBDIR += p5-File-ShareDir-PAR
     SUBDIR += p5-File-ShareDir-PathClass
     SUBDIR += p5-File-ShareDir-ProjectDistDir
+    SUBDIR += p5-File-ShareDir-Tarball
     SUBDIR += p5-File-Slurp
     SUBDIR += p5-File-Slurp-Tiny
     SUBDIR += p5-File-Slurp-Tree
@@ -2978,6 +2979,7 @@
     SUBDIR += p5-MooX-Locale-Passthrough
     SUBDIR += p5-MooX-Options
     SUBDIR += p5-MooX-Role-Parameterized
+    SUBDIR += p5-MooX-Singleton
     SUBDIR += p5-MooX-StrictConstructor
     SUBDIR += p5-MooX-Thunking
     SUBDIR += p5-MooX-Traits
@@ -3026,6 +3028,7 @@
     SUBDIR += p5-MooseX-MethodAttributes
     SUBDIR += p5-MooseX-MultiInitArg
     SUBDIR += p5-MooseX-MultiMethods
+    SUBDIR += p5-MooseX-MungeHas
     SUBDIR += p5-MooseX-NonMoose
     SUBDIR += p5-MooseX-Object-Pluggable
     SUBDIR += p5-MooseX-OneArgNew
