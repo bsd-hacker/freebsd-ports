@@ -1,4 +1,4 @@
---- include/qemu/atomic.h.orig	2019-04-12 03:28:28 UTC
+--- include/qemu/atomic.h.orig	2018-08-02 21:48:53 UTC
 +++ include/qemu/atomic.h
 @@ -200,10 +200,12 @@
  /* Provide shorter names for GCC atomic builtins, return old value */

@@ -1,6 +1,6 @@
---- configure.orig	2019-04-14 21:25:18 UTC
+--- configure.orig	2019-04-14 20:18:21 UTC
 +++ configure
-@@ -375,6 +375,7 @@ hax="no"
+@@ -353,6 +353,7 @@ hax="no"
  hvf="no"
  whpx="no"
  rdma=""
@@ -8,7 +8,7 @@
  gprof="no"
  debug_tcg="no"
  debug="no"
-@@ -391,7 +392,7 @@ DSOSUF=".so"
+@@ -369,7 +370,7 @@ DSOSUF=".so"
  LDFLAGS_SHARED="-shared"
  modules="no"
  prefix="/usr/local"
@@ -17,7 +17,7 @@
  datadir="\${prefix}/share"
  firmwarepath="\${prefix}/share/qemu-firmware"
  qemu_docdir="\${prefix}/share/doc/qemu"
-@@ -471,6 +472,9 @@ numa=""
+@@ -449,6 +450,9 @@ numa=""
  tcmalloc="no"
  jemalloc="no"
  replication="yes"
@@ -26,8 +26,8 @@
 +bpf="no"
  vxhs=""
  libxml2=""
- docker="no"
-@@ -1087,6 +1091,10 @@ for opt do
+ 
+@@ -1032,6 +1036,10 @@ for opt do
    ;;
    --enable-vnc-png) vnc_png="yes"
    ;;
@@ -38,7 +38,7 @@
    --disable-slirp) slirp="no"
    ;;
    --disable-vde) vde="no"
-@@ -1363,6 +1371,10 @@ for opt do
+@@ -1308,6 +1316,10 @@ for opt do
    ;;
    --disable-rdma) rdma="no"
    ;;
@@ -49,7 +49,7 @@
    --with-gtkabi=*) gtkabi="$optarg"
    ;;
    --disable-vte) vte="no"
-@@ -1669,7 +1681,8 @@ disabled with --disable-FEATURE, default is enabled if
+@@ -1593,7 +1605,8 @@ disabled with --disable-FEATURE, default is enabled if
    hax             HAX acceleration support
    hvf             Hypervisor.framework acceleration support
    whpx            Windows Hypervisor Platform acceleration support
@@ -59,7 +59,7 @@
    vde             support for vde network
    netmap          support for netmap network
    linux-aio       Linux AIO support
-@@ -2881,7 +2894,49 @@ else
+@@ -2791,7 +2804,49 @@ else
      tasn1=no
  fi
  
@@ -109,7 +109,7 @@
  ##########################################
  # getifaddrs (for tests/test-io-channel-socket )
  
-@@ -2891,6 +2946,14 @@ if ! check_include "ifaddrs.h" ; then
+@@ -2801,6 +2856,14 @@ if ! check_include "ifaddrs.h" ; then
  fi
  
  ##########################################
@@ -124,7 +124,7 @@
  # VTE probe
  
  if test "$vte" != "no"; then
-@@ -3061,7 +3124,51 @@ EOF
+@@ -2971,7 +3034,51 @@ EOF
    fi
  fi
  
@@ -176,7 +176,7 @@
  ##########################################
  # VNC SASL detection
  if test "$vnc" = "yes" -a "$vnc_sasl" != "no" ; then
-@@ -3474,7 +3581,7 @@ for i in $glib_modules; do
+@@ -3388,7 +3495,7 @@ for i in $glib_modules; do
          glib_libs=$($pkg_config --libs $i)
          QEMU_CFLAGS="$glib_cflags $QEMU_CFLAGS"
          LIBS="$glib_libs $LIBS"
@@ -185,7 +185,7 @@
      else
          error_exit "glib-$glib_req_ver $i is required to compile QEMU"
      fi
-@@ -4419,14 +4526,7 @@ fi
+@@ -4333,14 +4440,7 @@ fi
  
  # Check if tools are available to build documentation.
  if test "$docs" != "no" ; then
@@ -200,7 +200,7 @@
  fi
  
  # Search for bswap_32 function
-@@ -4551,7 +4651,7 @@ fi
+@@ -4465,7 +4565,7 @@ fi
  
  # check for libusb
  if test "$libusb" != "no" ; then
@@ -209,7 +209,7 @@
          libusb="yes"
          libusb_cflags=$($pkg_config --cflags libusb-1.0)
          libusb_libs=$($pkg_config --libs libusb-1.0)
-@@ -5914,6 +6014,7 @@ echo "Audio drivers     $audio_drv_list"
+@@ -5785,6 +5885,7 @@ echo "Audio drivers     $audio_drv_list"
  echo "Block whitelist (rw) $block_drv_rw_whitelist"
  echo "Block whitelist (ro) $block_drv_ro_whitelist"
  echo "VirtFS support    $virtfs"
@@ -217,7 +217,7 @@
  echo "Multipath support $mpath"
  echo "VNC support       $vnc"
  if test "$vnc" = "yes" ; then
-@@ -5949,6 +6050,7 @@ if test "$tcg" = "yes" ; then
+@@ -5820,6 +5921,7 @@ if test "$tcg" = "yes" ; then
  fi
  echo "malloc trim support $malloc_trim"
  echo "RDMA support      $rdma"
@@ -225,7 +225,7 @@
  echo "fdt support       $fdt"
  echo "membarrier        $membarrier"
  echo "preadv support    $preadv"
-@@ -6143,6 +6245,15 @@ fi
+@@ -6012,6 +6114,15 @@ fi
  if test "$profiler" = "yes" ; then
    echo "CONFIG_PROFILER=y" >> $config_host_mak
  fi
@@ -241,17 +241,17 @@
  if test "$slirp" = "yes" ; then
    echo "CONFIG_SLIRP=y" >> $config_host_mak
    echo "CONFIG_SMBD_COMMAND=\"$smbd\"" >> $config_host_mak
-@@ -6384,6 +6495,9 @@ fi
+@@ -6250,6 +6361,9 @@ fi
  if test "$have_fsxattr" = "yes" ; then
      echo "HAVE_FSXATTR=y" >> $config_host_mak
  fi
 +if test "$have_ifaddrs_h" = "yes" ; then
 +    echo "HAVE_IFADDRS_H=y" >> $config_host_mak
 +fi
- if test "$have_copy_file_range" = "yes" ; then
-     echo "HAVE_COPY_FILE_RANGE=y" >> $config_host_mak
- fi
-@@ -6703,6 +6817,10 @@ echo "CONFIG_TRACE_FILE=$trace_file" >> $config_host_m
+ if test "$vte" = "yes" ; then
+   echo "CONFIG_VTE=y" >> $config_host_mak
+   echo "VTE_CFLAGS=$vte_cflags" >> $config_host_mak
+@@ -6566,6 +6680,10 @@ echo "CONFIG_TRACE_FILE=$trace_file" >> $config_host_m
  if test "$rdma" = "yes" ; then
    echo "CONFIG_RDMA=y" >> $config_host_mak
    echo "RDMA_LIBS=$rdma_libs" >> $config_host_mak

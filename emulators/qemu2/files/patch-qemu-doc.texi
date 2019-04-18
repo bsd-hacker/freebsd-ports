@@ -1,6 +1,6 @@
---- qemu-doc.texi.orig	2019-04-12 03:28:29 UTC
+--- qemu-doc.texi.orig	2018-08-02 21:48:53 UTC
 +++ qemu-doc.texi
-@@ -198,7 +198,7 @@ VGA BIOS.
+@@ -197,7 +197,7 @@ VGA BIOS.
  QEMU uses YM3812 emulation by Tatsuyuki Satoh.
  
  QEMU uses GUS emulation (GUSEMU32 @url{http://www.deinmeister.de/gusemu/})
@@ -9,7 +9,7 @@
  
  Note that, by default, GUS shares IRQ(7) with parallel ports and so
  QEMU must be told to not have parallel ports to have working GUS.
-@@ -558,7 +558,8 @@ Send the escape character to the frontend
+@@ -557,7 +557,8 @@ Send the escape character to the frontend
  
  @c man begin SEEALSO
  The HTML documentation of QEMU for more precise information and Linux
