@@ -4184,6 +4184,7 @@
     SUBDIR += py-IBMQuantumExperience
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
+    SUBDIR += py-Js2Py
     SUBDIR += py-Missing
     SUBDIR += py-MultiMapping
     SUBDIR += py-PEAK-Rules
@@ -4974,6 +4975,7 @@
     SUBDIR += py-pyicu
     SUBDIR += py-pyinotify
     SUBDIR += py-pyinstaller
+    SUBDIR += py-pyjsparser
     SUBDIR += py-pyke
     SUBDIR += py-pylibsrtp
     SUBDIR += py-pylru
