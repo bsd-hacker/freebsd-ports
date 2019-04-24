@@ -1378,6 +1378,8 @@
     SUBDIR += u-boot-nanopi-neo-air
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
+    SUBDIR += u-boot-olinuxino-lime2
+    SUBDIR += u-boot-olinuxino-lime2-emmc
     SUBDIR += u-boot-orangepi-one
     SUBDIR += u-boot-orangepi-pc
     SUBDIR += u-boot-orangepi-pc-plus

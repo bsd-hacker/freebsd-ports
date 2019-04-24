@@ -1,20 +1,19 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	asynctest
-PORTVERSION=	0.12.4
+PORTNAME=	progress
+PORTVERSION=	1.5
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Enhance unittest for testing asyncio libraries
+COMMENT=	Easy to use progress bars
 
-LICENSE=	APACHE20
+LICENSE=	ISCL
+#LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		python:3.4+
-USE_PYTHON=	autoplist distutils
-
-NO_ARCH=	yes
+USES=		python
+USE_PYTHON=	autoplist concurrent distutils
 
 .include <bsd.port.mk>
