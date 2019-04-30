@@ -4143,7 +4143,6 @@
     SUBDIR += pmd
     SUBDIR += pmdk
     SUBDIR += poco
-    SUBDIR += poco-ssl
     SUBDIR += popt
     SUBDIR += poslib
     SUBDIR += powerpc64-binutils
@@ -4611,6 +4610,7 @@
     SUBDIR += py-freezegun
     SUBDIR += py-frozendict
     SUBDIR += py-fs
+    SUBDIR += py-fs2
     SUBDIR += py-fsm
     SUBDIR += py-fudge
     SUBDIR += py-funcparserlib
