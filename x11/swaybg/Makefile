@@ -1,28 +1,23 @@
 # $FreeBSD$
 
-PORTNAME=	swaylock
-DISTVERSION=	1.4
+PORTNAME=	swaybg
+DISTVERSION=	1.0
 CATEGORIES=	x11
 
 MAINTAINER=	jbeich@FreeBSD.org
-COMMENT=	Screen locker for Wayland
+COMMENT=	Wallpaper tool for Wayland compositors
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	wayland-protocols>=1.14:graphics/wayland-protocols
-LIB_DEPENDS=	libwayland-client.so:graphics/wayland \
-		libxkbcommon.so:x11/libxkbcommon
+LIB_DEPENDS=	libwayland-client.so:graphics/wayland
 
 USES=		compiler:c11 meson pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	swaywm
-USE_GNOME=	cairo pango
-PLIST_FILES=	bin/${PORTNAME} \
-		etc/pam.d/${PORTNAME} \
-		share/bash-completion/completions/${PORTNAME} \
-		share/fish/completions/${PORTNAME}.fish \
-		share/zsh/site-functions/_${PORTNAME}
+USE_GNOME=	cairo
+PLIST_FILES=	bin/${PORTNAME}
 
 OPTIONS_DEFINE=	MANPAGES PIXBUF
 OPTIONS_DEFAULT=MANPAGES PIXBUF
