@@ -135,6 +135,7 @@
     SUBDIR += eq10q-lv2
     SUBDIR += esound
     SUBDIR += espeak
+    SUBDIR += espressivo-lv2
     SUBDIR += etcd
     SUBDIR += eteroj-lv2
     SUBDIR += etktab
@@ -811,6 +812,7 @@
     SUBDIR += teamspeak3-server
     SUBDIR += tempest_for_eliza
     SUBDIR += thunar-media-tags-plugin
+    SUBDIR += timely-lv2
     SUBDIR += timemachine
     SUBDIR += timidity
     SUBDIR += timidity++
