@@ -2,16 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	perl
-# XXX Remove second line, uncomment first
-#DISTVERSION=	${PERL_VERSION}
-DISTVERSIONPREFIX=	v
-DISTVERSION=	${GH_TAGNAME:C/^v//:C/-g[0-9a-f]*$//}
-DISTVERSIONSUFFIX=	${GH_TAGNAME:C/.*-g/-g/}
+DISTVERSION=	${PERL_VERSION}-RC1
 PORTREVISION=	0
 CATEGORIES=	lang devel perl5
-# XXX Leave only CPAN.
-MASTER_SITES=	LOCAL/mat/perl GH
-#MASTER_SITES=	CPAN/../../src/5.0
+MASTER_SITES=	CPAN/../../src/5.0
 DIST_SUBDIR=	perl
 
 MAINTAINER=	mat@FreeBSD.org
@@ -26,29 +20,21 @@ LICENSE_FILE_GPLv1+ =	${WRKSRC}/Copying
 #DEPRECATED=	Support end three years after .0 release, please upgrade to a more recent version of Perl
 #EXPIRATION_DATE=<Release date of .0 + 3 years>
 
-# XXX releases are .tar.xz, add: tar:xz
-USES=	cpe
+USES=	cpe tar:xz
 
 # Give a hint of where libperl.so can be found.
 USE_LDCONFIG=	${PREFIX}/${_ARCH_LIB}/CORE
-
-# XXX Remove github things.
-USE_GITHUB=	yes
-GH_ACCOUNT=	Perl
-GH_PROJECT=	perl5
-GH_TAGNAME=	v5.30.0-RC1-4-g3119bee2e3
 
 TEST_TARGET=	test_harness
 TEST_ENV=	${MAKE_ENV} TEST_JOBS=${MAKE_JOBS_NUMBER} \
 		LD_LIBRARY_PATH=${WRKSRC}
 
-# XXX uncomment PORTSCOUT line
-#PORTSCOUT=	limit:^${PERL_VER}.
+PORTSCOUT=	limit:^${PERL_VER}.
 
 HAS_CONFIGURE=	yes
 CONFIGURE_SCRIPT=Configure
 CONFIGURE_ARGS=	-sde -Dprefix=${PREFIX} \
-	-Dlibperl=libperl.so.${LIBPERL_VER} \
+	-Dlibperl=libperl.so.${PERL_VERSION} \
 	-Darchlib=${PREFIX}/${_ARCH_LIB} \
 	-Dprivlib=${PREFIX}/${_PRIV_LIB} \
 	-Dman3dir=${PREFIX}/${PERLMANPREFIX_REL}/man/man3 \
@@ -65,13 +51,9 @@ CONFIGURE_ARGS=	-sde -Dprefix=${PREFIX} \
 # Keep the following two in sync.
 # lddlflags is used for all .so linking
 # shrpldflags is used for libperl.so, so remove all the extra bits inherited from lddlflags.
-# XXX change the soname to $$(LIBPERL:R)
 CONFIGURE_ARGS+=	\
 	-Alddlflags='-L${WRKSRC} -L${PREFIX}/${_ARCH_LIB}/CORE -lperl' \
-	-Dshrpldflags='$$(LDDLFLAGS:N-L${WRKSRC}:N-L${PREFIX}/${_ARCH_LIB}/CORE:N-lperl) -Wl,-soname,$$(LIBPERL)'
-
-# XXX Remove
-CONFIGURE_ARGS+=	-Dusedevel -Uversiononly
+	-Dshrpldflags='$$(LDDLFLAGS:N-L${WRKSRC}:N-L${PREFIX}/${_ARCH_LIB}/CORE:N-lperl) -Wl,-soname,$$(LIBPERL:R)'
 
 # When built from a git repository, newvers.sh can put a = in the version.
 CONFIGURE_ENV=	UNAME_v="$$(uname -v | sed 'y/=/ /')"
@@ -111,8 +93,6 @@ PLIST_SUB=	PERL_VERSION=${PERL_VERSION} \
 		PRIV_LIB=${_PRIV_LIB} \
 		PKGNAMESUFFIX=${PKGNAMESUFFIX} \
 		ARCH_LIB=${_ARCH_LIB}
-# XXX Remove and change to PERL_VERSION in the plist.
-PLIST_SUB+=	LIBPERL_VER=${LIBPERL_VER}
 
 SUB_LIST=	PERL_VERSION=${PERL_VERSION} \
 		PERL_VER=${PERL_VER} \
@@ -141,9 +121,6 @@ _ARCH_LIB=	${_PRIV_LIB}/${PERL_ARCH}
 PERLMANPREFIX_REL=	${_PRIV_LIB}/perl
 PERLMANPREFIX=	${PREFIX}/${PERLMANPREFIX_REL}
 MANDIRS=	${PERLMANPREFIX}/man
-
-# XXX replace all LIBPERL_VER occurences with PERL_VERSION
-LIBPERL_VER=	${PORTVERSION:C/[^0-9.]//}
 
 OPTIONS_DEFINE=	DEBUG GDBM PERL_64BITINT MULTIPLICITY SITECUSTOMIZE \
 		THREADS PERL_MALLOC DTRACE DOT_INC
@@ -194,13 +171,12 @@ _PERL5_DEFAULT_FILE=	/tmp/PERL5_DEFAULT
 
 # if this port is default due PERL5_DEFAULT
 # change PKGNAME to reflect this
-.if ${PERL_VER} == ${PERL5_DEFAULT} || ${PERL5_DEFAULT} == devel # XXX Remove devel case
+.if ${PERL_VER} == ${PERL5_DEFAULT}
 PKGNAMESUFFIX=	5
 IAMDEFAULTPERL=	yes
 .else
 # make PKGNAME unique among other lang/perl5.x
-PKGNAMESUFFIX=	5-devel
-#PKGNAMESUFFIX=	${PERL_VER} # XXX remove the previous, leave only this.
+PKGNAMESUFFIX=	${PERL_VER}
 .endif
 
 # Am I building the default Perl ?
@@ -236,34 +212,14 @@ pre-everything::
 .  endif
 .endif
 
-# XXX Remove this
-pre-everything::
-	@${ECHO_MSG} "########################################"
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "This is a DEVELOPER only version of Perl"
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "             DO NOT USE IT"
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} " Things ARE going to be broken with it"
-	@${ECHO_MSG} "       and it WILL eat your data"
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "         You have been warned !"
-	@${ECHO_MSG} ""
-	@${ECHO_MSG} "########################################"
-# No need to make me, or the package builders, wait
-.if !(defined(PACKAGE_BUILDING) || defined(PERL_DEV_SHUT_UP) || defined(BATCH))
-	@sleep 30
-.endif
-
 # Put a symlink to the future libperl.so.x.yy so that -lperl works.
 # Also, save PERL5_DEFAULT in case someone is not using the default Perl
 # version whilst not having set DEFAULT_VERSIONS=perl5=blah.  While upgrading,
 # portmaster/portupgrade will remove the installed Perl version, and it will
 # remove any way to guess what the default Perl version is needed.
 post-extract:
-	${LN} -s libperl.so.${LIBPERL_VER} ${WRKSRC}/libperl.so
-	${LN} -s libperl.so.${LIBPERL_VER} ${WRKSRC}/libperl.so.${PERL_VER}
+	${LN} -s libperl.so.${PERL_VERSION} ${WRKSRC}/libperl.so
+	${LN} -s libperl.so.${PERL_VERSION} ${WRKSRC}/libperl.so.${PERL_VER}
 .if !defined(PACKAGE_BUILDING)
 	@${ECHO_CMD} "PERL5_DEFAULT=${PERL5_DEFAULT}" > ${_PERL5_DEFAULT_FILE}
 .endif
@@ -303,8 +259,8 @@ post-install:
 .if defined(IAMDEFAULTPERL)
 	${LN} -sf perl ${STAGEDIR}${PREFIX}/bin/perl${PERL_VERSION}
 .endif
-	${LN} -sf libperl.so.${LIBPERL_VER} ${STAGEDIR}${PREFIX}/${_ARCH_LIB}/CORE/libperl.so
-	${LN} -sf libperl.so.${LIBPERL_VER} ${STAGEDIR}${PREFIX}/${_ARCH_LIB}/CORE/libperl.so.${PERL_VER}
+	${LN} -sf libperl.so.${PERL_VERSION} ${STAGEDIR}${PREFIX}/${_ARCH_LIB}/CORE/libperl.so
+	${LN} -sf libperl.so.${PERL_VERSION} ${STAGEDIR}${PREFIX}/${_ARCH_LIB}/CORE/libperl.so.${PERL_VER}
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/perl${PERL_VERSION}
 	${MKDIR} ${STAGEDIR}${SITE_ARCH}/machine
 	${MKDIR} ${STAGEDIR}${SITE_ARCH}/sys

@@ -685,7 +685,7 @@ etc/man.d/perl%%PKGNAMESUFFIX%%.conf
 %%ARCH_LIB%%/CORE/l1_char_class_tab.h
 %%ARCH_LIB%%/CORE/libperl.so
 %%ARCH_LIB%%/CORE/libperl.so.%%PERL_VER%%
-%%ARCH_LIB%%/CORE/libperl.so.%%LIBPERL_VER%%
+%%ARCH_LIB%%/CORE/libperl.so.%%PERL_VERSION%%
 %%ARCH_LIB%%/CORE/malloc_ctl.h
 %%ARCH_LIB%%/CORE/metaconfig.h
 %%ARCH_LIB%%/CORE/mg.h
