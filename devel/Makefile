@@ -126,6 +126,7 @@
     SUBDIR += apr2
     SUBDIR += arachne-pnr
     SUBDIR += arcanist
+    SUBDIR += arcanist-lib
     SUBDIR += arduino
     SUBDIR += arduino-avrdude
     SUBDIR += arduino-bsd-mk
@@ -1523,7 +1524,6 @@
     SUBDIR += mk-configure
     SUBDIR += mm
     SUBDIR += mm-common
-    SUBDIR += modules2tuple
     SUBDIR += mongo-c-driver
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
