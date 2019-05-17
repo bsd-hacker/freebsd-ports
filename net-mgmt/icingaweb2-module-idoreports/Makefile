@@ -1,17 +1,18 @@
 # $FreeBSD$
 
-PORTNAME=	icingaweb2-module-ipl
+PORTNAME=	icingaweb2-module-idoreports
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.3.0
+DISTVERSION=	0.9.0
 CATEGORIES=	net-mgmt www
 
 MAINTAINER=	lme@FreeBSD.org
-COMMENT=	Icinga PHP library
+COMMENT=	Host and service availability reports for Icinga
 
-LICENSE=	MIT
+LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	icingaweb2>=2.4.1:net-mgmt/icingaweb2
+RUN_DEPENDS=	icingaweb2>=2.6.0:net-mgmt/icingaweb2 \
+		icingaweb2-module-reporting>=0.9:net-mgmt/icingaweb2-module-reporting
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	icinga
