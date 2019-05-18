@@ -2147,6 +2147,7 @@
     SUBDIR += rubygem-sinatra1
     SUBDIR += rubygem-smashing
     SUBDIR += rubygem-socksify
+    SUBDIR += rubygem-swd
     SUBDIR += rubygem-task_list
     SUBDIR += rubygem-thin
     SUBDIR += rubygem-tinyatom
@@ -2193,6 +2194,7 @@
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
     SUBDIR += shttpd
+    SUBDIR += silicon
     SUBDIR += sitecopy
     SUBDIR += skytemplate
     SUBDIR += slowcgi
