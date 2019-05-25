@@ -408,6 +408,7 @@
     SUBDIR += kphotoalbum
     SUBDIR += krita
     SUBDIR += kudu
+    SUBDIR += kxstitch
     SUBDIR += l2p
     SUBDIR += largetifftools
     SUBDIR += laternamagica
@@ -733,6 +734,7 @@
     SUBDIR += pencil2d
     SUBDIR += peps
     SUBDIR += perceptualdiff
+    SUBDIR += peruse
     SUBDIR += pfstools
     SUBDIR += pgplot
     SUBDIR += pho
