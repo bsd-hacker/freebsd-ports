@@ -673,6 +673,7 @@
     SUBDIR += mgeupsd
     SUBDIR += minikube
     SUBDIR += minimunin
+    SUBDIR += minipro
     SUBDIR += minirsyslogd
     SUBDIR += mixer
     SUBDIR += mkdesktop
@@ -1284,6 +1285,7 @@
     SUBDIR += swapd
     SUBDIR += swapexd
     SUBDIR += swapmon
+    SUBDIR += swapusage
     SUBDIR += sweeper
     SUBDIR += symlinks
     SUBDIR += symon
