@@ -1,6 +1,6 @@
-bin/julia07
+bin/julia10
 %%JULIA%%/bin/julia
-%%DEBUG%%bin/julia07-debug
+%%DEBUG%%bin/julia10-debug
 %%DEBUG%%%%JULIA%%/bin/julia-debug
 %%JULIA%%/etc/julia/startup.jl
 %%JULIA%%/include/julia/END.h
@@ -44,8 +44,8 @@ bin/julia07
 %%JULIA%%/lib/julia/sys.so
 %%DEBUG%%%%JULIA%%/lib/julia/sys-debug.so
 %%DEBUG%%%%JULIA%%/lib/libjulia-debug.so
+%%DEBUG%%%%JULIA%%/lib/libjulia-debug.so.1
 %%DEBUG%%%%JULIA%%/lib/libjulia-debug.so.%%VERSION%%
-%%DEBUG%%%%JULIA%%/lib/libjulia-debug.so.%%SOVERSION%%
 %%GPL_LIBS%%%%JULIA%%/lib/julia/libamd.so
 %%GPL_LIBS%%%%JULIA%%/lib/julia/libcamd.so
 %%GPL_LIBS%%%%JULIA%%/lib/julia/libccolamd.so
@@ -57,9 +57,9 @@ bin/julia07
 %%GPL_LIBS%%%%JULIA%%/lib/julia/libumfpack.so
 %%OPENBLAS%%%%JULIA%%/lib/julia/libopenblas%%OPENBLAS64%%.so
 %%JULIA%%/lib/libjulia.so
+%%JULIA%%/lib/libjulia.so.1
 %%JULIA%%/lib/libjulia.so.%%VERSION%%
-%%JULIA%%/lib/libjulia.so.%%SOVERSION%%
-man/man1/julia07.1.gz
+man/man1/julia10.1.gz
 %%JULIA%%/man/man1/julia.1.gz
 %%DESKTOP%%%%JULIA%%/share/appdata/julia.appdata.xml
 %%DESKTOP%%%%JULIA%%/share/applications/julia.desktop
@@ -330,7 +330,6 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LibGit2/src/commit.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LibGit2/src/config.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LibGit2/src/consts.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/LibGit2/src/deprecated.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LibGit2/src/diff.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LibGit2/src/error.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LibGit2/src/gitcredential.jl
@@ -373,7 +372,6 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/blas.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/bunchkaufman.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/cholesky.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/conjarray.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/dense.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/deprecated.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/diagonal.jl
@@ -389,7 +387,6 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/lu.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/matmul.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/qr.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/rowvector.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/schur.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/special.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/structuredbroadcast.jl
@@ -400,6 +397,7 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/tridiag.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/src/uniformscaling.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/test/adjtrans.jl
+%%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/test/ambiguous_exec.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/test/bidiag.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/test/blas.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/LinearAlgebra/test/bunchkaufman.jl
@@ -459,26 +457,7 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Mmap/docs/src/index.md
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Mmap/src/Mmap.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Mmap/test/runtests.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/Project.toml
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/OldPkg.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/cache.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/dir.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/entry.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/query.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/read.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/reqs.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/resolve.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/resolve/fieldvalue.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/resolve/interface.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/resolve/maxsum.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/resolve/versionweight.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/types.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/src/write.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/test/pkg.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/test/resolve.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/test/resolvedata1.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/test/runtests.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/OldPkg/test/testgroups
+%%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/CHANGELOG.md
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/Compat.toml
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/LICENSE.md
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/Project.toml
@@ -491,6 +470,7 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/bin/stdlib.toml
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/bin/update.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/bin/utils.jl
+%%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/docs/Project.toml
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/docs/make.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/docs/src/index.md
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/ext/TOML/LICENSE.md
@@ -514,7 +494,6 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/src/Resolve.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/src/Types.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/src/generate.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/src/precompile.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/src/resolve/FieldValues.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/src/resolve/MaxSum.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Pkg/src/resolve/VersionWeights.jl
@@ -604,7 +583,6 @@ man/man1/julia07.1.gz
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Random/src/DSFMT.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Random/src/RNGs.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Random/src/Random.jl
-%%JULIA%%/share/julia/stdlib/v%%VERSION%%/Random/src/deprecated.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Random/src/generation.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Random/src/misc.jl
 %%JULIA%%/share/julia/stdlib/v%%VERSION%%/Random/src/normal.jl

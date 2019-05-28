@@ -1,4 +1,5 @@
 *******************************************************************************
-If you're looking for the older version of Julia.
-Please checkout lang/julia07 or lang/julia06.
+* If you're looking for the other version of Julia,
+* there is a meta port lang/julia.
+* Please checkout "make -C /usr/ports/lang/julia config" as well.
 *******************************************************************************

@@ -2,12 +2,11 @@
 # $FreeBSD$
 
 PORTNAME=	julia
-PORTVERSION=	0.6.4
+PORTVERSION=	1.1.0
 DISTVERSIONSUFFIX=	-full
-PORTREVISION=	5
 CATEGORIES=	lang math
 MASTER_SITES=	https://github.com/JuliaLang/julia/releases/download/v${PORTVERSION}/
-PKGNAMESUFFIX=	06
+PKGNAMESUFFIX=	11
 
 MAINTAINER=	iblis@hs.ntnu.edu.tw
 COMMENT=	Julia Language: A fresh approach to technical computing
@@ -30,10 +29,13 @@ BUILD_DEPENDS=	patchelf:sysutils/patchelf \
 		pcre2-config:devel/pcre2 \
 		cmake:devel/cmake
 
-USES=		gmake compiler:c++11-lib fortran python:2.7,build perl5
+USES=		gmake compiler:c++11-lib fortran python:2.7,build perl5 \
+		shebangfix
 USE_LDCONFIG=	yes
 
-WRKSRC=	${WRKDIR}/${PORTNAME}
+SHEBANG_GLOB=	*.sh
+
+WRKSRC=	${WRKDIR}/julia-${PORTVERSION}
 INSTALLDIR=	julia/${PORTNAME}${PKGNAMESUFFIX}
 MANDIRS+=	${PREFIX}/${INSTALLDIR}/man
 
@@ -42,7 +44,6 @@ INSTALL_TARGET=	install
 TEST_TARGET=	test
 
 PLIST_SUB=	VERSION="${PORTVERSION:R}" \
-		SOVERSION="${PORTVERSION}" \
 		JULIA="${INSTALLDIR}"
 
 CXXFLAGS+=	-stdlib=libc++ -std=c++11
@@ -63,10 +64,10 @@ MAKE_ARGS+=	prefix=${PREFIX}/${INSTALLDIR} \
 		USE_SYSTEM_UTF8PROC=1 \
 		NO_GIT=1
 
-OPTIONS_DEFINE=	EXAMPLES DEBUG DOCS GPL_LIBS DESKTOP NATIVE
+OPTIONS_DEFINE=	DEBUG DOCS GPL_LIBS DESKTOP NATIVE
 OPTIONS_DEFAULT=	OPENLIBM
 OPTIONS_GROUP=	PRIVATE
-OPTIONS_GROUP_PRIVATE=	ARPACK OPENBLAS
+OPTIONS_GROUP_PRIVATE=	OPENBLAS
 OPTIONS_SINGLE=	LIBM
 OPTIONS_SINGLE_LIBM=	SYSLIBM OPENLIBM
 OPTIONS_SUB=	yes
@@ -82,24 +83,13 @@ DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
 PORTDOCS=	html
 DOCS_VARS=	INSTALL_TARGET+=install-docs
 
-EXAMPLESDIR=	${PREFIX}/share/examples/${PORTNAME}${PKGNAMESUFFIX}
-PORTEXAMPLES=	*
-EXAMPLES_VARS=	INSTALL_TARGET+=install-examples
-
-GPL_LIBS_DESC=	Build with GPL libs: FFTW and SUITESPARSE
-GPL_LIBS_LIB_DEPENDS=	libfftw3.so:math/fftw3 \
-			libfftw3f.so:math/fftw3-float
-GPL_LIBS_MAKE_ARGS=	USE_SYSTEM_SUITESPARSE=0 USE_SYSTEM_FFTW=1
+GPL_LIBS_DESC=	Build with GPL lib: SUITESPARSE
+GPL_LIBS_MAKE_ARGS=	USE_SYSTEM_SUITESPARSE=0
 GPL_LIBS_VARS=	USE_GPL_LIBS=1
 
 DESKTOP_DESC=	Install icon, .desktop and appdata files
 DESKTOP_VARS=	INSTALL_TARGET+=install-desktop \
 		INSTALLS_ICONS=yes
-
-ARPACK_DESC=	Build self-shipped private arpack-ng
-ARPACK_MAKE_ARGS=	USE_SYSTEM_ARPACK=0
-ARPACK_MAKE_ARGS_OFF=	USE_SYSTEM_ARPACK=1
-ARPACK_LIB_DEPENDS_OFF=	libarpack.so:math/arpack-ng
 
 SYSLIBM_DESC=	Build with system libm
 SYSLIBM_MAKE_ARGS=	USE_SYSTEM_LIBM=1
@@ -108,7 +98,7 @@ OPENLIBM_DESC=	Build with OpenLibm (math/openlibm)
 OPENLIBM_MAKE_ARGS=	USE_SYSTEM_OPENLIBM=1
 OPENLIBM_LIB_DEPENDS=	libopenlibm.so:math/openlibm
 
-OPENBLAS_DESC=	Private OpenBLAS v0.3.0\
+OPENBLAS_DESC=	Private OpenBLAS v0.3.3\
 		(ports tree: v${:!${MAKE} -C ${PORTSDIR}/math/openblas -V PORTVERSION!})
 OPENBLAS_MAKE_ARGS=	USE_SYSTEM_BLAS=0 OPENBLAS_DYNAMIC_ARCH=1
 OPENBLAS_MAKE_ARGS_OFF=	USE_SYSTEM_BLAS=1
@@ -144,6 +134,7 @@ EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-ui_Makefile
 
 post-extract:
 	${GMAKE} -C ${WRKSRC}/deps extract
+	${GMAKE} -C ${WRKSRC}/stdlib install
 
 post-patch:
 	echo "override TAGGED_RELEASE_BANNER=\"FreeBSD port lang/${PORTNAME}${PKGNAMESUFFIX} build\"" >> ${WRKSRC}/Make.user
@@ -189,9 +180,5 @@ post-install-DOCS-on:
 post-install-DOCS-off:
 	# remove empty dir
 	${RM} -r ${STAGEDIR}${PREFIX}/${INSTALLDIR}/share/doc
-
-post-install-EXAMPLES-on:
-	${MV} ${STAGEDIR}${PREFIX}/${INSTALLDIR}/share/examples/julia ${STAGEDIR}${EXAMPLESDIR}
-	${RMDIR} ${STAGEDIR}${PREFIX}/${INSTALLDIR}/share/examples
 
 .include <bsd.port.mk>

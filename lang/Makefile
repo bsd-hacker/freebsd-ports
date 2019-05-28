@@ -162,6 +162,8 @@
     SUBDIR += julia
     SUBDIR += julia06
     SUBDIR += julia07
+    SUBDIR += julia10
+    SUBDIR += julia11
     SUBDIR += jython
     SUBDIR += kawa
     SUBDIR += kf5-kross
