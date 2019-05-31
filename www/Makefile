@@ -1594,7 +1594,6 @@
     SUBDIR += py-django-webpack-loader
     SUBDIR += py-django-widget-tweaks
     SUBDIR += py-django111
-    SUBDIR += py-django20
     SUBDIR += py-django21
     SUBDIR += py-django22
     SUBDIR += py-django_compressor
@@ -2010,7 +2009,6 @@
     SUBDIR += rubygem-hamlit-rails-rails5
     SUBDIR += rubygem-hamlit-rails-rails50
     SUBDIR += rubygem-hashicorp-checkpoint
-    SUBDIR += rubygem-heroku
     SUBDIR += rubygem-heroku-api
     SUBDIR += rubygem-heroku-nav
     SUBDIR += rubygem-hpricot
