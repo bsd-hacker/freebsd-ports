@@ -501,6 +501,7 @@
     SUBDIR += lbreakout
     SUBDIR += lbreakout2
     SUBDIR += ldmud
+    SUBDIR += leela-zero
     SUBDIR += legend-of-edgar
     SUBDIR += legends
     SUBDIR += legesmotus
@@ -552,6 +553,7 @@
     SUBDIR += linux-worldofgoo-demo
     SUBDIR += linwarrior
     SUBDIR += liquidwar
+    SUBDIR += lizzie
     SUBDIR += lm-solve
     SUBDIR += lmarbles
     SUBDIR += lmpc
