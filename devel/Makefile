@@ -765,6 +765,7 @@
     SUBDIR += gecode
     SUBDIR += generate
     SUBDIR += gengetopt
+    SUBDIR += genie
     SUBDIR += genproto
     SUBDIR += gettext
     SUBDIR += gettext-lint
@@ -1541,6 +1542,7 @@
     SUBDIR += mk-configure
     SUBDIR += mm
     SUBDIR += mm-common
+    SUBDIR += modd
     SUBDIR += mongo-c-driver
     SUBDIR += mongo-cxx-driver
     SUBDIR += mono-addins
