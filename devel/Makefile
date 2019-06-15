@@ -4111,6 +4111,7 @@
     SUBDIR += py-attrs
     SUBDIR += py-automaton
     SUBDIR += py-avro
+    SUBDIR += py-aws-sam-translator
     SUBDIR += py-aws-xray-sdk
     SUBDIR += py-azure-batch
     SUBDIR += py-azure-datalake-store
@@ -4228,6 +4229,7 @@
     SUBDIR += py-cffi
     SUBDIR += py-cfgparse
     SUBDIR += py-cfgv
+    SUBDIR += py-cfn-lint
     SUBDIR += py-cftime
     SUBDIR += py-chainmap
     SUBDIR += py-characteristic
