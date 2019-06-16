@@ -4289,6 +4289,7 @@
     SUBDIR += py-cxx
     SUBDIR += py-cycler
     SUBDIR += py-cymem
+    SUBDIR += py-cytoolz
     SUBDIR += py-d2to1
     SUBDIR += py-daemon
     SUBDIR += py-daemon-runner
@@ -4600,6 +4601,7 @@
     SUBDIR += py-multipledispatch
     SUBDIR += py-multiprocess
     SUBDIR += py-munch
+    SUBDIR += py-murmurhash
     SUBDIR += py-mwlib
     SUBDIR += py-mwlib.ext
     SUBDIR += py-mwlib.rl
@@ -4707,6 +4709,7 @@
     SUBDIR += py-pip-tools2
     SUBDIR += py-pipenv
     SUBDIR += py-pkgconfig
+    SUBDIR += py-plac
     SUBDIR += py-plan
     SUBDIR += py-plex
     SUBDIR += py-pluggy
@@ -4722,6 +4725,7 @@
     SUBDIR += py-pp
     SUBDIR += py-pqueue
     SUBDIR += py-pre-commit
+    SUBDIR += py-preshed
     SUBDIR += py-pretend
     SUBDIR += py-prettyprinter
     SUBDIR += py-prettytable
