@@ -1,25 +1,21 @@
 # $FreeBSD$
 
-PORTNAME=	folly
+PORTNAME=	rsocket-cpp
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2019.06.10.00
-PORTREVISION=	2
-CATEGORIES=	devel
-
-PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/commit/
-PATCHFILES=	1df75a13c2f52ee275b6f95be87a02a474e3386f.patch:-p1
+DISTVERSION=	0.10.0-942
+DISTVERSIONSUFFIX=	-g3d878b1e
+CATEGORIES=	net
 
 MAINTAINER=	yuri@FreeBSD.org
-COMMENT=	C++ library developed and used at Facebook
+COMMENT=	C++ implementation of RSocket
 
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BROKEN_i386=	error: use of undeclared identifier 'DCHECK': https://github.com/facebook/folly/issues/1168
-
 LIB_DEPENDS=	libboost_atomic.so:devel/boost-libs \
 		libdouble-conversion.so:devel/double-conversion \
 		libevent.so:devel/libevent \
+		libfolly.so:devel/folly \
 		libgflags.so:devel/gflags \
 		libglog.so:devel/glog \
 		liblz4.so:archivers/liblz4 \
@@ -28,13 +24,15 @@ LIB_DEPENDS=	libboost_atomic.so:devel/boost-libs \
 		libunwind.so:devel/libunwind \
 		libzstd.so:archivers/zstd
 
-USES=		cmake compiler:c++17-lang ssl
+USES=		cmake compiler:c++14-lang ssl
 USE_GITHUB=	yes
-GH_ACCOUNT=	facebook
+GH_ACCOUNT=	rsocket
 USE_LDCONFIG=	yes
 
 CMAKE_ON=	BUILD_SHARED_LIBS
+CMAKE_OFF=	BUILD_TESTS BUILD_EXAMPLES
 
-CXXFLAGS+=	-fPIC
+post-install: # https://github.com/rsocket/rsocket-cpp/issues/890
+	@cd ${STAGEDIR}${LOCALBASE} && ${RM} -r include/rsocket/examples include/rsocket/test include/yarpl/cmake include/yarpl/perf include/yarpl/test
 
 .include <bsd.port.mk>
