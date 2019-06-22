@@ -90,6 +90,7 @@
     SUBDIR += cntlm
     SUBDIR += codeigniter
     SUBDIR += coppermine
+    SUBDIR += colly
     SUBDIR += cplanet
     SUBDIR += cppcms
     SUBDIR += cpr
@@ -160,6 +161,7 @@
     SUBDIR += ffproxy
     SUBDIR += ffsend
     SUBDIR += fgallery
+    SUBDIR += filtron
     SUBDIR += firefox
     SUBDIR += firefox-esr
     SUBDIR += flashplayer
@@ -432,6 +434,7 @@
     SUBDIR += moodle35
     SUBDIR += moodle36
     SUBDIR += moodle37
+    SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
