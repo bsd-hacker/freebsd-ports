@@ -2,11 +2,9 @@
 # $FreeBSD$
 
 PORTNAME=	afl
-PORTVERSION=	2.52
-DISTVERSIONSUFFIX=	b
-PORTREVISION=	4
+PORTVERSION=	2.52c
 CATEGORIES=	security
-MASTER_SITES=	http://lcamtuf.coredump.cx/afl/releases/
+PKGNAMESUFFIX=	++
 
 MAINTAINER=	tobik@FreeBSD.org
 COMMENT=	Fast instrumented fuzzer
@@ -20,9 +18,14 @@ ONLY_FOR_ARCHS=	amd64 i386
 ONLY_FOR_ARCHS_REASON=	Uses binary instrumentation
 
 USES=		gmake tar:tgz
+USE_GITHUB=	yes
+GH_ACCOUNT=	vanhauser-thc
+GH_PROJECT=	AFLplusplus
 
 ALL_TARGET=	all libdislocator
 TEST_TARGET=	test_build
+
+CONFLICTS_INSTALL=	afl
 
 OPTIONS_DEFINE=		DEBUG DOCS LLVM
 OPTIONS_DEFAULT=	LLVM
@@ -78,8 +81,8 @@ post-install:
 		${STAGEDIR}${DOCSDIR}
 
 post-install-LLVM-on:
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/afl/afl-llvm-pass.so
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/afl-clang-fast
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/afl/*.so \
+		${STAGEDIR}${PREFIX}/bin/afl-clang-fast
 	${INSTALL_DATA} ${WRKSRC}/llvm_mode/README.llvm \
 		${STAGEDIR}${DOCSDIR}
 

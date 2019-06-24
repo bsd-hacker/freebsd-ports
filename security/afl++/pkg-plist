@@ -10,6 +10,7 @@ bin/afl-gcc
 bin/afl-gotcpu
 bin/afl-plot
 bin/afl-showmap
+bin/afl-system-config
 bin/afl-tmin
 bin/afl-whatsup
 lib/afl/afl-as
@@ -18,7 +19,10 @@ lib/afl/afl-as
 %%LLVM%%lib/afl/afl-llvm-rt-64.o
 %%LLVM%%lib/afl/afl-llvm-rt.o
 lib/afl/as
+%%LLVM%%lib/afl/compare-transform-pass.so
 lib/afl/libdislocator.so
+%%LLVM%%lib/afl/split-compares-pass.so
+%%LLVM%%lib/afl/split-switches-pass.so
 %%DATADIR%%/README.dictionaries
 %%DATADIR%%/README.testcases
 %%DATADIR%%/archives/common/ar/small_archive.a
@@ -82,6 +86,7 @@ lib/afl/libdislocator.so
 %%PORTDOCS%%%%DOCSDIR%%/notes_for_asan.txt
 %%PORTDOCS%%%%DOCSDIR%%/parallel_fuzzing.txt
 %%PORTDOCS%%%%DOCSDIR%%/perf_tips.txt
+%%PORTDOCS%%%%DOCSDIR%%/power_schedules.txt
 %%PORTDOCS%%%%DOCSDIR%%/sister_projects.txt
 %%PORTDOCS%%%%DOCSDIR%%/status_screen.txt
 %%PORTDOCS%%%%DOCSDIR%%/technical_details.txt
