@@ -1,16 +1,16 @@
+# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	sphinxcontrib-websupport
-PORTVERSION=	1.1.2
-CATEGORIES=	textproc
+PORTNAME=	semver
+PORTVERSION=	2.8.1
+CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Sphinx API for Web Apps
+COMMENT=	Python helper for Semantic Versioning
 
-LICENSE=	BSD2CLAUSE
-LICENSE_FILE=	${WRKSRC}/LICENSE
+LICENSE=	BSD3CLAUSE
 
 USES=		python
 USE_PYTHON=	autoplist concurrent distutils
