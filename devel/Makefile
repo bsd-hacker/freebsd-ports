@@ -1586,6 +1586,7 @@
     SUBDIR += newfile
     SUBDIR += newt
     SUBDIR += newtonsoft-json
+    SUBDIR += nextpnr
     SUBDIR += nexus2-oss
     SUBDIR += nimble
     SUBDIR += nini
@@ -6183,6 +6184,7 @@
     SUBDIR += trac-bitten
     SUBDIR += tradcpp
     SUBDIR += treepy.el
+    SUBDIR += trellis
     SUBDIR += trio
     SUBDIR += truc
     SUBDIR += ua_parser-core
