@@ -1,14 +1,14 @@
 # $FreeBSD$
 
-PORTVERSION=	2.6.18
-PKGNAMESUFFIX=	26
+PORTVERSION=	2.7.12
+PKGNAMESUFFIX=	27
 
 CONFLICTS=	ansible-* \
 		ansible1-* \
 		ansible23-* \
 		ansible24-* \
 		ansible25-* \
-		ansible27-*
+		ansible26-*
 
 MASTERDIR=	${.CURDIR}/../ansible
 DISTINFO_FILE=	${.CURDIR}/distinfo
