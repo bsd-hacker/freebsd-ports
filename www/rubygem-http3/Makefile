@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	http
-PORTVERSION=	4.1.1
+PORTVERSION=	3.3.0
 CATEGORIES=	www rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	3
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Simple Ruby DSL for making HTTP requests
@@ -21,5 +22,7 @@ USES=		gem
 USE_RUBY=	yes
 
 NO_ARCH=	yes
+
+PORTSCOUT=	limit:^3\.
 
 .include <bsd.port.mk>
