@@ -392,6 +392,7 @@
     SUBDIR += cpu_features
     SUBDIR += cquery
     SUBDIR += cram
+    SUBDIR += crc32c
     SUBDIR += creduce
     SUBDIR += critcl
     SUBDIR += cscope
@@ -1603,6 +1604,7 @@
     SUBDIR += nsgenbind
     SUBDIR += nspr
     SUBDIR += nss_wrapper
+    SUBDIR += nsync
     SUBDIR += nuitka
     SUBDIR += obby
     SUBDIR += objecthash
