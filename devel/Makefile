@@ -884,7 +884,6 @@
     SUBDIR += gputils
     SUBDIR += gradle
     SUBDIR += gradle4
-    SUBDIR += gradle46
     SUBDIR += grantlee5
     SUBDIR += graphql.el
     SUBDIR += grpc
@@ -951,6 +950,7 @@
     SUBDIR += hs-dlist
     SUBDIR += hs-extensible-exceptions
     SUBDIR += hs-ghc-events
+    SUBDIR += hs-ghcprofview
     SUBDIR += hs-git-annex
     SUBDIR += hs-haddock
     SUBDIR += hs-happy
