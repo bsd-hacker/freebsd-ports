@@ -4536,6 +4536,7 @@
     SUBDIR += py-jsmin
     SUBDIR += py-json-py
     SUBDIR += py-json-sempai
+    SUBDIR += py-json5
     SUBDIR += py-json_tricks
     SUBDIR += py-jsondiff
     SUBDIR += py-jsonform
@@ -4554,7 +4555,9 @@
     SUBDIR += py-jupyter_client
     SUBDIR += py-jupyter_console
     SUBDIR += py-jupyter_core
+    SUBDIR += py-jupyterlab
     SUBDIR += py-jupyterlab_launcher
+    SUBDIR += py-jupyterlab_server
     SUBDIR += py-kaitaistruct
     SUBDIR += py-kaptan
     SUBDIR += py-kayako
