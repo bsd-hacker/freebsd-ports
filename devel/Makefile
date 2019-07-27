@@ -5616,6 +5616,7 @@
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-health_check26-rails5
+    SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-hike
     SUBDIR += rubygem-hike1
@@ -6139,7 +6140,6 @@
     SUBDIR += subversion
     SUBDIR += subversion-book
     SUBDIR += subversion-lts
-    SUBDIR += subversion19
     SUBDIR += subversive
     SUBDIR += svk
     SUBDIR += svn2git
