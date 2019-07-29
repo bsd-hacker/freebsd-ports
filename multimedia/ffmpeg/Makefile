@@ -14,8 +14,14 @@ COMMENT=	Realtime audio/video encoder/converter and streaming server
 LICENSE=	GPLv2+ LGPL21+
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	nasm:devel/nasm \
-		${LOCALBASE}/bin/as:devel/binutils
+BUILD_DEPENDS=	${BUILD_DEPENDS_${ARCH}}
+BUILD_DEPENDS_aarch64=	as:devel/binutils
+BUILD_DEPENDS_amd64=	nasm:devel/nasm
+BUILD_DEPENDS_armv6=	as:devel/binutils
+BUILD_DEPENDS_armv7=	as:devel/binutils
+BUILD_DEPENDS_i386=	nasm:devel/nasm
+BUILD_DEPENDS_powerpc64=as:devel/binutils
+BUILD_DEPENDS_powerpc=	as:devel/binutils
 
 HAS_CONFIGURE=	yes
 CONFIGURE_LOG=	ffbuild/config.log
@@ -561,8 +567,7 @@ INSTALL_TARGET=	install-progs install-doc install-data \
 
 DATADIR=	${PREFIX}/share/${PORTNAME}${PKGNAMESUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${PKGNAMESUFFIX}
-CONFIGURE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin
-MAKE_ENV+=	COMPILER_PATH=${LOCALBASE}/bin V=1
+MAKE_ENV+=	V=1
 
 CONFIGURE_ARGS+=--prefix="${PREFIX}" \
 		--mandir="${PREFIX}/man" \
