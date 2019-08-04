@@ -1,24 +1,22 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	Term-Choose
-PORTVERSION=	1.655
-CATEGORIES=	devel perl5
+PORTNAME=	URI-Encode-XS
+PORTVERSION=	0.11
+CATEGORIES=	net perl5
 MASTER_SITES=	CPAN
 PKGNAMEPREFIX=	p5-
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Choose items from a list interactively
+COMMENT=	Perl URI encoder/decoder using C
 
-LICENSE=	ART10 GPLv1+
-LICENSE_COMB=	dual
+LICENSE=	BSD2CLAUSE
 LICENSE_FILE=	${WRKSRC}/LICENSE
-
-TEST_DEPENDS=	p5-Test-Fatal>=0:devel/p5-Test-Fatal
 
 USES=		perl5
 USE_PERL5=	configure
 
-NO_ARCH=	yes
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/${SITE_ARCH_REL}/auto/URI/Encode/XS/XS.so
 
 .include <bsd.port.mk>
