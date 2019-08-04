@@ -198,6 +198,7 @@
     SUBDIR += gofish
     SUBDIR += gogoc
     SUBDIR += google-cloud-sdk
+    SUBDIR += google-cloud-sdk-app-engine-go
     SUBDIR += googlecl
     SUBDIR += gopher
     SUBDIR += goreplay
@@ -1535,6 +1536,7 @@
     SUBDIR += yaz++
     SUBDIR += yazproxy
     SUBDIR += yconalyzer
+    SUBDIR += yggdrasil
     SUBDIR += yptransitd
     SUBDIR += zebra
     SUBDIR += zebra-server
