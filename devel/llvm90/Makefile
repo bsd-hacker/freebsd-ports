@@ -1,10 +1,14 @@
 # $FreeBSD$
 
 PORTNAME=	llvm
-DISTVERSION=	8.0.1
-PORTREVISION=	2
+DISTVERSION=	9.0.0rc1
+PORTREVISION=	0
 CATEGORIES=	devel lang
+.if ${DISTVERSION:M*rc*}
+MASTER_SITES=  http://prereleases.llvm.org/${LLVM_RELEASE}/${RCDIR}
+.else
 MASTER_SITES=	https://github.com/llvm/llvm-project/releases/download/llvmorg-${DISTVERSION}/
+.endif
 PKGNAMESUFFIX=	${LLVM_SUFFIX}
 DISTNAME=	${PORTNAME}-${DISTVERSION}.src
 DISTFILES=	${PORTNAME}-${DISTVERSION}.src${EXTRACT_SUFX}
@@ -13,10 +17,16 @@ MAINTAINER=	brooks@FreeBSD.org
 COMMENT=	LLVM and Clang
 
 .include "${.CURDIR}/../llvm-devel/Makefile.LICENSE"
+LICENSE+=	LLVM2
+LICENSE_FILE_LLVM2=	${WRKSRC}/LICENSE.TXT
+LICENSE_NAME_LLVM2=	Apache License 2.0 with LLVM Exceptions
+LICENSE_PERMS_LLVM2=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE:=	${LICENSE:NARM}
 
 LLVM_RELEASE=	${DISTVERSION:C/rc.*//}
 LLVM_MAJOR=	${LLVM_RELEASE:C/\.[0-9]\.[0-9]$//}
 LLVM_SUFFIX=	${LLVM_RELEASE:C/\.[0-9]$//:C/\.//}
+RCDIR=		${DISTVERSION:S/${LLVM_RELEASE}//:C|(rc.*)|\1/|}
 
 LLVM_PREFIX=	${PREFIX}/llvm${LLVM_SUFFIX}
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}${LLVM_SUFFIX}
@@ -100,20 +110,20 @@ GOLD_DESC=		Build the LLVM Gold plugin for LTO
 GOLD_CMAKE_ON=		-DLLVM_BINUTILS_INCDIR=${LOCALBASE}/include
 GOLD_BUILD_DEPENDS=	${LOCALBASE}/bin/ld.gold:devel/binutils
 LIT_DESC=		Install lit and FileCheck test tools
+LIT_LIB_DEPENDS=	libz3.so:math/z3
 LIT_VARS=		_USES_PYTHON=python:3.6+
 LLD_DESC=		Install lld, the LLVM linker
 LLD_DISTFILES=		lld-${DISTVERSION}.src${EXTRACT_SUFX}
-LLD_EXTRA_PATCHES=	${PATCHDIR}/lld
 LLDB_BUILD_DEPENDS=	swig3.0:devel/swig30 \
 			${PY_ENUM34}
 LLDB_DESC=		Install lldb, the LLVM debugger
 LLDB_DISTFILES=		lldb-${DISTVERSION}.src${EXTRACT_SUFX}
 LLDB_EXTRA_PATCHES=	${PATCHDIR}/lldb
 LLDB_IMPLIES=		CLANG
+LLDB_PORTDOCS=		lldb
 LLDB_VARS=		_USES_PYTHON=python:3.6+
 OPENMP_DESC=		Install libomp, the LLVM OpenMP runtime library
 OPENMP_DISTFILES=	openmp-${DISTVERSION}.src${EXTRACT_SUFX}
-OPENMP_EXTRA_PATCHES=	${PATCHDIR}/openmp
 
 .if defined(WITH_DEBUG)
 CMAKE_BUILD_TYPE=	RelWithDebInfo
@@ -131,6 +141,44 @@ PLIST_SUB+=	LLVM_RELEASE=${LLVM_RELEASE} \
 
 COMMANDS=	${LLVM_COMMANDS}
 FIRST_COMMAND=	${COMMANDS:C/^/XXXX/1:MXXXX*:C/^XXXX//}
+
+MAN1SRCS+=	bugpoint.1 \
+		dsymutil.1 \
+		llc.1 \
+		lli.1 \
+		llvm-addr2line.1 \
+		llvm-ar.1 \
+		llvm-as.1 \
+		llvm-bcanalyzer.1 \
+		llvm-build.1 \
+		llvm-config.1 \
+		llvm-cov.1 \
+		llvm-cxxfilt.1 \
+		llvm-cxxmap.1 \
+		llvm-diff.1 \
+		llvm-dis.1 \
+		llvm-dwarfdump.1 \
+		llvm-exegesis.1 \
+		llvm-extract.1 \
+		llvm-lib.1 \
+		llvm-lipo.1 \
+		llvm-link.1 \
+		llvm-mca.1 \
+		llvm-nm.1 \
+		llvm-objcopy.1 \
+		llvm-objdump.1 \
+		llvm-pdbutil.1 \
+		llvm-profdata.1 \
+		llvm-ranlib.1 \
+		llvm-readelf.1 \
+		llvm-readobj.1 \
+		llvm-size.1 \
+		llvm-stress.1 \
+		llvm-strings.1 \
+		llvm-strip.1 \
+		llvm-symbolizer.1 \
+		opt.1 \
+		tblgen.1
 
 STRIP_LIBS=	BugpointPasses.so \
 		LLVMHello.so \
@@ -195,9 +243,9 @@ COMPILER_RT_PATTERN=	(_blacklist.txt|sanitizer|include.xray)
 COMMANDS+=	${EXTRAS_COMMANDS}
 MAN1SRCS+=	extraclangtools.1
 PORTDOCS+=	clang-tools
-SHEBANG_FILES+=	tools/clang/tools/extra/clang-tidy/tool/clang-tidy-diff.py \
-		tools/clang/tools/extra/clang-tidy/tool/run-clang-tidy.py \
-		tools/clang/tools/extra/include-fixer/find-all-symbols/tool/run-find-all-symbols.py
+SHEBANG_FILES+=	tools/clang/tools/extra/clang-include-fixer/find-all-symbols/tool/run-find-all-symbols.py \
+		tools/clang/tools/extra/clang-tidy/tool/clang-tidy-diff.py \
+		tools/clang/tools/extra/clang-tidy/tool/run-clang-tidy.py
 .endif
 
 .if ${PORT_OPTIONS:MLIT}
@@ -213,23 +261,10 @@ PORTDOCS+=	lld
 COMMANDS+=	${LLDB_COMMANDS}
 .endif
 
-MAN1SRCS+=	bugpoint.1 dsymutil.1 llc.1 lli.1 llvm-ar.1 llvm-as.1 \
-		llvm-bcanalyzer.1 llvm-build.1 llvm-config.1 llvm-cov.1 \
-		llvm-cxxmap.1 \
-		llvm-diff.1 llvm-dis.1 llvm-dwarfdump.1 \
-		llvm-exegesis.1 \
-		llvm-extract.1 llvm-lib.1 llvm-link.1 \
-		llvm-mca.1 \
-		llvm-nm.1 \
-		llvm-objdump.1 \
-		llvm-pdbutil.1 \
-		llvm-profdata.1 llvm-readobj.1 llvm-stress.1 llvm-symbolizer.1 \
-		opt.1 tblgen.1
-
 .include <bsd.port.pre.mk>
 .include "${.CURDIR}/Makefile.COMMANDS"
 
-FREEBSD_BACKENDS=	AArch64 ARM Mips PowerPC Sparc X86
+FREEBSD_BACKENDS=	AArch64 ARM Mips PowerPC RISCV Sparc X86
 .if ${ARCH} == amd64
 NATIVE_BACKENDS=	X86
 .elif ${ARCH} == arm64
@@ -243,26 +278,26 @@ NATIVE_BACKENDS=	Mips
 .elif ${ARCH:Mpowerpc*}
 NATIVE_BACKENDS=	PowerPC
 .elif ${ARCH:Mriscv*}
-BROKEN_riscv=	No non-experimental native backend
+NATIVE_BACKENDS=	RISCV
 .endif
 STANDARD_BACKENDS=	${FREEBSD_BACKENDS} AMDGPU BPF Hexagon Lanai MSP430 \
 			NVPTX SystemZ WebAssembly XCore
 _BE_LIBS_COMMON=	CodeGen Desc Info
-_BE_LIBS_AArch64=	AsmParser AsmPrinter Disassembler Utils
-_BE_LIBS_AMDGPU=	AsmParser AsmPrinter Disassembler Utils
-_BE_LIBS_ARM=		AsmParser AsmPrinter Disassembler Utils
-_BE_LIBS_BPF=		AsmParser AsmPrinter Disassembler 
+_BE_LIBS_AArch64=	AsmParser Disassembler Utils
+_BE_LIBS_AMDGPU=	AsmParser Disassembler Utils
+_BE_LIBS_ARM=		AsmParser Disassembler Utils
+_BE_LIBS_BPF=		AsmParser Disassembler 
 _BE_LIBS_Hexagon=	AsmParser Disassembler
-_BE_LIBS_Lanai=		AsmParser AsmPrinter Disassembler
-_BE_LIBS_MSP430=	AsmParser AsmPrinter Disassembler
-_BE_LIBS_Mips=		AsmParser AsmPrinter Disassembler
-_BE_LIBS_NVPTX=		AsmPrinter
-_BE_LIBS_PowerPC=	AsmParser AsmPrinter Disassembler
-_BE_LIBS_Sparc=		AsmParser AsmPrinter Disassembler
-_BE_LIBS_SystemZ=	AsmParser AsmPrinter Disassembler
-_BE_LIBS_WebAssembly=	AsmParser AsmPrinter Disassembler
-_BE_LIBS_X86=		AsmParser AsmPrinter Disassembler Utils
-_BE_LIBS_XCore=		AsmPrinter Disassembler
+_BE_LIBS_Lanai=		AsmParser Disassembler
+_BE_LIBS_MSP430=	AsmParser Disassembler
+_BE_LIBS_Mips=		AsmParser Disassembler
+_BE_LIBS_PowerPC=	AsmParser Disassembler
+_BE_LIBS_RISCV=		AsmParser Disassembler Utils
+_BE_LIBS_Sparc=		AsmParser Disassembler
+_BE_LIBS_SystemZ=	AsmParser Disassembler
+_BE_LIBS_WebAssembly=	AsmParser Disassembler
+_BE_LIBS_X86=		AsmParser Disassembler Utils
+_BE_LIBS_XCore=		Disassembler
 .for BE in FREEBSD NATIVE STANDARD
 .for BE_ARCH in ${${BE}_BACKENDS}
 _BE_LIBS_${BE}+=	${_BE_LIBS_COMMON:S/^/${BE_ARCH}/} \
@@ -289,11 +324,8 @@ _COMPILER_RT_LIBS= \
 	libclang_rt.cfi_diag-x86_64.a \
 	libclang_rt.dd-x86_64.a \
 	libclang_rt.dyndd-x86_64.so \
-	libclang_rt.esan-x86_64.a \
-	libclang_rt.esan-x86_64.a.syms \
 	libclang_rt.fuzzer-x86_64.a \
 	libclang_rt.fuzzer_no_main-x86_64.a \
-	libclang_rt.lsan-x86_64.a \
 	libclang_rt.msan-x86_64.a \
 	libclang_rt.msan-x86_64.a.syms \
 	libclang_rt.msan_cxx-x86_64.a \
@@ -329,7 +361,6 @@ _COMPILER_RT_LIBS+= \
 	libclang_rt.builtins-i386.a \
 	libclang_rt.cfi-i386.a \
 	libclang_rt.cfi_diag-i386.a \
-	libclang_rt.lsan-i386.a \
 	libclang_rt.profile-i386.a \
 	libclang_rt.safestack-i386.a \
 	libclang_rt.stats-i386.a \
@@ -417,7 +448,6 @@ post-build-COMPILER_RT-on:
 
 post-install:
 	${RM} -r ${STAGEDIR}${LLVM_PREFIX}/include/llvm/MC/MCAnalysis
-	${RMDIR} ${STAGEDIR}/${PREFIX}/llvm80/include/llvm/TextAPI/MachO
 	${INSTALL_SCRIPT} ${WRKDIR}/llvm-wrapper.sh \
 	    ${STAGEDIR}${PREFIX}/bin/${FIRST_COMMAND}${LLVM_SUFFIX}
 .for command in ${COMMANDS:C/^/XXXX/1:NXXXX*}
