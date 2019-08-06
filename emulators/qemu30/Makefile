@@ -2,9 +2,10 @@
 # $FreeBSD$
 
 PORTNAME=	qemu
-PORTVERSION=	3.1.1
+PORTVERSION=	3.0.1
 CATEGORIES=	emulators
 MASTER_SITES=	https://download.qemu.org/
+PKGNAMESUFFIX=	30
 DIST_SUBDIR=	qemu/${PORTVERSION}
 
 MAINTAINER?=	bofh@FreeBSD.org
@@ -17,12 +18,6 @@ BROKEN_powerpc64=	fails to compile: In function aio_bh_poll: internal compiler e
 LIB_DEPENDS?=	libnettle.so:security/nettle \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
-
-.if !defined(PKGNAMESUFFIX) || (${PKGNAMESUFFIX} != "-utils" && ${PKGNAMESUFFIX} != "-guest-agent")
-ONLY_FOR_ARCHS=	amd64 i386 powerpc powerpc64
-USE_XORG=	pixman
-USE_GNOME+=	cairo glib20 libxml2
-.endif
 
 USES?=		cpe gmake gnome pkgconfig bison perl5 python:build tar:xz
 USE_PERL5=	build
