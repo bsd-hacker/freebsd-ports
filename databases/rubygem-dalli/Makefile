@@ -1,13 +1,13 @@
-# Created by: Torsten Zuehlsdorff <tz@FreeBSD.org>
+# Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	turbolinks-source
-PORTVERSION=	5.2.0
-CATEGORIES=	www rubygems
+PORTNAME=	dalli
+PORTVERSION=	2.7.10
+CATEGORIES=	databases rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Turbolinks JavaScript assets
+COMMENT=	High performance memcached client for Ruby
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE

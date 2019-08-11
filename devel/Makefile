@@ -5931,8 +5931,7 @@
     SUBDIR += rubygem-soap4r
     SUBDIR += rubygem-solve
     SUBDIR += rubygem-spring
-    SUBDIR += rubygem-spring-rails5
-    SUBDIR += rubygem-spring-rails50
+    SUBDIR += rubygem-spring-watcher-listen
     SUBDIR += rubygem-sprockets
     SUBDIR += rubygem-sprockets-es6
     SUBDIR += rubygem-sprockets-helpers
@@ -6030,7 +6029,7 @@
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden
     SUBDIR += rubygem-wdm
-    SUBDIR += rubygem-web-console
+    SUBDIR += rubygem-web-console-rails5
     SUBDIR += rubygem-web-console-rails50
     SUBDIR += rubygem-web-console2
     SUBDIR += rubygem-webby
