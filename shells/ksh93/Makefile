@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ksh93
-DISTVERSION=2020.0.0-alpha1
+DISTVERSION=	2020.0.0-alpha1
 PORTEPOCH=	1
 PORTREVISION=	3
 CATEGORIES=	shells
@@ -12,6 +12,10 @@ COMMENT=	AT&T KornShell 93
 LICENSE=	EPL
 
 USES=		compiler:c11 meson ninja python:build
+
+.if ${USE_GCC} == "9"
+BROKEN=		GCC 9.1 changes the output of `gcc -E` which breaks the conf.sh script, fixed in shells/ksh93-devel
+.endif
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	att
