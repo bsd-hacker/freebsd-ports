@@ -670,6 +670,7 @@
     SUBDIR += fortytwo-encore
     SUBDIR += fossil
     SUBDIR += fossology-nomos-standalone
+    SUBDIR += fp16
     SUBDIR += fpc-bfd
     SUBDIR += fpc-dbus
     SUBDIR += fpc-fcl-async
@@ -711,6 +712,7 @@
     SUBDIR += fujaba
     SUBDIR += funnelweb
     SUBDIR += fuzzylite
+    SUBDIR += fxdiv
     SUBDIR += ga
     SUBDIR += gaa
     SUBDIR += gamin
@@ -3966,6 +3968,7 @@
     SUBDIR += protobuf25
     SUBDIR += protozero
     SUBDIR += pructl
+    SUBDIR += psimd
     SUBDIR += psptoolchain
     SUBDIR += psptoolchain-binutils
     SUBDIR += psptoolchain-gcc-stage1
@@ -3978,6 +3981,7 @@
     SUBDIR += psvn
     SUBDIR += pth
     SUBDIR += pth-hard
+    SUBDIR += pthreadpool
     SUBDIR += pthsem
     SUBDIR += ptlib
     SUBDIR += ptmalloc
@@ -4008,6 +4012,7 @@
     SUBDIR += py-Missing
     SUBDIR += py-MultiMapping
     SUBDIR += py-PEAK-Rules
+    SUBDIR += py-PeachPy
     SUBDIR += py-Persistence
     SUBDIR += py-Pint
     SUBDIR += py-Products.ATContentTypes
@@ -4371,7 +4376,6 @@
     SUBDIR += py-dynrules
     SUBDIR += py-easyprocess
     SUBDIR += py-editdistance
-    SUBDIR += py-efilter
     SUBDIR += py-efl
     SUBDIR += py-eggtestinfo
     SUBDIR += py-ejson
@@ -4674,6 +4678,7 @@
     SUBDIR += py-oletools
     SUBDIR += py-omnijson
     SUBDIR += py-omniorb
+    SUBDIR += py-opcodes
     SUBDIR += py-openapi-codec
     SUBDIR += py-openapi-spec-validator
     SUBDIR += py-opendht
