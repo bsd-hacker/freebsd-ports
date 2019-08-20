@@ -186,6 +186,7 @@
     SUBDIR += mariadb104-server
     SUBDIR += mariadb55-client
     SUBDIR += mariadb55-server
+    SUBDIR += mdbconv
     SUBDIR += mdbtools
     SUBDIR += mdcached
     SUBDIR += memcached
@@ -521,6 +522,7 @@
     SUBDIR += p5-Xapian
     SUBDIR += p5-mysql-genocide
     SUBDIR += p5-tokyotyrant
+    SUBDIR += palm-db-tools
     SUBDIR += pear-DB
     SUBDIR += pear-DBA
     SUBDIR += pear-DBA_Relational
