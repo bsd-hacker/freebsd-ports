@@ -146,6 +146,7 @@
     SUBDIR += blas
     SUBDIR += blaze
     SUBDIR += blazeiterative
+    SUBDIR += blasfeo
     SUBDIR += blis
     SUBDIR += blitz++
     SUBDIR += blocksolve95
@@ -276,6 +277,7 @@
     SUBDIR += hexcalc
     SUBDIR += hipmcl
     SUBDIR += hmat-oss
+    SUBDIR += hpipm
     SUBDIR += hs-Agda
     SUBDIR += hs-semigroups
     SUBDIR += ignition-math
