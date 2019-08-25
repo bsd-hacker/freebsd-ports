@@ -1495,8 +1495,11 @@
     SUBDIR += py-dj22-django-auth-ldap
     SUBDIR += py-dj22-django-cacheops
     SUBDIR += py-dj22-django-cors-headers
+    SUBDIR += py-dj22-django_csp
     SUBDIR += py-dj22-django-debug-toolbar
     SUBDIR += py-dj22-django-filter
+    SUBDIR += py-dj22-django-formset-js-improved
+    SUBDIR += py-dj22-django-jquery-js
     SUBDIR += py-dj22-django-js-asset
     SUBDIR += py-dj22-django-mptt
     SUBDIR += py-dj22-django-prometheus
@@ -1531,6 +1534,7 @@
     SUBDIR += py-django-configurations
     SUBDIR += py-django-constance
     SUBDIR += py-django-contact-form
+    SUBDIR += py-django-context-decorator
     SUBDIR += py-django-contrib-comments
     SUBDIR += py-django-cors-headers
     SUBDIR += py-django-countries
@@ -1547,13 +1551,16 @@
     SUBDIR += py-django-guardian
     SUBDIR += py-django-happenings
     SUBDIR += py-django-haystack
+    SUBDIR += py-django-hierarkey
     SUBDIR += py-django-hijack
     SUBDIR += py-django-htmlmin
+    SUBDIR += py-django-i18nfield
     SUBDIR += py-django-js-asset
     SUBDIR += py-django-json-rpc
     SUBDIR += py-django-jsonfield
     SUBDIR += py-django-jsonfield2
     SUBDIR += py-django-ldapdb
+    SUBDIR += py-django-libsass
     SUBDIR += py-django-markdownx
     SUBDIR += py-django-markwhat
     SUBDIR += py-django-mezzanine
@@ -1693,6 +1700,7 @@
     SUBDIR += py-hyperframe
     SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
+    SUBDIR += py-inlinestyler
     SUBDIR += py-instabot
     SUBDIR += py-internetarchive
     SUBDIR += py-jonpy
@@ -1840,6 +1848,7 @@
     SUBDIR += py-rhodecode
     SUBDIR += py-rollbar
     SUBDIR += py-routes
+    SUBDIR += py-rules
     SUBDIR += py-scgi
     SUBDIR += py-scrapy
     SUBDIR += py-seafdav
@@ -1871,6 +1880,7 @@
     SUBDIR += py-unit
     SUBDIR += py-url
     SUBDIR += py-urlgrabber
+    SUBDIR += py-urlman
     SUBDIR += py-urlobject
     SUBDIR += py-urlwatch
     SUBDIR += py-user_agent
@@ -1886,6 +1896,7 @@
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
     SUBDIR += py-wfuzz
+    SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
     SUBDIR += py-wikitools
     SUBDIR += py-ws4py
@@ -1944,9 +1955,11 @@
     SUBDIR += rubygem-ace-rails-ap
     SUBDIR += rubygem-actioncable5
     SUBDIR += rubygem-actioncable50
+    SUBDIR += rubygem-actioncable52
     SUBDIR += rubygem-actionpack4
     SUBDIR += rubygem-actionpack5
     SUBDIR += rubygem-actionpack50
+    SUBDIR += rubygem-actionpack52
     SUBDIR += rubygem-activeresource4
     SUBDIR += rubygem-activeresource5
     SUBDIR += rubygem-acts-as-taggable-on
@@ -2134,6 +2147,7 @@
     SUBDIR += rubygem-rails4
     SUBDIR += rubygem-rails5
     SUBDIR += rubygem-rails50
+    SUBDIR += rubygem-rails52
     SUBDIR += rubygem-rails_12factor
     SUBDIR += rubygem-rails_autolink
     SUBDIR += rubygem-rails_serve_static_assets
@@ -2141,6 +2155,7 @@
     SUBDIR += rubygem-railties4
     SUBDIR += rubygem-railties5
     SUBDIR += rubygem-railties50
+    SUBDIR += rubygem-railties52
     SUBDIR += rubygem-raindrops
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
@@ -2156,6 +2171,7 @@
     SUBDIR += rubygem-redmine_acts_as_taggable_on
     SUBDIR += rubygem-responders
     SUBDIR += rubygem-responders-rails5
+    SUBDIR += rubygem-responders-rails52
     SUBDIR += rubygem-responders2-rails5
     SUBDIR += rubygem-rest-client
     SUBDIR += rubygem-rfacebook
