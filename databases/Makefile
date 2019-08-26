@@ -970,6 +970,7 @@
     SUBDIR += rubygem-paranoia
     SUBDIR += rubygem-peek-mysql2-rails5
     SUBDIR += rubygem-peek-pg-rails5
+    SUBDIR += rubygem-peek-pg-rails52
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg0
     SUBDIR += rubygem-pg018
@@ -985,6 +986,7 @@
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
     SUBDIR += rubygem-redis-actionpack-rails50
+    SUBDIR += rubygem-redis-actionpack-rails52
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis3
     SUBDIR += rubygem-seed-fu

@@ -5588,6 +5588,7 @@
     SUBDIR += rubygem-font-awesome-rails
     SUBDIR += rubygem-font-awesome-rails-rails5
     SUBDIR += rubygem-font-awesome-rails-rails50
+    SUBDIR += rubygem-font-awesome-rails-rails52
     SUBDIR += rubygem-foreigner
     SUBDIR += rubygem-foreman
     SUBDIR += rubygem-formatador
@@ -5653,6 +5654,7 @@
     SUBDIR += rubygem-hashie2
     SUBDIR += rubygem-health_check
     SUBDIR += rubygem-health_check26-rails5
+    SUBDIR += rubygem-health_check26-rails52
     SUBDIR += rubygem-heapy
     SUBDIR += rubygem-highline
     SUBDIR += rubygem-hike
@@ -5807,12 +5809,16 @@
     SUBDIR += rubygem-pdk
     SUBDIR += rubygem-peek
     SUBDIR += rubygem-peek-gc-rails5
+    SUBDIR += rubygem-peek-gc-rails52
     SUBDIR += rubygem-peek-host
     SUBDIR += rubygem-peek-performance_bar
     SUBDIR += rubygem-peek-rails4
     SUBDIR += rubygem-peek-rails5
+    SUBDIR += rubygem-peek-rails52
     SUBDIR += rubygem-peek-rblineprof-rails5
+    SUBDIR += rubygem-peek-rblineprof-rails52
     SUBDIR += rubygem-peek-redis-rails5
+    SUBDIR += rubygem-peek-redis-rails52
     SUBDIR += rubygem-pkg-config
     SUBDIR += rubygem-platform
     SUBDIR += rubygem-pleaserun
@@ -5850,6 +5856,7 @@
     SUBDIR += rubygem-rails-i18n-4
     SUBDIR += rubygem-rails-i18n-rails5
     SUBDIR += rubygem-rails-i18n-rails50
+    SUBDIR += rubygem-rails-i18n-rails52
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
     SUBDIR += rubygem-rake
@@ -5874,6 +5881,7 @@
     SUBDIR += rubygem-redis-activesupport
     SUBDIR += rubygem-redis-activesupport-rails5
     SUBDIR += rubygem-redis-activesupport-rails50
+    SUBDIR += rubygem-redis-activesupport-rails52
     SUBDIR += rubygem-redis-store
     SUBDIR += rubygem-redmine_plugin_support
     SUBDIR += rubygem-reentrant_flock
