@@ -1538,12 +1538,10 @@
     SUBDIR += rubygem-github-markup
     SUBDIR += rubygem-github-markup17
     SUBDIR += rubygem-gitlab-grit
-    SUBDIR += rubygem-gitlab-linguist
     SUBDIR += rubygem-gitlab-markup
     SUBDIR += rubygem-heredoc_unindent
     SUBDIR += rubygem-hikidoc
     SUBDIR += rubygem-html-pipeline
-    SUBDIR += rubygem-html-pipeline1
     SUBDIR += rubygem-html-pipeline27
     SUBDIR += rubygem-html2text
     SUBDIR += rubygem-htmlentities
