@@ -1465,7 +1465,6 @@
     SUBDIR += llvm
     SUBDIR += llvm-cheri
     SUBDIR += llvm-devel
-    SUBDIR += llvm35
     SUBDIR += llvm60
     SUBDIR += llvm70
     SUBDIR += llvm80
@@ -3999,10 +3998,6 @@
     SUBDIR += pty
     SUBDIR += ptypes
     SUBDIR += publib
-    SUBDIR += pure-ffi
-    SUBDIR += pure-readline
-    SUBDIR += pure-stldict
-    SUBDIR += pure-stllib
     SUBDIR += pushmi
     SUBDIR += py-Acquisition
     SUBDIR += py-AddOns
