@@ -4316,6 +4316,7 @@
     SUBDIR += py-constantly
     SUBDIR += py-construct
     SUBDIR += py-contextlib2
+    SUBDIR += py-convertdate
     SUBDIR += py-cookiecutter
     SUBDIR += py-coreapi
     SUBDIR += py-coreschema
@@ -4493,6 +4494,7 @@
     SUBDIR += py-hghooks
     SUBDIR += py-hgsubversion
     SUBDIR += py-hgtools
+    SUBDIR += py-holidays
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
     SUBDIR += py-hypothesis
@@ -4619,6 +4621,7 @@
     SUBDIR += py-logilab-common
     SUBDIR += py-logutils
     SUBDIR += py-louie
+    SUBDIR += py-lunardate
     SUBDIR += py-lxml
     SUBDIR += py-macholib
     SUBDIR += py-magic
