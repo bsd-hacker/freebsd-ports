@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=		uhid-freebsd
-PORTVERSION=		0.9
+PORTVERSION=		1.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=		devel python
 PKGNAMEPREFIX=		${PYTHON_PKGNAMEPREFIX}
@@ -17,6 +17,5 @@ USE_PYTHON=		autoplist distutils
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		grembo
-GH_PROJECT=		${PORTNAME}
 
 .include <bsd.port.mk>
