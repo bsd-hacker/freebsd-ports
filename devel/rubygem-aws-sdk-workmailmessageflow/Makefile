@@ -1,13 +1,13 @@
 # Created by: Po-Chuan Hsieh <sunpoet@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	aws-sdk-medialive
-PORTVERSION=	1.37.0
+PORTNAME=	aws-sdk-workmailmessageflow
+PORTVERSION=	1.0.0
 CATEGORIES=	devel rubygems
 MASTER_SITES=	RG
 
 MAINTAINER=	sunpoet@FreeBSD.org
-COMMENT=	Official AWS Ruby gem for AWS Elemental MediaLive (MediaLive)
+COMMENT=	Official AWS Ruby gem for Amazon WorkMail Message Flow
 
 LICENSE=	APACHE20
 
