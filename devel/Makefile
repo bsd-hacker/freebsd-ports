@@ -5393,8 +5393,14 @@
     SUBDIR += roboctl
     SUBDIR += robodoc
     SUBDIR += root-doc
+    SUBDIR += ros-catkin_pkg
+    SUBDIR += ros-rosdep
+    SUBDIR += ros-rosdistro
+    SUBDIR += ros-rosinstall
     SUBDIR += ros-rosinstall_generator
+    SUBDIR += ros-rospkg
     SUBDIR += ros-vcstools
+    SUBDIR += ros-wstool
     SUBDIR += rote
     SUBDIR += rpc2
     SUBDIR += rpclib
