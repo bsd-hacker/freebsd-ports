@@ -361,6 +361,7 @@
     SUBDIR += codesearch-py
     SUBDIR += codeville
     SUBDIR += codeworker
+    SUBDIR += collada-dom
     SUBDIR += colorgcc
     SUBDIR += colormake
     SUBDIR += commit-patch
@@ -5392,6 +5393,7 @@
     SUBDIR += roboctl
     SUBDIR += robodoc
     SUBDIR += root-doc
+    SUBDIR += ros-rosinstall_generator
     SUBDIR += rote
     SUBDIR += rpc2
     SUBDIR += rpclib
