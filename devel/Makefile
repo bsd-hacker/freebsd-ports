@@ -835,6 +835,7 @@
     SUBDIR += glib20-reference
     SUBDIR += glibmm
     SUBDIR += glibmm-reference
+    SUBDIR += gllvm
     SUBDIR += global
     SUBDIR += glog
     SUBDIR += glrparser
@@ -1192,7 +1193,6 @@
     SUBDIR += libdwarf
     SUBDIR += libe
     SUBDIR += libedit
-    SUBDIR += libee
     SUBDIR += libeio
     SUBDIR += libelf
     SUBDIR += libepoll-shim
@@ -1272,7 +1272,6 @@
     SUBDIR += libltdl
     SUBDIR += liblxqt
     SUBDIR += libmaa
-    SUBDIR += libmal
     SUBDIR += libmatheval
     SUBDIR += libmba
     SUBDIR += libmill
