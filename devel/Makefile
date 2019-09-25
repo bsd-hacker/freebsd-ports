@@ -5394,6 +5394,8 @@
     SUBDIR += robodoc
     SUBDIR += root-doc
     SUBDIR += ros-catkin_pkg
+    SUBDIR += ros-console_bridge
+    SUBDIR += ros-urdfdom_headers
     SUBDIR += ros-rosdep
     SUBDIR += ros-rosdistro
     SUBDIR += ros-rosinstall
