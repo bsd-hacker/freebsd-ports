@@ -6,6 +6,7 @@ PORTVERSION=	2.1.2
 PORTREVISION=	1
 CATEGORIES=	textproc rubygems
 MASTER_SITES=	RG
+PKGNAMESUFFIX=	-rails4
 
 MAINTAINER=	sunpoet@FreeBSD.org
 COMMENT=	Integrate SassC-Ruby into Rails
@@ -13,9 +14,9 @@ COMMENT=	Integrate SassC-Ruby into Rails
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
-RUN_DEPENDS=	rubygem-railties52>=4.0.0:www/rubygem-railties52 \
+RUN_DEPENDS=	rubygem-railties4>=4.0.0:www/rubygem-railties4 \
 		rubygem-sassc>=2.0:textproc/rubygem-sassc \
-		rubygem-sprockets-rails-rails52>=0:devel/rubygem-sprockets-rails-rails52 \
+		rubygem-sprockets-rails-rails4>=0:devel/rubygem-sprockets-rails-rails4 \
 		rubygem-sprockets3>=3.0:devel/rubygem-sprockets3 \
 		rubygem-tilt>=0:devel/rubygem-tilt
 
