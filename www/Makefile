@@ -309,6 +309,7 @@
     SUBDIR += libmicrohttpd
     SUBDIR += libnghttp2
     SUBDIR += libresonic-standalone
+    SUBDIR += libwpe
     SUBDIR += libwww
     SUBDIR += lightsquid
     SUBDIR += lighttpd
@@ -2482,6 +2483,7 @@
     SUBDIR += wikicalc
     SUBDIR += woof
     SUBDIR += wordpress
+    SUBDIR += wpebackend-fdo
     SUBDIR += wsdlpull
     SUBDIR += wsmake
     SUBDIR += wt
